@@ -1,0 +1,13 @@
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\Hil5-CRM-Project.exe.config
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\Hil5-CRM-Project.exe
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\Hil5-CRM-Project.pdb
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.AssemblyReference.cache
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.MainForm.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Properties.Resources.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.GenerateResource.cache
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.CoreCompileInputs.cache
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.CopyComplete
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.exe
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.pdb
