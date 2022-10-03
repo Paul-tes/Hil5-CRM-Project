@@ -36,6 +36,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>Resources\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="DragAssembly">
+      <HintPath>Resources\DragAssembly.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
