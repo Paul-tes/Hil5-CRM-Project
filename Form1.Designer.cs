@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.flp_leftPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -54,7 +53,6 @@
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_maximize = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
-            this.timer_sideBar = new System.Windows.Forms.Timer(this.components);
             this.flp_leftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,10 +80,8 @@
             this.flp_leftPanel.Controls.Add(this.panel9);
             this.flp_leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.flp_leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.flp_leftPanel.MaximumSize = new System.Drawing.Size(200, 780);
-            this.flp_leftPanel.MinimumSize = new System.Drawing.Size(60, 780);
             this.flp_leftPanel.Name = "flp_leftPanel";
-            this.flp_leftPanel.Size = new System.Drawing.Size(200, 780);
+            this.flp_leftPanel.Size = new System.Drawing.Size(200, 562);
             this.flp_leftPanel.TabIndex = 0;
             // 
             // panel1
@@ -119,7 +115,6 @@
             this.btn_menu.Text = "                Menu";
             this.btn_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_menu.UseVisualStyleBackColor = true;
-            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // panel2
             // 
@@ -343,11 +338,6 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // timer_sideBar
-            // 
-            this.timer_sideBar.Interval = 10;
-            this.timer_sideBar.Tick += new System.EventHandler(this.timer_sideBar_Tick);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,7 +393,6 @@
         private System.Windows.Forms.Button btn_minimize;
         private System.Windows.Forms.Button btn_maximize;
         private System.Windows.Forms.FlowLayoutPanel flp_windowControl;
-        private System.Windows.Forms.Timer timer_sideBar;
     }
 }
 
