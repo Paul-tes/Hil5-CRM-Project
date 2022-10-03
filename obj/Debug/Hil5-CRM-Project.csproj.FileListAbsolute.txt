@@ -11,3 +11,4 @@ C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-P
 C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.CopyComplete
 C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.exe
 C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.pdb
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\DragAssembly.dll
