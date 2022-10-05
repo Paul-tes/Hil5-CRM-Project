@@ -33,8 +33,8 @@
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.flp_leftPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.btn_menu = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_dashBoard = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -57,7 +57,6 @@
             this.timer_sideBar = new System.Windows.Forms.Timer(this.components);
             this.flp_leftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -82,27 +81,20 @@
             this.flp_leftPanel.Controls.Add(this.panel9);
             this.flp_leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.flp_leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.flp_leftPanel.MaximumSize = new System.Drawing.Size(200, 780);
+            this.flp_leftPanel.MaximumSize = new System.Drawing.Size(192, 780);
             this.flp_leftPanel.MinimumSize = new System.Drawing.Size(60, 780);
             this.flp_leftPanel.Name = "flp_leftPanel";
-            this.flp_leftPanel.Size = new System.Drawing.Size(200, 780);
+            this.flp_leftPanel.Size = new System.Drawing.Size(60, 780);
             this.flp_leftPanel.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_menu);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(217, 92);
+            this.panel1.Size = new System.Drawing.Size(217, 167);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btn_menu);
-            this.panel3.Location = new System.Drawing.Point(3, 27);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(197, 43);
-            this.panel3.TabIndex = 1;
             // 
             // btn_menu
             // 
@@ -111,20 +103,27 @@
             this.btn_menu.ForeColor = System.Drawing.Color.White;
             this.btn_menu.Image = global::Hil5_CRM_Project.Properties.Resources._menu;
             this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_menu.Location = new System.Drawing.Point(-6, -14);
+            this.btn_menu.Location = new System.Drawing.Point(-8, 109);
             this.btn_menu.Name = "btn_menu";
             this.btn_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_menu.Size = new System.Drawing.Size(225, 59);
+            this.btn_menu.Size = new System.Drawing.Size(225, 55);
             this.btn_menu.TabIndex = 1;
             this.btn_menu.Text = "                Menu";
             this.btn_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_menu.UseVisualStyleBackColor = true;
             this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(3, 27);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(197, 60);
+            this.panel3.TabIndex = 1;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_dashBoard);
-            this.panel2.Location = new System.Drawing.Point(3, 101);
+            this.panel2.Location = new System.Drawing.Point(3, 176);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(197, 43);
             this.panel2.TabIndex = 1;
@@ -148,7 +147,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btn_Contacts);
-            this.panel4.Location = new System.Drawing.Point(3, 150);
+            this.panel4.Location = new System.Drawing.Point(3, 225);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(197, 43);
             this.panel4.TabIndex = 1;
@@ -172,7 +171,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btn_leads);
-            this.panel5.Location = new System.Drawing.Point(3, 199);
+            this.panel5.Location = new System.Drawing.Point(3, 274);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(197, 43);
             this.panel5.TabIndex = 1;
@@ -196,7 +195,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.btn_Events);
-            this.panel6.Location = new System.Drawing.Point(3, 248);
+            this.panel6.Location = new System.Drawing.Point(3, 323);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(197, 43);
             this.panel6.TabIndex = 1;
@@ -220,7 +219,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.btn_tasks);
-            this.panel7.Location = new System.Drawing.Point(3, 297);
+            this.panel7.Location = new System.Drawing.Point(3, 372);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(197, 43);
             this.panel7.TabIndex = 1;
@@ -244,7 +243,7 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.btn_reports);
-            this.panel8.Location = new System.Drawing.Point(3, 346);
+            this.panel8.Location = new System.Drawing.Point(3, 421);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(197, 43);
             this.panel8.TabIndex = 1;
@@ -268,7 +267,8 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.btn_settings);
-            this.panel9.Location = new System.Drawing.Point(3, 395);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(3, 470);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(197, 43);
             this.panel9.TabIndex = 1;
@@ -294,9 +294,9 @@
             this.p_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.p_top.Controls.Add(this.flp_windowControl);
             this.p_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.p_top.Location = new System.Drawing.Point(200, 0);
+            this.p_top.Location = new System.Drawing.Point(60, 0);
             this.p_top.Name = "p_top";
-            this.p_top.Size = new System.Drawing.Size(1060, 34);
+            this.p_top.Size = new System.Drawing.Size(1200, 34);
             this.p_top.TabIndex = 1;
             // 
             // flp_windowControl
@@ -305,7 +305,7 @@
             this.flp_windowControl.Controls.Add(this.btn_maximize);
             this.flp_windowControl.Controls.Add(this.btn_close);
             this.flp_windowControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flp_windowControl.Location = new System.Drawing.Point(937, 0);
+            this.flp_windowControl.Location = new System.Drawing.Point(1077, 0);
             this.flp_windowControl.Name = "flp_windowControl";
             this.flp_windowControl.Size = new System.Drawing.Size(123, 34);
             this.flp_windowControl.TabIndex = 2;
@@ -346,7 +346,7 @@
             // timer_sideBar
             // 
             this.timer_sideBar.Interval = 10;
-            this.timer_sideBar.Tick += new System.EventHandler(this.timer_sideBar_Tick);
+            this.timer_sideBar.Tick += new System.EventHandler(this.timer_sideBar_Tick_1);
             // 
             // MainForm
             // 
@@ -362,7 +362,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.flp_leftPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);

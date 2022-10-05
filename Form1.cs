@@ -13,7 +13,7 @@ namespace Hil5_CRM_Project
 {
     public partial class MainForm : Form
     {
-        private bool sidebarExpand = true;
+        private bool sidebarExpand = false;
         public MainForm()
         {
             InitializeComponent();
@@ -42,30 +42,32 @@ namespace Hil5_CRM_Project
         }
 
         // Timer for Minimizing and Maximizing side bar.
-        private void timer_sideBar_Tick(object sender, EventArgs e)
+        private void btn_menu_Click(object sender, EventArgs e)
         {
-            if(sidebarExpand) // minimizing the left side bar. 
+            timer_sideBar.Start();
+        }
+
+        private void timer_sideBar_Tick_1(object sender, EventArgs e)
+        {
+
+            if (sidebarExpand) // minimizing the left side bar. 
             {
                 flp_leftPanel.Width -= 10;
-                if(flp_leftPanel.Width == flp_leftPanel.MinimumSize.Width)
+                if (flp_leftPanel.Width == flp_leftPanel.MinimumSize.Width)
                 {
                     sidebarExpand = false;
                     timer_sideBar.Stop();
                 }
-            } else // expanding the left side bar.
+            }
+            else // expanding the left side bar.
             {
                 flp_leftPanel.Width += 10;
                 if (flp_leftPanel.Width == flp_leftPanel.MaximumSize.Width)
                 {
-                    sidebarExpand=true;
+                    sidebarExpand = true;
                     timer_sideBar.Stop();
                 }
             }
-        }
-
-        private void btn_menu_Click(object sender, EventArgs e)
-        {
-            timer_sideBar.Start();
         }
     }
 }
