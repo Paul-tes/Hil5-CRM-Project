@@ -8,5 +8,29 @@ namespace Hil5_CRM_Project.model
 {
     internal class Customers
     {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+
+        public string mobile { get; set; }
+
+        public string city { get; set; }
+
+        public string state { get; set; }
+
+        public string zip { get; set; }
+
+        public string country { get; set; }
+
+        public string addedBy { get; set; }
+
+        public string addedDate { get; set; }
+        public string photo { get; set; }
+        public string website { get; set; }
+        public string promotedFrom { get; set; }
+        public int Invitation { get; set; }
+        public Team Team { get; set; }
+        public Events Events { get; set; }
+        public List<Leads> Leads{ get; set; }
     }
 }
