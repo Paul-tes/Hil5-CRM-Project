@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Hil5_CRM_Project
 {
-    public partial class MainForm : Form
+    public partial class Hil5MainForm : Form
     {
         private bool sidebarExpand = false;
-        public MainForm()
+        public Hil5MainForm()
         {
             InitializeComponent();
         }

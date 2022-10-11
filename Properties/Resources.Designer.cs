@@ -173,6 +173,26 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_client_64__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-client-64 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_client_64__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-client-64 (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_window_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-window-50", resourceCulture);
@@ -223,6 +243,16 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_remove_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-remove-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_schedule_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-schedule-50", resourceCulture);
@@ -236,6 +266,36 @@ namespace Hil5_CRM_Project.Properties {
         internal static System.Drawing.Bitmap icons8_schedule_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-schedule-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_641 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_search_more_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-search-more-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
