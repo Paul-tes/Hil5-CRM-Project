@@ -28,6 +28,25 @@ namespace Hil5_CRM_Project
             }
         }
 
-       
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                dgv_customor.Rows.Add(new object[]
+                {
+                    imageList1.Images[0]
+                });
+            }
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

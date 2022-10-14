@@ -10,16 +10,14 @@ using System.Windows.Forms;
 
 namespace Hil5_CRM_Project
 {
-    public partial class DashBoardForm : Form
+    public partial class EventForm : Form
     {
-        public DashBoardForm()
+        public EventForm()
         {
             InitializeComponent();
         }
 
-        
-
-        private void label1_Click(object sender, EventArgs e)
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
 
         }

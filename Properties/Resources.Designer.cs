@@ -153,6 +153,26 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap defultlogo {
+            get {
+                object obj = ResourceManager.GetObject("defultlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap favicon {
+            get {
+                object obj = ResourceManager.GetObject("favicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon8_Hil5 {
             get {
                 object obj = ResourceManager.GetObject("icon8-Hil5", resourceCulture);
@@ -193,6 +213,16 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-close-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_close_window_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-close-window-50", resourceCulture);
@@ -216,6 +246,16 @@ namespace Hil5_CRM_Project.Properties {
         internal static System.Drawing.Bitmap icons8_customer_insight_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-customer-insight-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_dashboard_layout_48__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-dashboard-layout-48 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,6 +313,26 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_schedule_50__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-schedule-50 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_schedule_501 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-schedule-501", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_search_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-64", resourceCulture);
@@ -316,6 +376,16 @@ namespace Hil5_CRM_Project.Properties {
         internal static System.Drawing.Bitmap icons8_tasklist_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-tasklist-50 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoicon {
+            get {
+                object obj = ResourceManager.GetObject("logoicon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

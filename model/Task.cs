@@ -9,6 +9,7 @@ namespace Hil5_CRM_Project.model
     internal class Task
     {
         public int id { get; set; }
+        public string name { get; set; }
         public int addedBy { get; set; }
         public string status { get; set; }
         public string referType  { get; set; }

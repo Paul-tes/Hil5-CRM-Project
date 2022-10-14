@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Hil5_CRM_Project
 {
-    public partial class DashBoardForm : Form
+    public partial class ReportForm : Form
     {
-        public DashBoardForm()
+        public ReportForm()
         {
             InitializeComponent();
-        }
-
-        
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
