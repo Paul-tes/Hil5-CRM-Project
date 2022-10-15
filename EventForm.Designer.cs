@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -100,6 +101,7 @@
             this.panel4.Controls.Add(this.guna2CircleButton1);
             this.panel4.Controls.Add(this.btn_add);
             this.panel4.Controls.Add(this.btn_update);
+            this.panel4.Controls.Add(this.guna2ImageButton1);
             this.panel4.Controls.Add(this.btn_delete);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -203,14 +205,14 @@
             this.dgv_customor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_customor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_customor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_customor.ColumnHeadersHeight = 40;
             this.dgv_customor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_customor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -227,14 +229,14 @@
             this.col_endTime,
             this.col_photo,
             this.col_active});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_customor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_customor.EnableHeadersVisualStyles = false;
             this.dgv_customor.Location = new System.Drawing.Point(0, 99);
@@ -254,8 +256,8 @@
             // 
             // col_id
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.col_id.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.col_id.DefaultCellStyle = dataGridViewCellStyle2;
             this.col_id.FillWeight = 38.85136F;
             this.col_id.HeaderText = "ID";
             this.col_id.Name = "col_id";
@@ -361,44 +363,61 @@
             // 
             // btn_add
             // 
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
             this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
             this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
             this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
             this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_add.ImageRotate = 0F;
             this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_add.Location = new System.Drawing.Point(562, 6);
+            this.btn_add.Location = new System.Drawing.Point(553, -2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.Size = new System.Drawing.Size(38, 48);
+            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(68, 68);
+            this.btn_add.Size = new System.Drawing.Size(58, 60);
             this.btn_add.TabIndex = 1;
             // 
             // btn_update
             // 
             this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(40, 40);
             this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
             this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_update.ImageRotate = 0F;
             this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_update.Location = new System.Drawing.Point(530, 18);
+            this.btn_update.Location = new System.Drawing.Point(509, 12);
+            this.btn_update.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btn_update.MinimumSize = new System.Drawing.Size(30, 30);
             this.btn_update.Name = "btn_update";
-            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.Size = new System.Drawing.Size(26, 32);
+            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_update.Size = new System.Drawing.Size(40, 40);
             this.btn_update.TabIndex = 1;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2ImageButton1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton1.Location = new System.Drawing.Point(613, 6);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(45, 48);
+            this.guna2ImageButton1.TabIndex = 1;
             // 
             // btn_delete
             // 
             this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(40, 40);
             this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
             this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
             this.btn_delete.ImageRotate = 0F;
             this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_delete.Location = new System.Drawing.Point(604, 18);
+            this.btn_delete.Location = new System.Drawing.Point(660, 5);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.Size = new System.Drawing.Size(26, 32);
+            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_delete.Size = new System.Drawing.Size(45, 48);
             this.btn_delete.TabIndex = 1;
             // 
             // bunifuGradientPanel1
@@ -501,5 +520,6 @@
         private System.Windows.Forms.DataGridViewImageColumn col_photo;
         private System.Windows.Forms.DataGridViewImageColumn col_active;
         private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
     }
 }

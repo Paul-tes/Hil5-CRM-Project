@@ -273,6 +273,16 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_export_pdf_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-export-pdf-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_maximize_window_50__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-maximize-window-50 (1)", resourceCulture);

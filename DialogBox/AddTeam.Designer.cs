@@ -36,7 +36,6 @@
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btn_hidePwd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lbl_required6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,6 +65,7 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_Showpwd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_hidePwd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.grp_gender.SuspendLayout();
@@ -171,23 +171,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(806, 425);
             this.bunifuGradientPanel1.TabIndex = 2;
-            // 
-            // btn_hidePwd
-            // 
-            this.btn_hidePwd.BackColor = System.Drawing.Color.White;
-            this.btn_hidePwd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_hidePwd.HoverState.ImageSize = new System.Drawing.Size(29, 29);
-            this.btn_hidePwd.Image = ((System.Drawing.Image)(resources.GetObject("btn_hidePwd.Image")));
-            this.btn_hidePwd.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_hidePwd.ImageRotate = 0F;
-            this.btn_hidePwd.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_hidePwd.IndicateFocus = true;
-            this.btn_hidePwd.Location = new System.Drawing.Point(380, 178);
-            this.btn_hidePwd.Name = "btn_hidePwd";
-            this.btn_hidePwd.PressedState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_hidePwd.Size = new System.Drawing.Size(29, 18);
-            this.btn_hidePwd.TabIndex = 11;
-            this.btn_hidePwd.Click += new System.EventHandler(this.btn_hidePwd_Click);
             // 
             // lbl_required6
             // 
@@ -607,6 +590,23 @@
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(210, 29);
             this.txt_password.TabIndex = 1;
+            // 
+            // btn_hidePwd
+            // 
+            this.btn_hidePwd.BackColor = System.Drawing.Color.White;
+            this.btn_hidePwd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_hidePwd.HoverState.ImageSize = new System.Drawing.Size(29, 29);
+            this.btn_hidePwd.Image = ((System.Drawing.Image)(resources.GetObject("btn_hidePwd.Image")));
+            this.btn_hidePwd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_hidePwd.ImageRotate = 0F;
+            this.btn_hidePwd.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_hidePwd.IndicateFocus = true;
+            this.btn_hidePwd.Location = new System.Drawing.Point(380, 178);
+            this.btn_hidePwd.Name = "btn_hidePwd";
+            this.btn_hidePwd.PressedState.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_hidePwd.Size = new System.Drawing.Size(29, 18);
+            this.btn_hidePwd.TabIndex = 11;
+            this.btn_hidePwd.Click += new System.EventHandler(this.btn_hidePwd_Click);
             // 
             // AddTeam
             // 
