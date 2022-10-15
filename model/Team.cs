@@ -17,7 +17,7 @@ namespace Hil5_CRM_Project.model
         public string type { get; set; }
         public string departement { get; set; }
         public string role { get; set; }
-        public string status { get; set; }
+        public bool status { get; set; }
 
         public List<Leads> Teams { get; set; }
         public List<Task> Tasks { get; set; }

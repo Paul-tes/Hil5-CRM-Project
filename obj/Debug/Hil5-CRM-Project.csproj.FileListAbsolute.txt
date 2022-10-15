@@ -210,3 +210,4 @@ C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.cspro
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.CopyComplete
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.exe
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.pdb
+C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddTeam.resources
