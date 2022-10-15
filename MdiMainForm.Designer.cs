@@ -31,37 +31,38 @@
             this.components = new System.ComponentModel.Container();
             this.flp_leftPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_menu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_dashBoard = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_Contacts = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_leads = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_Events = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.btn_tasks = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_reports = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_settings = new System.Windows.Forms.Button();
             this.p_top = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.flp_windowControl = new System.Windows.Forms.FlowLayoutPanel();
-            this.timer_sideBar = new System.Windows.Forms.Timer(this.components);
-            this.DesktopPanel = new System.Windows.Forms.Panel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.flp_windowControl = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_maximize = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
-            this.btn_menu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_dashBoard = new System.Windows.Forms.Button();
-            this.btn_Contacts = new System.Windows.Forms.Button();
-            this.btn_leads = new System.Windows.Forms.Button();
-            this.btn_Events = new System.Windows.Forms.Button();
-            this.btn_tasks = new System.Windows.Forms.Button();
-            this.btn_reports = new System.Windows.Forms.Button();
-            this.btn_settings = new System.Windows.Forms.Button();
+            this.timer_sideBar = new System.Windows.Forms.Timer(this.components);
+            this.DesktopPanel = new System.Windows.Forms.Panel();
             this.flp_leftPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,9 +71,8 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.p_top.SuspendLayout();
-            this.flp_windowControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flp_windowControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // flp_leftPanel
@@ -103,6 +103,23 @@
             this.panel1.Size = new System.Drawing.Size(217, 167);
             this.panel1.TabIndex = 0;
             // 
+            // btn_menu
+            // 
+            this.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menu.ForeColor = System.Drawing.Color.White;
+            this.btn_menu.Image = global::Hil5_CRM_Project.Properties.Resources._menu;
+            this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_menu.Location = new System.Drawing.Point(-8, 109);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_menu.Size = new System.Drawing.Size(225, 55);
+            this.btn_menu.TabIndex = 1;
+            this.btn_menu.Text = "                Menu";
+            this.btn_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_menu.UseVisualStyleBackColor = true;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
@@ -123,6 +140,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Hil5";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icon8_Hil5;
+            this.pictureBox1.Location = new System.Drawing.Point(-10, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_dashBoard);
@@ -130,6 +157,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(197, 43);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_dashBoard
+            // 
+            this.btn_dashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_dashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashBoard.ForeColor = System.Drawing.Color.White;
+            this.btn_dashBoard.Image = global::Hil5_CRM_Project.Properties.Resources._dashboard;
+            this.btn_dashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dashBoard.Location = new System.Drawing.Point(-6, -8);
+            this.btn_dashBoard.Name = "btn_dashBoard";
+            this.btn_dashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_dashBoard.Size = new System.Drawing.Size(225, 62);
+            this.btn_dashBoard.TabIndex = 1;
+            this.btn_dashBoard.Text = "                DashBoard";
+            this.btn_dashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dashBoard.UseVisualStyleBackColor = true;
+            this.btn_dashBoard.Click += new System.EventHandler(this.btn_dashBoard_Click);
             // 
             // panel4
             // 
@@ -139,6 +183,23 @@
             this.panel4.Size = new System.Drawing.Size(197, 43);
             this.panel4.TabIndex = 1;
             // 
+            // btn_Contacts
+            // 
+            this.btn_Contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Contacts.ForeColor = System.Drawing.Color.White;
+            this.btn_Contacts.Image = global::Hil5_CRM_Project.Properties.Resources._contacts;
+            this.btn_Contacts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Contacts.Location = new System.Drawing.Point(-6, -8);
+            this.btn_Contacts.Name = "btn_Contacts";
+            this.btn_Contacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Contacts.Size = new System.Drawing.Size(225, 62);
+            this.btn_Contacts.TabIndex = 1;
+            this.btn_Contacts.Text = "                Contacts";
+            this.btn_Contacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Contacts.UseVisualStyleBackColor = true;
+            this.btn_Contacts.Click += new System.EventHandler(this.btn_Contacts_Click);
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btn_leads);
@@ -146,6 +207,23 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(197, 43);
             this.panel5.TabIndex = 1;
+            // 
+            // btn_leads
+            // 
+            this.btn_leads.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_leads.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_leads.ForeColor = System.Drawing.Color.White;
+            this.btn_leads.Image = global::Hil5_CRM_Project.Properties.Resources._leads;
+            this.btn_leads.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_leads.Location = new System.Drawing.Point(-6, -8);
+            this.btn_leads.Name = "btn_leads";
+            this.btn_leads.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_leads.Size = new System.Drawing.Size(225, 62);
+            this.btn_leads.TabIndex = 1;
+            this.btn_leads.Text = "                Leads";
+            this.btn_leads.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_leads.UseVisualStyleBackColor = true;
+            this.btn_leads.Click += new System.EventHandler(this.btn_leads_Click);
             // 
             // panel6
             // 
@@ -155,6 +233,23 @@
             this.panel6.Size = new System.Drawing.Size(197, 43);
             this.panel6.TabIndex = 1;
             // 
+            // btn_Events
+            // 
+            this.btn_Events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Events.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Events.ForeColor = System.Drawing.Color.White;
+            this.btn_Events.Image = global::Hil5_CRM_Project.Properties.Resources._events;
+            this.btn_Events.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Events.Location = new System.Drawing.Point(-6, -8);
+            this.btn_Events.Name = "btn_Events";
+            this.btn_Events.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Events.Size = new System.Drawing.Size(225, 62);
+            this.btn_Events.TabIndex = 1;
+            this.btn_Events.Text = "                Events";
+            this.btn_Events.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Events.UseVisualStyleBackColor = true;
+            this.btn_Events.Click += new System.EventHandler(this.btn_Events_Click);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.btn_tasks);
@@ -162,6 +257,23 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(197, 43);
             this.panel7.TabIndex = 1;
+            // 
+            // btn_tasks
+            // 
+            this.btn_tasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tasks.ForeColor = System.Drawing.Color.White;
+            this.btn_tasks.Image = global::Hil5_CRM_Project.Properties.Resources._tasks;
+            this.btn_tasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tasks.Location = new System.Drawing.Point(-6, -8);
+            this.btn_tasks.Name = "btn_tasks";
+            this.btn_tasks.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_tasks.Size = new System.Drawing.Size(225, 62);
+            this.btn_tasks.TabIndex = 1;
+            this.btn_tasks.Text = "                Tasks";
+            this.btn_tasks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tasks.UseVisualStyleBackColor = true;
+            this.btn_tasks.Click += new System.EventHandler(this.btn_tasks_Click);
             // 
             // panel8
             // 
@@ -171,6 +283,23 @@
             this.panel8.Size = new System.Drawing.Size(197, 43);
             this.panel8.TabIndex = 1;
             // 
+            // btn_reports
+            // 
+            this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_reports.ForeColor = System.Drawing.Color.White;
+            this.btn_reports.Image = global::Hil5_CRM_Project.Properties.Resources._reports;
+            this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reports.Location = new System.Drawing.Point(-6, -8);
+            this.btn_reports.Name = "btn_reports";
+            this.btn_reports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_reports.Size = new System.Drawing.Size(225, 62);
+            this.btn_reports.TabIndex = 1;
+            this.btn_reports.Text = "                Reports";
+            this.btn_reports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_reports.UseVisualStyleBackColor = true;
+            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.btn_settings);
@@ -179,6 +308,23 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(197, 43);
             this.panel9.TabIndex = 1;
+            // 
+            // btn_settings
+            // 
+            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_settings.ForeColor = System.Drawing.Color.White;
+            this.btn_settings.Image = global::Hil5_CRM_Project.Properties.Resources._settings;
+            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.Location = new System.Drawing.Point(-6, -8);
+            this.btn_settings.Name = "btn_settings";
+            this.btn_settings.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_settings.Size = new System.Drawing.Size(225, 62);
+            this.btn_settings.TabIndex = 1;
+            this.btn_settings.Text = "                Settings";
+            this.btn_settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_settings.UseVisualStyleBackColor = true;
+            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
             // 
             // p_top
             // 
@@ -215,30 +361,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "[Companey Name]";
             // 
-            // flp_windowControl
-            // 
-            this.flp_windowControl.Controls.Add(this.btn_minimize);
-            this.flp_windowControl.Controls.Add(this.btn_maximize);
-            this.flp_windowControl.Controls.Add(this.btn_close);
-            this.flp_windowControl.Dock = System.Windows.Forms.DockStyle.Right;
-            this.flp_windowControl.Location = new System.Drawing.Point(937, 0);
-            this.flp_windowControl.Name = "flp_windowControl";
-            this.flp_windowControl.Size = new System.Drawing.Size(123, 43);
-            this.flp_windowControl.TabIndex = 2;
-            // 
-            // timer_sideBar
-            // 
-            this.timer_sideBar.Interval = 10;
-            this.timer_sideBar.Tick += new System.EventHandler(this.timer_sideBar_Tick);
-            // 
-            // DesktopPanel
-            // 
-            this.DesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DesktopPanel.Location = new System.Drawing.Point(192, 43);
-            this.DesktopPanel.Name = "DesktopPanel";
-            this.DesktopPanel.Size = new System.Drawing.Size(1060, 579);
-            this.DesktopPanel.TabIndex = 3;
-            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.defultlogo;
@@ -250,6 +372,17 @@
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2CirclePictureBox1.TabIndex = 3;
             this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // flp_windowControl
+            // 
+            this.flp_windowControl.Controls.Add(this.btn_minimize);
+            this.flp_windowControl.Controls.Add(this.btn_maximize);
+            this.flp_windowControl.Controls.Add(this.btn_close);
+            this.flp_windowControl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.flp_windowControl.Location = new System.Drawing.Point(937, 0);
+            this.flp_windowControl.Name = "flp_windowControl";
+            this.flp_windowControl.Size = new System.Drawing.Size(123, 43);
+            this.flp_windowControl.TabIndex = 2;
             // 
             // btn_minimize
             // 
@@ -284,151 +417,18 @@
             this.btn_close.UseVisualStyleBackColor = true;
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             // 
-            // btn_menu
+            // timer_sideBar
             // 
-            this.btn_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_menu.ForeColor = System.Drawing.Color.White;
-            this.btn_menu.Image = global::Hil5_CRM_Project.Properties.Resources._menu;
-            this.btn_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_menu.Location = new System.Drawing.Point(-8, 109);
-            this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_menu.Size = new System.Drawing.Size(225, 55);
-            this.btn_menu.TabIndex = 1;
-            this.btn_menu.Text = "                Menu";
-            this.btn_menu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_menu.UseVisualStyleBackColor = true;
-            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
+            this.timer_sideBar.Interval = 10;
+            this.timer_sideBar.Tick += new System.EventHandler(this.timer_sideBar_Tick);
             // 
-            // pictureBox1
+            // DesktopPanel
             // 
-            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icon8_Hil5;
-            this.pictureBox1.Location = new System.Drawing.Point(-10, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 53);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btn_dashBoard
-            // 
-            this.btn_dashBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_dashBoard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_dashBoard.ForeColor = System.Drawing.Color.White;
-            this.btn_dashBoard.Image = global::Hil5_CRM_Project.Properties.Resources._dashboard;
-            this.btn_dashBoard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashBoard.Location = new System.Drawing.Point(-6, -8);
-            this.btn_dashBoard.Name = "btn_dashBoard";
-            this.btn_dashBoard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_dashBoard.Size = new System.Drawing.Size(225, 62);
-            this.btn_dashBoard.TabIndex = 1;
-            this.btn_dashBoard.Text = "                DashBoard";
-            this.btn_dashBoard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_dashBoard.UseVisualStyleBackColor = true;
-            this.btn_dashBoard.Click += new System.EventHandler(this.btn_dashBoard_Click);
-            // 
-            // btn_Contacts
-            // 
-            this.btn_Contacts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Contacts.ForeColor = System.Drawing.Color.White;
-            this.btn_Contacts.Image = global::Hil5_CRM_Project.Properties.Resources._contacts;
-            this.btn_Contacts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Contacts.Location = new System.Drawing.Point(-6, -8);
-            this.btn_Contacts.Name = "btn_Contacts";
-            this.btn_Contacts.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_Contacts.Size = new System.Drawing.Size(225, 62);
-            this.btn_Contacts.TabIndex = 1;
-            this.btn_Contacts.Text = "                Contacts";
-            this.btn_Contacts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Contacts.UseVisualStyleBackColor = true;
-            this.btn_Contacts.Click += new System.EventHandler(this.btn_Contacts_Click);
-            // 
-            // btn_leads
-            // 
-            this.btn_leads.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_leads.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_leads.ForeColor = System.Drawing.Color.White;
-            this.btn_leads.Image = global::Hil5_CRM_Project.Properties.Resources._leads;
-            this.btn_leads.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_leads.Location = new System.Drawing.Point(-6, -8);
-            this.btn_leads.Name = "btn_leads";
-            this.btn_leads.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_leads.Size = new System.Drawing.Size(225, 62);
-            this.btn_leads.TabIndex = 1;
-            this.btn_leads.Text = "                Leads";
-            this.btn_leads.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_leads.UseVisualStyleBackColor = true;
-            this.btn_leads.Click += new System.EventHandler(this.btn_leads_Click);
-            // 
-            // btn_Events
-            // 
-            this.btn_Events.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Events.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Events.ForeColor = System.Drawing.Color.White;
-            this.btn_Events.Image = global::Hil5_CRM_Project.Properties.Resources._events;
-            this.btn_Events.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Events.Location = new System.Drawing.Point(-6, -8);
-            this.btn_Events.Name = "btn_Events";
-            this.btn_Events.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_Events.Size = new System.Drawing.Size(225, 62);
-            this.btn_Events.TabIndex = 1;
-            this.btn_Events.Text = "                Events";
-            this.btn_Events.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Events.UseVisualStyleBackColor = true;
-            this.btn_Events.Click += new System.EventHandler(this.btn_Events_Click);
-            // 
-            // btn_tasks
-            // 
-            this.btn_tasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_tasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tasks.ForeColor = System.Drawing.Color.White;
-            this.btn_tasks.Image = global::Hil5_CRM_Project.Properties.Resources._tasks;
-            this.btn_tasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tasks.Location = new System.Drawing.Point(-6, -8);
-            this.btn_tasks.Name = "btn_tasks";
-            this.btn_tasks.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_tasks.Size = new System.Drawing.Size(225, 62);
-            this.btn_tasks.TabIndex = 1;
-            this.btn_tasks.Text = "                Tasks";
-            this.btn_tasks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tasks.UseVisualStyleBackColor = true;
-            this.btn_tasks.Click += new System.EventHandler(this.btn_tasks_Click);
-            // 
-            // btn_reports
-            // 
-            this.btn_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_reports.ForeColor = System.Drawing.Color.White;
-            this.btn_reports.Image = global::Hil5_CRM_Project.Properties.Resources._reports;
-            this.btn_reports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.Location = new System.Drawing.Point(-6, -8);
-            this.btn_reports.Name = "btn_reports";
-            this.btn_reports.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_reports.Size = new System.Drawing.Size(225, 62);
-            this.btn_reports.TabIndex = 1;
-            this.btn_reports.Text = "                Reports";
-            this.btn_reports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_reports.UseVisualStyleBackColor = true;
-            this.btn_reports.Click += new System.EventHandler(this.btn_reports_Click);
-            // 
-            // btn_settings
-            // 
-            this.btn_settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_settings.ForeColor = System.Drawing.Color.White;
-            this.btn_settings.Image = global::Hil5_CRM_Project.Properties.Resources._settings;
-            this.btn_settings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_settings.Location = new System.Drawing.Point(-6, -8);
-            this.btn_settings.Name = "btn_settings";
-            this.btn_settings.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_settings.Size = new System.Drawing.Size(225, 62);
-            this.btn_settings.TabIndex = 1;
-            this.btn_settings.Text = "                Settings";
-            this.btn_settings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_settings.UseVisualStyleBackColor = true;
-            this.btn_settings.Click += new System.EventHandler(this.btn_settings_Click);
+            this.DesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DesktopPanel.Location = new System.Drawing.Point(192, 43);
+            this.DesktopPanel.Name = "DesktopPanel";
+            this.DesktopPanel.Size = new System.Drawing.Size(1060, 579);
+            this.DesktopPanel.TabIndex = 3;
             // 
             // MdiMainForm
             // 
@@ -446,6 +446,7 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -455,9 +456,8 @@
             this.panel9.ResumeLayout(false);
             this.p_top.ResumeLayout(false);
             this.p_top.PerformLayout();
-            this.flp_windowControl.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flp_windowControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
