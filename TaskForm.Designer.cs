@@ -41,9 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_onleave = new Guna.UI2.WinForms.Guna2Button();
             this.btn_active = new Guna.UI2.WinForms.Guna2Button();
@@ -63,6 +60,10 @@
             this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_pdfExport = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -151,54 +152,13 @@
             // 
             this.panel5.Controls.Add(this.btn_add);
             this.panel5.Controls.Add(this.btn_update);
+            this.panel5.Controls.Add(this.btn_pdfExport);
             this.panel5.Controls.Add(this.btn_delete);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(307, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(566, 60);
             this.panel5.TabIndex = 2;
-            // 
-            // btn_add
-            // 
-            this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
-            this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_add.ImageRotate = 0F;
-            this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_add.Location = new System.Drawing.Point(273, 9);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.Size = new System.Drawing.Size(38, 48);
-            this.btn_add.TabIndex = 1;
-            // 
-            // btn_update
-            // 
-            this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
-            this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_update.ImageRotate = 0F;
-            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_update.Location = new System.Drawing.Point(241, 21);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.Size = new System.Drawing.Size(26, 32);
-            this.btn_update.TabIndex = 1;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_delete.ImageRotate = 0F;
-            this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_delete.Location = new System.Drawing.Point(315, 21);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.Size = new System.Drawing.Size(26, 32);
-            this.btn_delete.TabIndex = 1;
             // 
             // panel4
             // 
@@ -443,6 +403,65 @@
             this.col_active.HeaderText = "Active";
             this.col_active.Name = "col_active";
             // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
+            this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_add.ImageRotate = 0F;
+            this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
+            this.btn_add.Location = new System.Drawing.Point(229, 0);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
+            this.btn_add.Size = new System.Drawing.Size(58, 60);
+            this.btn_add.TabIndex = 2;
+            // 
+            // btn_update
+            // 
+            this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
+            this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_update.ImageRotate = 0F;
+            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Location = new System.Drawing.Point(185, 14);
+            this.btn_update.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btn_update.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_update.Size = new System.Drawing.Size(40, 40);
+            this.btn_update.TabIndex = 3;
+            // 
+            // btn_pdfExport
+            // 
+            this.btn_pdfExport.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_pdfExport.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_pdfExport.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
+            this.btn_pdfExport.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_pdfExport.ImageRotate = 0F;
+            this.btn_pdfExport.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_pdfExport.Location = new System.Drawing.Point(289, 8);
+            this.btn_pdfExport.Name = "btn_pdfExport";
+            this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
+            this.btn_pdfExport.TabIndex = 4;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_delete.ImageRotate = 0F;
+            this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_delete.Location = new System.Drawing.Point(336, 7);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_delete.Size = new System.Drawing.Size(45, 48);
+            this.btn_delete.TabIndex = 5;
+            // 
             // TaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,9 +497,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_add;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_update;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btn_onleave;
         private Guna.UI2.WinForms.Guna2Button btn_active;
@@ -500,5 +516,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
         private System.Windows.Forms.DataGridViewImageColumn col_photo;
         private System.Windows.Forms.DataGridViewImageColumn col_active;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_add;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_update;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
     }
 }

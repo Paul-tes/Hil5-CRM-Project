@@ -58,7 +58,7 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_pdfExport = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -101,7 +101,7 @@
             this.panel4.Controls.Add(this.guna2CircleButton1);
             this.panel4.Controls.Add(this.btn_add);
             this.panel4.Controls.Add(this.btn_update);
-            this.panel4.Controls.Add(this.guna2ImageButton1);
+            this.panel4.Controls.Add(this.btn_pdfExport);
             this.panel4.Controls.Add(this.btn_delete);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
@@ -372,7 +372,7 @@
             this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
             this.btn_add.Location = new System.Drawing.Point(553, -2);
             this.btn_add.Name = "btn_add";
-            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(68, 68);
+            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
             this.btn_add.Size = new System.Drawing.Size(58, 60);
             this.btn_add.TabIndex = 1;
             // 
@@ -392,19 +392,19 @@
             this.btn_update.Size = new System.Drawing.Size(40, 40);
             this.btn_update.TabIndex = 1;
             // 
-            // guna2ImageButton1
+            // btn_pdfExport
             // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2ImageButton1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton1.Location = new System.Drawing.Point(613, 6);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(45, 48);
-            this.guna2ImageButton1.TabIndex = 1;
+            this.btn_pdfExport.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_pdfExport.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_pdfExport.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
+            this.btn_pdfExport.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_pdfExport.ImageRotate = 0F;
+            this.btn_pdfExport.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_pdfExport.Location = new System.Drawing.Point(613, 6);
+            this.btn_pdfExport.Name = "btn_pdfExport";
+            this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
+            this.btn_pdfExport.TabIndex = 1;
             // 
             // btn_delete
             // 
@@ -520,6 +520,6 @@
         private System.Windows.Forms.DataGridViewImageColumn col_photo;
         private System.Windows.Forms.DataGridViewImageColumn col_active;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
     }
 }

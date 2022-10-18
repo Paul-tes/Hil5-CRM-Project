@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LeadsForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -56,14 +56,15 @@
             this.col_website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Leads = new System.Windows.Forms.Label();
+            this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_pdfExport = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -89,6 +90,7 @@
             // 
             this.panel5.Controls.Add(this.btn_add);
             this.panel5.Controls.Add(this.btn_update);
+            this.panel5.Controls.Add(this.btn_pdfExport);
             this.panel5.Controls.Add(this.btn_delete);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(307, 0);
@@ -205,14 +207,14 @@
             this.dgv_customor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_customor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_customor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_customor.ColumnHeadersHeight = 40;
             this.dgv_customor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_customor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -229,14 +231,14 @@
             this.col_website,
             this.col_photo,
             this.col_active});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_customor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_customor.EnableHeadersVisualStyles = false;
             this.dgv_customor.Location = new System.Drawing.Point(0, 99);
@@ -256,8 +258,8 @@
             // 
             // col_id
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.col_id.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.col_id.DefaultCellStyle = dataGridViewCellStyle2;
             this.col_id.FillWeight = 38.85136F;
             this.col_id.HeaderText = "ID";
             this.col_id.Name = "col_id";
@@ -292,9 +294,9 @@
             // 
             // col_
             // 
-            dataGridViewCellStyle8.Format = "D";
-            dataGridViewCellStyle8.NullValue = null;
-            this.col_.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Format = "D";
+            dataGridViewCellStyle3.NullValue = null;
+            this.col_.DefaultCellStyle = dataGridViewCellStyle3;
             this.col_.HeaderText = "Created Date";
             this.col_.Name = "col_";
             // 
@@ -306,9 +308,9 @@
             // 
             // col_addedDate
             // 
-            dataGridViewCellStyle9.Format = "D";
-            dataGridViewCellStyle9.NullValue = null;
-            this.col_addedDate.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Format = "D";
+            dataGridViewCellStyle4.NullValue = null;
+            this.col_addedDate.DefaultCellStyle = dataGridViewCellStyle4;
             this.col_addedDate.FillWeight = 77.70273F;
             this.col_addedDate.HeaderText = "Added Date";
             this.col_addedDate.Name = "col_addedDate";
@@ -330,48 +332,6 @@
             this.col_active.FillWeight = 50F;
             this.col_active.HeaderText = "Active";
             this.col_active.Name = "col_active";
-            // 
-            // btn_add
-            // 
-            this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
-            this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_add.ImageRotate = 0F;
-            this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_add.Location = new System.Drawing.Point(273, 9);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.Size = new System.Drawing.Size(38, 48);
-            this.btn_add.TabIndex = 1;
-            // 
-            // btn_update
-            // 
-            this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
-            this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_update.ImageRotate = 0F;
-            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_update.Location = new System.Drawing.Point(241, 21);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.Size = new System.Drawing.Size(26, 32);
-            this.btn_update.TabIndex = 1;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_delete.ImageRotate = 0F;
-            this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_delete.Location = new System.Drawing.Point(315, 21);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.Size = new System.Drawing.Size(26, 32);
-            this.btn_delete.TabIndex = 1;
             // 
             // guna2TextBox1
             // 
@@ -454,6 +414,65 @@
             this.lb_Leads.TabIndex = 0;
             this.lb_Leads.Text = "Leads";
             // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
+            this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_add.ImageRotate = 0F;
+            this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
+            this.btn_add.Location = new System.Drawing.Point(237, 0);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
+            this.btn_add.Size = new System.Drawing.Size(58, 60);
+            this.btn_add.TabIndex = 2;
+            // 
+            // btn_update
+            // 
+            this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
+            this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_update.ImageRotate = 0F;
+            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Location = new System.Drawing.Point(193, 14);
+            this.btn_update.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btn_update.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_update.Size = new System.Drawing.Size(40, 40);
+            this.btn_update.TabIndex = 3;
+            // 
+            // btn_pdfExport
+            // 
+            this.btn_pdfExport.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_pdfExport.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_pdfExport.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
+            this.btn_pdfExport.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_pdfExport.ImageRotate = 0F;
+            this.btn_pdfExport.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_pdfExport.Location = new System.Drawing.Point(297, 8);
+            this.btn_pdfExport.Name = "btn_pdfExport";
+            this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
+            this.btn_pdfExport.TabIndex = 4;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_delete.ImageRotate = 0F;
+            this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_delete.Location = new System.Drawing.Point(344, 7);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_delete.Size = new System.Drawing.Size(45, 48);
+            this.btn_delete.TabIndex = 5;
+            // 
             // LeadsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,9 +506,6 @@
         private System.Windows.Forms.Label lb_Leads;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_add;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_update;
-        private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btn_onleave;
         private Guna.UI2.WinForms.Guna2Button btn_active;
@@ -512,5 +528,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_website;
         private System.Windows.Forms.DataGridViewImageColumn col_photo;
         private System.Windows.Forms.DataGridViewImageColumn col_active;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_add;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_update;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
     }
 }
