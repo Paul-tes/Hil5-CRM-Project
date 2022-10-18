@@ -244,6 +244,18 @@
     <Compile Include="DashBoardForm.Designer.cs">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogBox\AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogBox\AddLead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AddLead.Designer.cs">
+      <DependentUpon>AddLead.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogBox\AddTeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +305,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoardForm.resx">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\AddLead.resx">
+      <DependentUpon>AddLead.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBox\AddTeam.resx">
       <DependentUpon>AddTeam.cs</DependentUpon>

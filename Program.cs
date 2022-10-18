@@ -17,7 +17,7 @@ namespace Hil5_CRM_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EventForm());
+            Application.Run(new AddEvent());
         }
     }
 }
