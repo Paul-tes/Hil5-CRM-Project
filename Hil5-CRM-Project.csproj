@@ -256,6 +256,12 @@
     <Compile Include="DialogBox\AddLead.Designer.cs">
       <DependentUpon>AddLead.cs</DependentUpon>
     </Compile>
+    <Compile Include="DialogBox\AddOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AddOrganization.Designer.cs">
+      <DependentUpon>AddOrganization.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogBox\AddTeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBox\AddLead.resx">
       <DependentUpon>AddLead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\AddOrganization.resx">
+      <DependentUpon>AddOrganization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBox\AddTeam.resx">
       <DependentUpon>AddTeam.cs</DependentUpon>
