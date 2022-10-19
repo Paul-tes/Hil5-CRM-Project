@@ -214,3 +214,4 @@ C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Dialo
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddEvent.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddLead.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddOrganization.resources
+C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddTask.resources
