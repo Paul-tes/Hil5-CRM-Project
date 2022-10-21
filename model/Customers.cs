@@ -28,7 +28,6 @@ namespace Hil5_CRM_Project.model
         public string photo { get; set; }
         public string website { get; set; }
         public int promoted { get; set; }
-        public int Invitation { get; set; }
         public bool Active { get; set; }
         public Team Team { get; set; }
         public Events Events { get; set; }
