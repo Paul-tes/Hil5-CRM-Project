@@ -213,9 +213,5 @@ C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.pdb
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddTeam.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddEvent.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddLead.resources
-C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddEvent.resources
-C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddLead.resources
-C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddTeam.resources
-C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\itextsharp.dll
-C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\bin\Debug\itextsharp.xml
+C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddOrganization.resources
+C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.DialogBox.AddTask.resources

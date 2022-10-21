@@ -18,7 +18,6 @@ namespace Hil5_CRM_Project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MdiMainForm());
-
         }
     }
 }

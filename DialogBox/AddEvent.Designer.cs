@@ -40,15 +40,18 @@
             this.dtp_startDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lbl_required4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_required6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_save = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cmb_note = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmb_guestsList = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_Status = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_type = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_addedBy = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lbl_guests = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_status = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_AddedBy = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_type = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -62,9 +65,6 @@
             this.lbl_Topic = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.lbl_guests = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmb_guestsList = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lbl_required6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -236,6 +236,17 @@
             this.lbl_required7.TabIndex = 10;
             this.lbl_required7.Text = "*";
             // 
+            // lbl_required6
+            // 
+            this.lbl_required6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_required6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_required6.ForeColor = System.Drawing.Color.Red;
+            this.lbl_required6.Location = new System.Drawing.Point(154, 308);
+            this.lbl_required6.Name = "lbl_required6";
+            this.lbl_required6.Size = new System.Drawing.Size(13, 24);
+            this.lbl_required6.TabIndex = 10;
+            this.lbl_required6.Text = "*";
+            // 
             // lbl_required5
             // 
             this.lbl_required5.BackColor = System.Drawing.Color.Transparent;
@@ -263,7 +274,7 @@
             this.lbl_required2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required2.Location = new System.Drawing.Point(147, 141);
+            this.lbl_required2.Location = new System.Drawing.Point(141, 144);
             this.lbl_required2.Name = "lbl_required2";
             this.lbl_required2.Size = new System.Drawing.Size(13, 24);
             this.lbl_required2.TabIndex = 10;
@@ -274,7 +285,7 @@
             this.lbl_required1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required1.Location = new System.Drawing.Point(149, 106);
+            this.lbl_required1.Location = new System.Drawing.Point(146, 106);
             this.lbl_required1.Name = "lbl_required1";
             this.lbl_required1.Size = new System.Drawing.Size(13, 24);
             this.lbl_required1.TabIndex = 10;
@@ -319,10 +330,28 @@
             "Held",
             "Not Held",
             "Other"});
-            this.cmb_note.Location = new System.Drawing.Point(213, 135);
+            this.cmb_note.Location = new System.Drawing.Point(213, 134);
             this.cmb_note.Name = "cmb_note";
             this.cmb_note.Size = new System.Drawing.Size(210, 36);
             this.cmb_note.TabIndex = 3;
+            // 
+            // cmb_guestsList
+            // 
+            this.cmb_guestsList.AutoRoundedCorners = true;
+            this.cmb_guestsList.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_guestsList.BorderRadius = 17;
+            this.cmb_guestsList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_guestsList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_guestsList.FillColor = System.Drawing.Color.Moccasin;
+            this.cmb_guestsList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_guestsList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_guestsList.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_guestsList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmb_guestsList.ItemHeight = 30;
+            this.cmb_guestsList.Location = new System.Drawing.Point(209, 297);
+            this.cmb_guestsList.Name = "cmb_guestsList";
+            this.cmb_guestsList.Size = new System.Drawing.Size(210, 36);
+            this.cmb_guestsList.TabIndex = 3;
             // 
             // cmb_Status
             // 
@@ -366,7 +395,7 @@
             "Social",
             "Fundraising",
             "Other"});
-            this.cmb_type.Location = new System.Drawing.Point(211, 176);
+            this.cmb_type.Location = new System.Drawing.Point(211, 175);
             this.cmb_type.Name = "cmb_type";
             this.cmb_type.Size = new System.Drawing.Size(210, 36);
             this.cmb_type.TabIndex = 3;
@@ -388,6 +417,17 @@
             this.cmb_addedBy.Name = "cmb_addedBy";
             this.cmb_addedBy.Size = new System.Drawing.Size(210, 36);
             this.cmb_addedBy.TabIndex = 3;
+            // 
+            // lbl_guests
+            // 
+            this.lbl_guests.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_guests.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_guests.ForeColor = System.Drawing.Color.Gold;
+            this.lbl_guests.Location = new System.Drawing.Point(97, 310);
+            this.lbl_guests.Name = "lbl_guests";
+            this.lbl_guests.Size = new System.Drawing.Size(56, 23);
+            this.lbl_guests.TabIndex = 0;
+            this.lbl_guests.Text = "Guests";
             // 
             // lbl_status
             // 
@@ -534,46 +574,6 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.panel_drag;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // lbl_guests
-            // 
-            this.lbl_guests.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_guests.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_guests.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_guests.Location = new System.Drawing.Point(97, 310);
-            this.lbl_guests.Name = "lbl_guests";
-            this.lbl_guests.Size = new System.Drawing.Size(56, 23);
-            this.lbl_guests.TabIndex = 0;
-            this.lbl_guests.Text = "Guests";
-            // 
-            // cmb_guestsList
-            // 
-            this.cmb_guestsList.AutoRoundedCorners = true;
-            this.cmb_guestsList.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_guestsList.BorderRadius = 17;
-            this.cmb_guestsList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_guestsList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_guestsList.FillColor = System.Drawing.Color.Moccasin;
-            this.cmb_guestsList.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_guestsList.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_guestsList.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_guestsList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmb_guestsList.ItemHeight = 30;
-            this.cmb_guestsList.Location = new System.Drawing.Point(209, 297);
-            this.cmb_guestsList.Name = "cmb_guestsList";
-            this.cmb_guestsList.Size = new System.Drawing.Size(210, 36);
-            this.cmb_guestsList.TabIndex = 3;
-            // 
-            // lbl_required6
-            // 
-            this.lbl_required6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required6.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required6.Location = new System.Drawing.Point(154, 308);
-            this.lbl_required6.Name = "lbl_required6";
-            this.lbl_required6.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required6.TabIndex = 10;
-            this.lbl_required6.Text = "*";
             // 
             // AddEvent
             // 
