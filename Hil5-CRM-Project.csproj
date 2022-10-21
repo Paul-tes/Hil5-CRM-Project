@@ -256,6 +256,12 @@
     <Compile Include="LeadsForm.Designer.cs">
       <DependentUpon>LeadsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_page.Designer.cs">
+      <DependentUpon>Login_page.cs</DependentUpon>
+    </Compile>
     <Compile Include="MdiMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LeadsForm.resx">
       <DependentUpon>LeadsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_page.resx">
+      <DependentUpon>Login_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MdiMainForm.resx">
       <DependentUpon>MdiMainForm.cs</DependentUpon>
