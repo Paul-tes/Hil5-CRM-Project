@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -39,6 +39,12 @@
             this.btn_onleave = new Guna.UI2.WinForms.Guna2Button();
             this.btn_all = new Guna.UI2.WinForms.Guna2Button();
             this.btn_active = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_pdfExport = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_customor = new System.Windows.Forms.DataGridView();
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
@@ -54,12 +60,6 @@
             this.col_endTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_update = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_pdfExport = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Leads = new System.Windows.Forms.Label();
@@ -184,6 +184,106 @@
             this.btn_active.Size = new System.Drawing.Size(69, 31);
             this.btn_active.TabIndex = 1;
             this.btn_active.Text = "Passed";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2TextBox1.BorderRadius = 13;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.IconLeft = global::Hil5_CRM_Project.Properties.Resources.icons8_search_more_32;
+            this.guna2TextBox1.Location = new System.Drawing.Point(15, 23);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.Size = new System.Drawing.Size(247, 27);
+            this.guna2TextBox1.TabIndex = 2;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_search_641;
+            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(268, 22);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(32, 27);
+            this.guna2CircleButton1.TabIndex = 3;
+            // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.Transparent;
+            this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
+            this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_add.ImageRotate = 0F;
+            this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
+            this.btn_add.Location = new System.Drawing.Point(553, -2);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
+            this.btn_add.Size = new System.Drawing.Size(58, 60);
+            this.btn_add.TabIndex = 1;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
+            // btn_update
+            // 
+            this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
+            this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_update.ImageRotate = 0F;
+            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Location = new System.Drawing.Point(509, 12);
+            this.btn_update.MaximumSize = new System.Drawing.Size(40, 40);
+            this.btn_update.MinimumSize = new System.Drawing.Size(30, 30);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_update.Size = new System.Drawing.Size(40, 40);
+            this.btn_update.TabIndex = 1;
+            // 
+            // btn_pdfExport
+            // 
+            this.btn_pdfExport.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_pdfExport.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_pdfExport.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
+            this.btn_pdfExport.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_pdfExport.ImageRotate = 0F;
+            this.btn_pdfExport.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_pdfExport.Location = new System.Drawing.Point(613, 6);
+            this.btn_pdfExport.Name = "btn_pdfExport";
+            this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
+            this.btn_pdfExport.TabIndex = 1;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
+            this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btn_delete.ImageRotate = 0F;
+            this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_delete.Location = new System.Drawing.Point(660, 5);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(45, 45);
+            this.btn_delete.Size = new System.Drawing.Size(45, 48);
+            this.btn_delete.TabIndex = 1;
             // 
             // panel1
             // 
@@ -320,105 +420,6 @@
             this.col_active.FillWeight = 50F;
             this.col_active.HeaderText = "Active";
             this.col_active.Name = "col_active";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.BorderRadius = 13;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::Hil5_CRM_Project.Properties.Resources.icons8_search_more_32;
-            this.guna2TextBox1.Location = new System.Drawing.Point(15, 23);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(247, 27);
-            this.guna2TextBox1.TabIndex = 2;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleButton1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_search_641;
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(268, 22);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(32, 27);
-            this.guna2CircleButton1.TabIndex = 3;
-            // 
-            // btn_add
-            // 
-            this.btn_add.BackColor = System.Drawing.Color.Transparent;
-            this.btn_add.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_add.Image = ((System.Drawing.Image)(resources.GetObject("btn_add.Image")));
-            this.btn_add.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_add.ImageRotate = 0F;
-            this.btn_add.ImageSize = new System.Drawing.Size(50, 50);
-            this.btn_add.Location = new System.Drawing.Point(553, -2);
-            this.btn_add.Name = "btn_add";
-            this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
-            this.btn_add.Size = new System.Drawing.Size(58, 60);
-            this.btn_add.TabIndex = 1;
-            // 
-            // btn_update
-            // 
-            this.btn_update.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_update.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_update.Image = ((System.Drawing.Image)(resources.GetObject("btn_update.Image")));
-            this.btn_update.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_update.ImageRotate = 0F;
-            this.btn_update.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_update.Location = new System.Drawing.Point(509, 12);
-            this.btn_update.MaximumSize = new System.Drawing.Size(40, 40);
-            this.btn_update.MinimumSize = new System.Drawing.Size(30, 30);
-            this.btn_update.Name = "btn_update";
-            this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btn_update.Size = new System.Drawing.Size(40, 40);
-            this.btn_update.TabIndex = 1;
-            // 
-            // btn_pdfExport
-            // 
-            this.btn_pdfExport.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_pdfExport.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_pdfExport.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_export_pdf_48;
-            this.btn_pdfExport.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_pdfExport.ImageRotate = 0F;
-            this.btn_pdfExport.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_pdfExport.Location = new System.Drawing.Point(613, 6);
-            this.btn_pdfExport.Name = "btn_pdfExport";
-            this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
-            this.btn_pdfExport.TabIndex = 1;
-            // 
-            // btn_delete
-            // 
-            this.btn_delete.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_delete.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btn_delete.Image = ((System.Drawing.Image)(resources.GetObject("btn_delete.Image")));
-            this.btn_delete.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btn_delete.ImageRotate = 0F;
-            this.btn_delete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_delete.Location = new System.Drawing.Point(660, 5);
-            this.btn_delete.Name = "btn_delete";
-            this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(45, 45);
-            this.btn_delete.Size = new System.Drawing.Size(45, 48);
-            this.btn_delete.TabIndex = 1;
             // 
             // bunifuGradientPanel1
             // 

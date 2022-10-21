@@ -17,9 +17,11 @@ namespace Hil5_CRM_Project
             InitializeComponent();
         }
 
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
+      
+        private void btn_add_Click(object sender, EventArgs e)
         {
-
+            DialogBox.AddEvent addevent = new DialogBox.AddEvent();
+            addevent.ShowDialog();
         }
     }
 }

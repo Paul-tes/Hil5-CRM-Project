@@ -205,6 +205,7 @@
             this.pieChart.TabIndex = 0;
             this.pieChart.Text = "pieChart1";
             this.pieChart.UseWaitCursor = true;
+            this.pieChart.ChildChanged += new System.EventHandler<System.Windows.Forms.Integration.ChildChangedEventArgs>(this.pieChart_ChildChanged);
             // 
             // bunifuGradientPanel1
             // 

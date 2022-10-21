@@ -16,5 +16,10 @@ namespace Hil5_CRM_Project
         {
             InitializeComponent();
         }
+
+        private void pieChart_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+            pieChart.ChildChanged -= pieChart_ChildChanged;
+        }
     }
 }
