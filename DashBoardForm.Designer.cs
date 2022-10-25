@@ -32,34 +32,35 @@
             this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lb_tasks = new System.Windows.Forms.Label();
             this.lb_NoTasks = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lb_events = new System.Windows.Forms.Label();
             this.lb_NoEvents = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lb_Contacts = new System.Windows.Forms.Label();
             this.lb_NoCustomers = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gp_Leads = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lb_leads = new System.Windows.Forms.Label();
             this.lb_NoLeads = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel4.SuspendLayout();
-            this.guna2GradientPanel3.SuspendLayout();
-            this.guna2GradientPanel2.SuspendLayout();
-            this.gp_Leads.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2GradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.guna2GradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gp_Leads.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
@@ -73,9 +74,10 @@
             this.guna2GradientPanel4.Controls.Add(this.pictureBox4);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(928, 34);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(1237, 42);
+            this.guna2GradientPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(223, 118);
+            this.guna2GradientPanel4.Size = new System.Drawing.Size(297, 145);
             this.guna2GradientPanel4.TabIndex = 1;
             // 
             // lb_tasks
@@ -84,9 +86,10 @@
             this.lb_tasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.lb_tasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_tasks.ForeColor = System.Drawing.Color.White;
-            this.lb_tasks.Location = new System.Drawing.Point(20, 18);
+            this.lb_tasks.Location = new System.Drawing.Point(27, 22);
+            this.lb_tasks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_tasks.Name = "lb_tasks";
-            this.lb_tasks.Size = new System.Drawing.Size(51, 20);
+            this.lb_tasks.Size = new System.Drawing.Size(66, 25);
             this.lb_tasks.TabIndex = 3;
             this.lb_tasks.Text = "Tasks";
             // 
@@ -96,11 +99,24 @@
             this.lb_NoTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
             this.lb_NoTasks.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NoTasks.ForeColor = System.Drawing.Color.White;
-            this.lb_NoTasks.Location = new System.Drawing.Point(22, 36);
+            this.lb_NoTasks.Location = new System.Drawing.Point(29, 44);
+            this.lb_NoTasks.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_NoTasks.Name = "lb_NoTasks";
-            this.lb_NoTasks.Size = new System.Drawing.Size(51, 55);
+            this.lb_NoTasks.Size = new System.Drawing.Size(63, 69);
             this.lb_NoTasks.TabIndex = 2;
             this.lb_NoTasks.Text = "0";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
+            this.pictureBox4.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_tasklist_50__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(171, 36);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(79, 64);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // guna2GradientPanel3
             // 
@@ -110,9 +126,10 @@
             this.guna2GradientPanel3.Controls.Add(this.pictureBox3);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(26)))), ((int)(((byte)(16)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(26)))), ((int)(((byte)(16)))));
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(645, 34);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(860, 42);
+            this.guna2GradientPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
-            this.guna2GradientPanel3.Size = new System.Drawing.Size(223, 118);
+            this.guna2GradientPanel3.Size = new System.Drawing.Size(297, 145);
             this.guna2GradientPanel3.TabIndex = 1;
             // 
             // lb_events
@@ -121,9 +138,10 @@
             this.lb_events.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(26)))), ((int)(((byte)(16)))));
             this.lb_events.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_events.ForeColor = System.Drawing.Color.White;
-            this.lb_events.Location = new System.Drawing.Point(20, 18);
+            this.lb_events.Location = new System.Drawing.Point(27, 22);
+            this.lb_events.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_events.Name = "lb_events";
-            this.lb_events.Size = new System.Drawing.Size(58, 20);
+            this.lb_events.Size = new System.Drawing.Size(72, 25);
             this.lb_events.TabIndex = 3;
             this.lb_events.Text = "Events";
             // 
@@ -133,11 +151,24 @@
             this.lb_NoEvents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(26)))), ((int)(((byte)(16)))));
             this.lb_NoEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NoEvents.ForeColor = System.Drawing.Color.White;
-            this.lb_NoEvents.Location = new System.Drawing.Point(19, 36);
+            this.lb_NoEvents.Location = new System.Drawing.Point(25, 44);
+            this.lb_NoEvents.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_NoEvents.Name = "lb_NoEvents";
-            this.lb_NoEvents.Size = new System.Drawing.Size(51, 55);
+            this.lb_NoEvents.Size = new System.Drawing.Size(63, 69);
             this.lb_NoEvents.TabIndex = 2;
             this.lb_NoEvents.Text = "0";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(26)))), ((int)(((byte)(16)))));
+            this.pictureBox3.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_schedule_50;
+            this.pictureBox3.Location = new System.Drawing.Point(171, 36);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(83, 68);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
             // 
             // guna2GradientPanel2
             // 
@@ -147,9 +178,10 @@
             this.guna2GradientPanel2.Controls.Add(this.pictureBox2);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(40)))), ((int)(((byte)(201)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(40)))), ((int)(((byte)(201)))));
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(347, 34);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(463, 42);
+            this.guna2GradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(223, 118);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(297, 145);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // lb_Contacts
@@ -158,9 +190,10 @@
             this.lb_Contacts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(40)))), ((int)(((byte)(201)))));
             this.lb_Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Contacts.ForeColor = System.Drawing.Color.White;
-            this.lb_Contacts.Location = new System.Drawing.Point(20, 18);
+            this.lb_Contacts.Location = new System.Drawing.Point(27, 22);
+            this.lb_Contacts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_Contacts.Name = "lb_Contacts";
-            this.lb_Contacts.Size = new System.Drawing.Size(86, 20);
+            this.lb_Contacts.Size = new System.Drawing.Size(107, 25);
             this.lb_Contacts.TabIndex = 3;
             this.lb_Contacts.Text = "Customers";
             // 
@@ -170,11 +203,24 @@
             this.lb_NoCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(40)))), ((int)(((byte)(201)))));
             this.lb_NoCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NoCustomers.ForeColor = System.Drawing.Color.White;
-            this.lb_NoCustomers.Location = new System.Drawing.Point(21, 36);
+            this.lb_NoCustomers.Location = new System.Drawing.Point(28, 44);
+            this.lb_NoCustomers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_NoCustomers.Name = "lb_NoCustomers";
-            this.lb_NoCustomers.Size = new System.Drawing.Size(51, 55);
+            this.lb_NoCustomers.Size = new System.Drawing.Size(63, 69);
             this.lb_NoCustomers.TabIndex = 2;
             this.lb_NoCustomers.Text = "0";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(40)))), ((int)(((byte)(201)))));
+            this.pictureBox2.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_customer_insight_50;
+            this.pictureBox2.Location = new System.Drawing.Point(173, 31);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(81, 73);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // gp_Leads
             // 
@@ -184,9 +230,10 @@
             this.gp_Leads.Controls.Add(this.pictureBox1);
             this.gp_Leads.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(249)))));
             this.gp_Leads.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(249)))));
-            this.gp_Leads.Location = new System.Drawing.Point(60, 34);
+            this.gp_Leads.Location = new System.Drawing.Point(80, 42);
+            this.gp_Leads.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gp_Leads.Name = "gp_Leads";
-            this.gp_Leads.Size = new System.Drawing.Size(223, 118);
+            this.gp_Leads.Size = new System.Drawing.Size(297, 145);
             this.gp_Leads.TabIndex = 1;
             // 
             // lb_leads
@@ -195,9 +242,10 @@
             this.lb_leads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(249)))));
             this.lb_leads.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_leads.ForeColor = System.Drawing.Color.White;
-            this.lb_leads.Location = new System.Drawing.Point(20, 18);
+            this.lb_leads.Location = new System.Drawing.Point(27, 22);
+            this.lb_leads.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_leads.Name = "lb_leads";
-            this.lb_leads.Size = new System.Drawing.Size(53, 20);
+            this.lb_leads.Size = new System.Drawing.Size(66, 25);
             this.lb_leads.TabIndex = 3;
             this.lb_leads.Text = "Leads";
             // 
@@ -207,11 +255,24 @@
             this.lb_NoLeads.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(249)))));
             this.lb_NoLeads.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_NoLeads.ForeColor = System.Drawing.Color.White;
-            this.lb_NoLeads.Location = new System.Drawing.Point(19, 39);
+            this.lb_NoLeads.Location = new System.Drawing.Point(25, 48);
+            this.lb_NoLeads.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lb_NoLeads.Name = "lb_NoLeads";
-            this.lb_NoLeads.Size = new System.Drawing.Size(51, 55);
+            this.lb_NoLeads.Size = new System.Drawing.Size(63, 69);
             this.lb_NoLeads.TabIndex = 2;
             this.lb_NoLeads.Text = "0";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(249)))));
+            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_client_64__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(171, 36);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -220,54 +281,11 @@
             this.panel2.Controls.Add(this.guna2GradientPanel3);
             this.panel2.Controls.Add(this.guna2GradientPanel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 39);
+            this.panel2.Location = new System.Drawing.Point(0, 48);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1243, 168);
+            this.panel2.Size = new System.Drawing.Size(1657, 207);
             this.panel2.TabIndex = 4;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(172)))), ((int)(((byte)(82)))));
-            this.pictureBox4.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_tasklist_50__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(128, 29);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(59, 52);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(170)))), ((int)(((byte)(249)))));
-            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_client_64__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 29);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(26)))), ((int)(((byte)(16)))));
-            this.pictureBox3.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_schedule_50;
-            this.pictureBox3.Location = new System.Drawing.Point(128, 29);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(62, 55);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(40)))), ((int)(((byte)(201)))));
-            this.pictureBox2.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_customer_insight_50;
-            this.pictureBox2.Location = new System.Drawing.Point(130, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 59);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // bunifuGradientPanel1
             // 
@@ -281,18 +299,20 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1243, 39);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1657, 48);
             this.bunifuGradientPanel1.TabIndex = 3;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_dashboard_layout_48__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(1006, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(1341, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 32);
+            this.pictureBox5.Size = new System.Drawing.Size(53, 39);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
@@ -304,9 +324,10 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1052, 9);
+            this.label1.Location = new System.Drawing.Point(1403, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 20);
+            this.label1.Size = new System.Drawing.Size(119, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "DashBoard";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -315,9 +336,10 @@
             // 
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 556);
+            this.panel1.Location = new System.Drawing.Point(0, 684);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1243, 30);
+            this.panel1.Size = new System.Drawing.Size(1657, 37);
             this.panel1.TabIndex = 5;
             // 
             // label2
@@ -327,39 +349,56 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 8);
+            this.label2.Location = new System.Drawing.Point(4, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
+            this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "DashBoard";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 6;
+            this.guna2Button1.Text = "guna2Button1";
+            // 
             // DashBoardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(1243, 586);
+            this.ClientSize = new System.Drawing.Size(1657, 721);
+            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DashBoardForm";
             this.Text = "DashBoardForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             this.guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gp_Leads.ResumeLayout(false);
             this.gp_Leads.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -392,5 +431,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
