@@ -17,8 +17,7 @@ namespace Hil5_CRM_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MdiMainForm());
-            Application.Run(new Login_page());
+            Application.Run(new MdiMainForm());
         }
     }
 }
