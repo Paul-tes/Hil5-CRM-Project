@@ -17,12 +17,38 @@ namespace Hil5_CRM_Project
             InitializeComponent();
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void txt_pswd_KeyPress(object sender, KeyPressEventArgs e)
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbl_admin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_forgot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_pswd_KeyPress_1(object sender, KeyPressEventArgs e)
         {
 
             if (e.KeyChar == (char)Keys.Enter)
