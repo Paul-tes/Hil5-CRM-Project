@@ -250,6 +250,7 @@
     <Compile Include="DashBoardForm.Designer.cs">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbAccess.cs" />
     <Compile Include="DialogBox\AddEvent.cs">
       <SubType>Form</SubType>
     </Compile>
