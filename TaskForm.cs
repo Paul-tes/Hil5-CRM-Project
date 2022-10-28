@@ -16,5 +16,11 @@ namespace Hil5_CRM_Project
         {
             InitializeComponent();
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            DialogBox.AddTask addevent = new DialogBox.AddTask();
+            addevent.ShowDialog();
+        }
     }
 }

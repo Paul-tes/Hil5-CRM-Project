@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hil5_CRM_Project.DialogBox;
 namespace Hil5_CRM_Project
 {
     public partial class CustomersForm : Form
@@ -131,6 +131,11 @@ namespace Hil5_CRM_Project
             {
                 MessageBox.Show("No reccord Found", "info");
             }
+        }
+        // add customer data.
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -116,6 +116,7 @@
             this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
             this.btn_add.Size = new System.Drawing.Size(58, 60);
             this.btn_add.TabIndex = 6;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_update
             // 
