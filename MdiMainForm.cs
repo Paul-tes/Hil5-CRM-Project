@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hil5_CRM_Project.DialogBox;
 namespace Hil5_CRM_Project
 {
     public partial class MdiMainForm : Form
@@ -151,7 +151,9 @@ namespace Hil5_CRM_Project
 
         private void btn_settings_Click(object sender, EventArgs e)
         {
-            OpenChildform(new TaskForm(), sender);
+            AddOrganization setting = new AddOrganization();
+            setting.ShowDialog();
+            setting.StartPosition = FormStartPosition.CenterParent;
         }
     }
-}
+} 

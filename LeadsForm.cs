@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hil5_CRM_Project.DialogBox;
 namespace Hil5_CRM_Project
 {
     public partial class LeadsForm : Form
@@ -15,6 +8,13 @@ namespace Hil5_CRM_Project
         public LeadsForm()
         {
             InitializeComponent();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            AddLead addlead = new AddLead();
+            addlead.ShowDialog();
+            addlead.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

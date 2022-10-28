@@ -1,5 +1,5 @@
 ﻿namespace Hil5_CRM_Project
-{
+{/*
     partial class MainForm
     {
         /// <summary>
@@ -323,6 +323,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button button8;
-    }
+    }*/
 }
 

@@ -42,6 +42,7 @@
             this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_onleave = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_closed = new Guna.UI2.WinForms.Guna2Button();
             this.btn_active = new Guna.UI2.WinForms.Guna2Button();
             this.btn_all = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,7 +66,6 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Leads = new System.Windows.Forms.Label();
-            this.btn_closed = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -113,6 +113,7 @@
             this.btn_add.PressedState.ImageSize = new System.Drawing.Size(71, 76);
             this.btn_add.Size = new System.Drawing.Size(58, 60);
             this.btn_add.TabIndex = 2;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // btn_update
             // 
@@ -191,6 +192,28 @@
             this.btn_onleave.Size = new System.Drawing.Size(91, 31);
             this.btn_onleave.TabIndex = 1;
             this.btn_onleave.Text = "On Leave";
+            // 
+            // btn_closed
+            // 
+            this.btn_closed.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_closed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.btn_closed.BorderRadius = 13;
+            this.btn_closed.BorderThickness = 2;
+            this.btn_closed.CustomizableEdges.BottomRight = false;
+            this.btn_closed.CustomizableEdges.TopLeft = false;
+            this.btn_closed.CustomizableEdges.TopRight = false;
+            this.btn_closed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_closed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_closed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_closed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_closed.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.btn_closed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_closed.ForeColor = System.Drawing.Color.White;
+            this.btn_closed.Location = new System.Drawing.Point(181, 24);
+            this.btn_closed.Name = "btn_closed";
+            this.btn_closed.Size = new System.Drawing.Size(69, 31);
+            this.btn_closed.TabIndex = 1;
+            this.btn_closed.Text = "closed";
             // 
             // btn_active
             // 
@@ -474,28 +497,6 @@
             this.lb_Leads.Size = new System.Drawing.Size(58, 20);
             this.lb_Leads.TabIndex = 0;
             this.lb_Leads.Text = "Leads";
-            // 
-            // btn_closed
-            // 
-            this.btn_closed.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_closed.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.btn_closed.BorderRadius = 13;
-            this.btn_closed.BorderThickness = 2;
-            this.btn_closed.CustomizableEdges.BottomRight = false;
-            this.btn_closed.CustomizableEdges.TopLeft = false;
-            this.btn_closed.CustomizableEdges.TopRight = false;
-            this.btn_closed.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_closed.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_closed.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_closed.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_closed.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.btn_closed.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_closed.ForeColor = System.Drawing.Color.White;
-            this.btn_closed.Location = new System.Drawing.Point(181, 24);
-            this.btn_closed.Name = "btn_closed";
-            this.btn_closed.Size = new System.Drawing.Size(69, 31);
-            this.btn_closed.TabIndex = 1;
-            this.btn_closed.Text = "closed";
             // 
             // LeadsForm
             // 

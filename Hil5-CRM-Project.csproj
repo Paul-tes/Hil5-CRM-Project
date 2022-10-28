@@ -251,6 +251,12 @@
       <DependentUpon>DashBoardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DbAccess.cs" />
+    <Compile Include="DialogBox\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogBox\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="DialogBox\AddEvent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +299,13 @@
     <Compile Include="LeadsForm.Designer.cs">
       <DependentUpon>LeadsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_page.Designer.cs">
+      <DependentUpon>Login_page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs" />
     <Compile Include="MdiMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +318,7 @@
     <Compile Include="model\Organization.cs" />
     <Compile Include="model\Task.cs" />
     <Compile Include="model\Team.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportForm.cs">
@@ -324,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoardForm.resx">
       <DependentUpon>DashBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogBox\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogBox\AddEvent.resx">
       <DependentUpon>AddEvent.cs</DependentUpon>
@@ -346,9 +363,25 @@
     <EmbeddedResource Include="LeadsForm.resx">
       <DependentUpon>LeadsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login_page.resx">
+      <DependentUpon>Login_page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MdiMainForm.resx">
       <DependentUpon>MdiMainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.CustomersForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DashBoardForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddEvent.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddLead.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddOrganization.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddTask.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddTeam.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.EventForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.LeadsForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.MdiMainForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.ReportForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.TaskForm.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -365,6 +398,23 @@
     <EmbeddedResource Include="TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include=".vs\Hil5-CRM-Project\FileContentIndex\26cd51f8-6d30-43c3-922d-b172180cd815.vsidx" />
+    <None Include=".vs\Hil5-CRM-Project\FileContentIndex\9929d742-778f-4bbe-a1d1-b07c2b2b9b2d.vsidx" />
+    <None Include=".vs\Hil5-CRM-Project\FileContentIndex\a5b14394-ca04-4d3c-804c-f65a1fa77f6a.vsidx" />
+    <None Include=".vs\Hil5-CRM-Project\FileContentIndex\read.lock" />
+    <None Include=".vs\ProjectSettings.json" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="bin\Debug\Hil5-CRM-Project.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Hil5-CRM-Project.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\Hil5-CRM-Project.csproj.CopyComplete" />
+    <None Include="obj\Debug\Hil5-CRM-Project.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Hil5-CRM-Project.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Hil5-CRM-Project.csproj.SuggestedBindingRedirects.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -468,6 +518,156 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-export-pdf-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Azure.Core.dll" />
+    <Content Include="bin\Debug\Azure.Core.xml" />
+    <Content Include="bin\Debug\Azure.Identity.dll" />
+    <Content Include="bin\Debug\Azure.Identity.xml" />
+    <Content Include="bin\Debug\BouncyCastle.Crypto.dll" />
+    <Content Include="bin\Debug\Bunifu_UI_v1.5.3.dll" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Design.dll" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Docking.dll" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Navigator.dll" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Ribbon.dll" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Toolkit.dll" />
+    <Content Include="bin\Debug\ComponentFactory.Krypton.Workspace.dll" />
+    <Content Include="bin\Debug\de\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\DragAssembly.dll" />
+    <Content Include="bin\Debug\es\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\Guna.Charts.WinForms.dll" />
+    <Content Include="bin\Debug\Guna.UI2.dll" />
+    <Content Include="bin\Debug\Hil5-CRM-Project.exe" />
+    <Content Include="bin\Debug\Hil5-CRM-Project.pdb" />
+    <Content Include="bin\Debug\itextsharp.dll" />
+    <Content Include="bin\Debug\itextsharp.xml" />
+    <Content Include="bin\Debug\it\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\LiveCharts.dll" />
+    <Content Include="bin\Debug\LiveCharts.pdb" />
+    <Content Include="bin\Debug\LiveCharts.WinForms.dll" />
+    <Content Include="bin\Debug\LiveCharts.WinForms.pdb" />
+    <Content Include="bin\Debug\LiveCharts.WinForms.xml" />
+    <Content Include="bin\Debug\LiveCharts.Wpf.dll" />
+    <Content Include="bin\Debug\LiveCharts.Wpf.pdb" />
+    <Content Include="bin\Debug\LiveCharts.Wpf.xml" />
+    <Content Include="bin\Debug\LiveCharts.xml" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll" />
+    <Content Include="bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x64.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x64.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x86.dll" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.SNI.x86.pdb" />
+    <Content Include="bin\Debug\Microsoft.Data.SqlClient.xml" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.dll" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.Extensions.Msal.dll" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.Extensions.Msal.xml" />
+    <Content Include="bin\Debug\Microsoft.Identity.Client.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Abstractions.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Abstractions.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Logging.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Protocols.xml" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="bin\Debug\Microsoft.IdentityModel.Tokens.xml" />
+    <Content Include="bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\SqlKata.dll" />
+    <Content Include="bin\Debug\SqlKata.xml" />
+    <Content Include="bin\Debug\System.Buffers.dll" />
+    <Content Include="bin\Debug\System.Buffers.xml" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.dll" />
+    <Content Include="bin\Debug\System.Configuration.ConfigurationManager.xml" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.dll" />
+    <Content Include="bin\Debug\System.Diagnostics.DiagnosticSource.xml" />
+    <Content Include="bin\Debug\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="bin\Debug\System.IdentityModel.Tokens.Jwt.xml" />
+    <Content Include="bin\Debug\System.Memory.Data.dll" />
+    <Content Include="bin\Debug\System.Memory.Data.xml" />
+    <Content Include="bin\Debug\System.Memory.dll" />
+    <Content Include="bin\Debug\System.Memory.xml" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.dll" />
+    <Content Include="bin\Debug\System.Numerics.Vectors.xml" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\Debug\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\Debug\System.Security.AccessControl.dll" />
+    <Content Include="bin\Debug\System.Security.AccessControl.xml" />
+    <Content Include="bin\Debug\System.Security.Cryptography.ProtectedData.dll" />
+    <Content Include="bin\Debug\System.Security.Cryptography.ProtectedData.xml" />
+    <Content Include="bin\Debug\System.Security.Permissions.dll" />
+    <Content Include="bin\Debug\System.Security.Permissions.xml" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\Debug\System.Security.Principal.Windows.xml" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.dll" />
+    <Content Include="bin\Debug\System.Text.Encodings.Web.xml" />
+    <Content Include="bin\Debug\System.Text.Json.dll" />
+    <Content Include="bin\Debug\System.Text.Json.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.xml" />
+    <Content Include="bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll" />
+    <Content Include="Database sql script\CRM5_Script_with_sp.sql" />
+    <Content Include="obj\Debug\Hil5-CRM-Project.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Hil5-CRM-Project.exe" />
+    <Content Include="obj\Debug\Hil5-CRM-Project.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\Bunifu_UI_v1.5.3.dll" />
+    <Content Include="Resources\delete.png" />
+    <Content Include="Resources\DragAssembly.dll" />
+    <Content Include="Resources\edit.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\favicon2s.png" />
+    <Content Include="Resources\favicon2v.ico" />
+    <Content Include="Resources\help.png" />
+    <Content Include="Resources\icons8-active-58.png" />
+    <Content Include="Resources\icons8-add-100.png" />
+    <Content Include="Resources\icons8-contact-32.png" />
+    <Content Include="Resources\icons8-contact-64 %281%29.png" />
+    <Content Include="Resources\icons8-contact-64.png" />
+    <Content Include="Resources\icons8-dashboard-layout-48.png" />
+    <Content Include="Resources\icons8-graph-report-64 %281%29.png" />
+    <Content Include="Resources\icons8-graph-report-64.png" />
+    <Content Include="Resources\icons8-h-64.png" />
+    <Content Include="Resources\icons8-h-67 %281%29.png" />
+    <Content Include="Resources\icons8-maximize-window-50.png" />
+    <Content Include="Resources\icons8-remove-48 %281%29.png" />
+    <Content Include="Resources\icons8-setting-64 %281%29.png" />
+    <Content Include="Resources\icons8-setting-64.png" />
+    <Content Include="Resources\icons8-tasklist-50.png" />
+    <Content Include="Resources\icons8-update-64.png" />
+    <Content Include="Resources\info-sm.png" />
+    <Content Include="Resources\info-w.png" />
+    <Content Include="Resources\logoicon.ico" />
+    <Content Include="Resources\logoicon22.png" />
+    <Content Include="Resources\logoicon32x32.ico" />
+    <Content Include="Resources\mail.png" />
+    <Content Include="Resources\pdf.png" />
+    <Content Include="Resources\print.png" />
+    <Content Include="Resources\view.png" />
+    <Content Include="Resources\_contact_black.png" />
+    <Content Include="Resources\_dashboard_black.png" />
+    <Content Include="Resources\_events_black.png" />
+    <Content Include="Resources\_leads_black.png" />
+    <Content Include="Resources\_reports_black.png" />
+    <Content Include="Resources\_settings_black.png" />
+    <Content Include="Resources\_tasks_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\Hil5-CRM-Project\FileContentIndex\merges\" />
+    <Folder Include=".vs\Hil5-CRM-Project\v17\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.0.1\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

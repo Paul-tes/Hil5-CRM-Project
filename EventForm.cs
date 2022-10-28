@@ -22,6 +22,7 @@ namespace Hil5_CRM_Project
         {
             DialogBox.AddEvent addevent = new DialogBox.AddEvent();
             addevent.ShowDialog();
+            addevent.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

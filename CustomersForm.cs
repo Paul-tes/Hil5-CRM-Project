@@ -135,7 +135,9 @@ namespace Hil5_CRM_Project
         // add customer data.
         private void btn_add_Click(object sender, EventArgs e)
         {
-            
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.ShowDialog();
+            addCustomer.StartPosition = FormStartPosition.CenterParent;
         }
     }
 }
