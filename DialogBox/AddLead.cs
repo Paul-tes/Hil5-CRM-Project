@@ -22,7 +22,7 @@ namespace Hil5_CRM_Project.DialogBox
             lbl_required3.Hide();
             lbl_required4.Hide();
             lbl_required5.Hide();
-          
+            dtp_addedDate.MinDate = DateTime.Now;
             txt_email.Text = null;
 
         }
@@ -93,6 +93,9 @@ namespace Hil5_CRM_Project.DialogBox
                 lead.addedBy = cmb_addedBy.SelectedItem.ToString();
       
             }
+
+            //added date
+            lead.createDate = DateTime.Parse(dtp_addedDate.ToString());
 
 
         }

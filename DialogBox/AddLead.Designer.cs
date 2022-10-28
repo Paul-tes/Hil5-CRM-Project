@@ -39,6 +39,7 @@
             this.lbl_required3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmb_source = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_save = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cmb_status = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_addedBy = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -53,7 +54,8 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.cmb_source = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtp_addedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lbl_addedDAte = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +106,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.dtp_addedDate);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required4);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required5);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required3);
@@ -121,6 +124,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.txt_email);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_email);
             this.bunifuGradientPanel1.Controls.Add(this.txt_name);
+            this.bunifuGradientPanel1.Controls.Add(this.lbl_addedDAte);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_Name);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
@@ -188,6 +192,27 @@
             this.lbl_required1.TabIndex = 10;
             this.lbl_required1.Text = "*";
             // 
+            // cmb_source
+            // 
+            this.cmb_source.AutoRoundedCorners = true;
+            this.cmb_source.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_source.BorderRadius = 17;
+            this.cmb_source.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_source.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_source.FillColor = System.Drawing.Color.Moccasin;
+            this.cmb_source.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_source.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_source.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_source.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmb_source.ItemHeight = 30;
+            this.cmb_source.Items.AddRange(new object[] {
+            "call",
+            "website"});
+            this.cmb_source.Location = new System.Drawing.Point(213, 130);
+            this.cmb_source.Name = "cmb_source";
+            this.cmb_source.Size = new System.Drawing.Size(210, 36);
+            this.cmb_source.TabIndex = 3;
+            // 
             // btn_save
             // 
             this.btn_save.BorderColor = System.Drawing.Color.Teal;
@@ -223,10 +248,10 @@
             this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmb_status.ItemHeight = 30;
             this.cmb_status.Items.AddRange(new object[] {
-            "Intern",
-            "Contract",
-            "Full-time",
-            "Part-time"});
+            "Potential",
+            "Prospect",
+            "Qualified",
+            "Lost"});
             this.cmb_status.Location = new System.Drawing.Point(213, 168);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(210, 36);
@@ -400,26 +425,30 @@
             this.guna2DragControl1.TargetControl = this.panel_drag;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // cmb_source
+            // dtp_addedDate
             // 
-            this.cmb_source.AutoRoundedCorners = true;
-            this.cmb_source.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_source.BorderRadius = 17;
-            this.cmb_source.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_source.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_source.FillColor = System.Drawing.Color.Moccasin;
-            this.cmb_source.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_source.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_source.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_source.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmb_source.ItemHeight = 30;
-            this.cmb_source.Items.AddRange(new object[] {
-            "call",
-            "website"});
-            this.cmb_source.Location = new System.Drawing.Point(213, 130);
-            this.cmb_source.Name = "cmb_source";
-            this.cmb_source.Size = new System.Drawing.Size(210, 36);
-            this.cmb_source.TabIndex = 3;
+            this.dtp_addedDate.Checked = true;
+            this.dtp_addedDate.FillColor = System.Drawing.Color.Snow;
+            this.dtp_addedDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_addedDate.Location = new System.Drawing.Point(543, 90);
+            this.dtp_addedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_addedDate.MinDate = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
+            this.dtp_addedDate.Name = "dtp_addedDate";
+            this.dtp_addedDate.Size = new System.Drawing.Size(234, 37);
+            this.dtp_addedDate.TabIndex = 12;
+            this.dtp_addedDate.Value = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
+            // 
+            // lbl_addedDAte
+            // 
+            this.lbl_addedDAte.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_addedDAte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_addedDAte.ForeColor = System.Drawing.Color.Gold;
+            this.lbl_addedDAte.Location = new System.Drawing.Point(543, 61);
+            this.lbl_addedDAte.Name = "lbl_addedDAte";
+            this.lbl_addedDAte.Size = new System.Drawing.Size(103, 23);
+            this.lbl_addedDAte.TabIndex = 0;
+            this.lbl_addedDAte.Text = "Added Date";
             // 
             // AddLead
             // 
@@ -465,5 +494,7 @@
         private Guna.UI2.WinForms.Guna2MessageDialog msg_dialogError;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_source;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_addedDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_addedDAte;
     }
 }
