@@ -1,6 +1,6 @@
 
 CREATE TABLE organization(
-id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id INT PRIMARY KEY IDENTITY(1,1),
 logo VARBINARY(MAX) NULL,
 name VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL,
@@ -8,8 +8,9 @@ phone VARCHAR(255) NOT NULL,
 address VARCHAR(255) NOT NULL,
 )
 
+
 CREATE TABLE team(
-id	INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id	INT PRIMARY KEY IDENTITY(1,1),
 picture	VARBINARY(MAX) NULL,
 name VARCHAR(255) NOT NULL,
 gender	VARCHAR(255) NOT NULL,
@@ -18,49 +19,42 @@ password VARCHAR(255) NOT NULL,
 type VARCHAR(255) NOT NULL,
 department VARCHAR(255) NOT NULL,
 role VARCHAR(255) NOT NULL,
-status VARCHAR(255) NOT NULL,
+status bit NOT NULL, -- bit
 )
 
- 
 CREATE TABLE customers(
-id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id INT PRIMARY KEY IDENTITY(1,1),
 name VARCHAR(255) NOT NULL,
 email VARCHAR(255) NOT NULL,
 mobile VARCHAR(255) NOT NULL,
 city VARCHAR(255) NOT NULL,
-state VARCHAR(255) NOT NULL,
 zip VARCHAR(255) NOT NULL,
 country VARCHAR(255) NOT NULL,
-added_date VARCHAR(255) NOT NULL,
+added_date DATETIME NOT NULL,
 photo VARBINARY(MAX) NULL,
 website VARCHAR(255) NULL,
-promoted VARCHAR(255) NOT NULL, 
+status BIT,
+promoted_leadsId INT NOT NULL,  -- Q FOREIGN KEY REFERENCES leads(id),
 addedBy_teamId INT FOREIGN KEY REFERENCES team(id)
 )
--- promoted should be a coustomer id
--- there should be a status for a customer, to know if they are no longer a customer of the organization ( we could just change the promoted column to status )
-
- ALTER TABLE customers DROP COLUMN promoted;
- ALTER TABLE customers ADD status VARCHAR(255) NULL;
--- added_date datatype should be date
- ALTER TABLE customers ALTER COLUMN added_date date;
 
 
 CREATE TABLE leads(
-id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id INT PRIMARY KEY IDENTITY(1,1),
 name VARCHAR(255) NOT NULL,
+email VARCHAR(255) NOT NULL,
 source VARCHAR(255) NOT NULL,
 status VARCHAR(255) NOT NULL,
 note VARCHAR(MAX) NULL,
-createDate datetime,
+createDate DATETIME,
 addedBy_teamId INT FOREIGN KEY REFERENCES team(id),
-customerId INT FOREIGN KEY REFERENCES  customers(id),
+customerId INT NULL,
 )
 
-
+ALTER TABLE leads ALTER COLUMN customerId INT FOREIGN KEY REFERENCES customers(id) Null,
 
 CREATE TABLE events(
-id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id INT PRIMARY KEY IDENTITY(1,1),
 topic VARCHAR(255) NOT NULL,
 type VARCHAR(255) NOT NULL,
 status VARCHAR(255) NOT NULL,
@@ -70,16 +64,13 @@ start_time time NOT NULL,
 end_date date NOT NULL,
 end_time time NOT NULL,
 addedBy_teamId INT FOREIGN KEY REFERENCES team(id),
-guestId INT --FOREIGN KEY REFERENCES guests(id) 
 )
 
 
---ALTER TABLE events
---ADD CONSTRAINT fk_evets_Guests Foreign Key(guestId) REFERENCES guest(id)
-
 
 CREATE TABLE tasks(
-id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id INT PRIMARY KEY IDENTITY(1,1),
+name VARCHAR(255) NOT NULL, -- new column
 status VARCHAR(255) NOT NULL,
 refer_type VARCHAR(255) NOT NULL,
 refer_name VARCHAR(255) NOT NULL,
@@ -90,7 +81,7 @@ addedBy_teamId INT FOREIGN KEY REFERENCES team(id)
 
 
 CREATE TABLE guest(
-id INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
+id INT PRIMARY KEY IDENTITY(1,1),
 eventId INT Foreign Key REFERENCES events(id) NOT NULL,
 customerId INT FOREIGN KEY REFERENCES customers(id) NOT NULL
 )
@@ -154,7 +145,6 @@ GO
 
 
 
- 
 GO
  -- PROCEDURE ON TEAM ( select, update, or delete )
 
@@ -180,6 +170,7 @@ GO
 
  CREATE PROC spUpdateTeam_byId
  @teamId int,
+ @newPicture varbinary(max),
  @newName varchar(255),
  @newGender varchar(255),
  @newEmail varchar(255),
@@ -187,13 +178,13 @@ GO
  @newType varchar(255),
  @newDepartment varchar(255),
  @newRole varchar(255),
- @newStatus varchar(255)
+ @newStatus bit
 
  AS
  BEGIN
 
   UPDATE team
-  SET name = @newName, gender = @newGender, email = @newEmail, password = @newPassword, type = @newType, department = @newDepartment, role = @newRole, status = @newStatus
+  SET picture = @newPicture, name = @newName, gender = @newGender, email = @newEmail, password = @newPassword, type = @newType, department = @newDepartment, role = @newRole, status = @newStatus
   WHERE team.id = @teamId
 
  END
@@ -208,12 +199,9 @@ GO
  AS
  BEGIN
 
-  --DELETE FROM team 
-  --WHERE (id = @idOrName or name = @idOrName)
-
-  -- we shouldn't delete a team member, just make their status 'not_active'
+  -- we shouldn't delete a team member, just make their status false 0
   UPDATE team
-  SET status = 'not_active'
+  SET status = 0  -- bit ( false )
   WHERE (id = @idOrName or name = @idOrName)
 
  END
@@ -233,12 +221,12 @@ GO
  AS
  BEGIN
  select * from customers
-  SELECT c.id, c.name, c.email, c.mobile, c.city, c.state, c.zip, c.country, c.added_date, c.website, t.name AS [Added By], c.status
+  SELECT c.id, c.name, c.email, c.mobile, c.city, c.zip, c.country, c.added_date, c.website, c.status, t.name AS [Added By] -- Q l.id AS [Leads Id]
   FROM customers c
   join team t
   ON c.addedBy_teamId = t.id
   WHERE (c.id = @idOrName or c.name = @idOrName)
-  ORDER BY c.name
+  -- ORDER BY c.name
 
  END
 
@@ -252,13 +240,13 @@ GO
  @newEmail varchar(255),
  @newMobile varchar(255),
  @newCity varchar(255),
- @newState varchar(255),
  @newZip varchar(255),
  @newCountry varchar(255),
- @newAdded_date date,
+ @newAdded_date datetime,
+ @newPhoto varbinary(max),
  @newWebsite varchar(255),
  @newAddedBy_teamId int,
- @newStatus varchar(255)
+ @newStatus bit
  
 
  AS
@@ -266,7 +254,7 @@ GO
 
   UPDATE customers
   SET name = @newName, email = @newEmail, mobile = @newMobile, city = @newCity, 
-      state = @newState, zip = @newZip, country = @newCountry, added_date = @newAdded_date, 
+      zip = @newZip, country = @newCountry, added_date = @newAdded_date, photo = @newPhoto
 	  website = @newWebsite, addedBy_teamId = @newAddedBy_teamId, status = @newStatus
 
   WHERE customers.id = @customerId
@@ -284,7 +272,7 @@ GO
  BEGIN
 
   UPDATE customers
-  SET status = 'not_active'
+  SET status = 0
   WHERE (id = @idOrName or name = @idOrName)
 
  END
@@ -294,10 +282,69 @@ GO
 
 GO
 -- PROCEDURE ON LEADS ( select, update, or delete )
--- i can't create a proc for leads, unitl we confirm the realtionship between leads and customers
 GO
 
+-- select leads
 
+CREATE PROC spGetLeads_byIdOrName
+ @idOrName varchar(255)
+
+ AS
+ BEGIN
+  SELECT l.id, l.name, l.email, l.source, l.status, l.note, l.createDate, t.name, c.id
+  FROM leads l
+  join team t
+  ON l.addedBy_teamId = t.id
+  join customers c
+  on l.customerId = c.id
+  WHERE (l.id = @idOrName or l.name = @idOrName)
+  ORDER BY l.id
+
+ END
+
+
+ GO
+ -- Update leads
+
+ CREATE PROC spUpdateLeads_byIdOrName
+ @leadsIdOrName varchar(255),
+ @newName varchar(255),
+ @newEmail varchar(255),
+ @newSources varchar(255),
+ @newStatus varchar(255),
+ @newNote varchar(max),
+ @newCreateDate datetime, 
+ @newAddedBy_teamId int,
+ @newCustomerId int
+ 
+
+ AS
+ BEGIN
+
+  UPDATE leads
+  SET name = @newName, email = @newEmail, source = @newSources, status = @newStatus, 
+      note = @newNote, createDate = @newCreateDate, addedBy_teamId = @newAddedBy_teamId, 
+	  customerId = @newCustomerId
+
+  WHERE (leads.id = @leadsIdOrName or leads.name = @leadsIdOrName)
+
+ END
+
+
+ GO
+ -- Delete leads
+ 
+ CREATE PROC spDeleteLeads_byIdOrName
+ @leadsIdOrName varchar(255)
+
+ AS
+ BEGIN
+
+  UPDATE leads
+  SET status = 'Lost'
+  WHERE (leads.id = @leadsIdOrName or leads.name = @leadsIdOrName)
+
+ END
 
 
 
@@ -313,8 +360,7 @@ GO
 
  AS
  BEGIN
- -- select events
-  SELECT e.id, e.topic, e.type, e.status, e.note, e.startDate, e.start_time, e.end_date, e.end_time, t.name, e.guestId
+  SELECT e.id, e.topic, e.type, e.status, e.note, e.startDate, e.start_time, e.end_date, e.end_time, t.name
   FROM events e
   join team t
   ON e.addedBy_teamId = t.id
@@ -338,7 +384,6 @@ GO
  @newEnd_date date,
  @newEnd_time time,
  @newAddedBy_teamId int,
- @newGuestId int
  
 
  AS
@@ -347,7 +392,7 @@ GO
   UPDATE events
   SET topic = @newTopic, type = @newType, status = @newStatus, note = @newNote, 
       startDate = @newStart_date, start_time = @newStart_time, end_date = @newEnd_date, 
-	  end_time = @newEnd_time, addedBy_teamId = @newAddedBy_teamId, guestId = @newGuestId
+	  end_time = @newEnd_time, addedBy_teamId = @newAddedBy_teamId
 
   WHERE events.id = @eventId
 
@@ -377,16 +422,16 @@ GO
 GO
 -- Select tasks
 
- CREATE PROC spGetTasks_byId
- @id int
+ CREATE PROC spGetTasks_byIdOrName
+ @idOrName varchar(255)
 
  AS
  BEGIN
-  SELECT t.id, t.status, t.refer_type, t.refer_name, t.priority, t.note, tm.name as [Added By]
+  SELECT t.id, t.name, t.status, t.refer_type, t.refer_name, t.priority, t.note, tm.name as [Added By]
   FROM tasks t
   join team tm
   ON t.addedBy_teamId = tm.id
-  WHERE t.id = @id 
+  WHERE (t.id = @idOrName or t.name = @idOrName)
 
  END
 
@@ -395,7 +440,8 @@ GO
  -- Update events
 
  CREATE PROC spUpdateTasks_byId
- @taskId int,
+ @taskIdOrName varchar(255),
+ @newName varchar(255),
  @newStatus varchar(255),
  @newRefer_type varchar(255),
  @newRefer_name varchar(255),
@@ -407,9 +453,9 @@ GO
  BEGIN
 
   UPDATE tasks
-  SET status = @newStatus, refer_type = @newRefer_type, refer_name = @newRefer_name, priority = @newPriority, note = @newNote, addedBy_teamId = @newAddedBy_teamId
+  SET name = @newName, status = @newStatus, refer_type = @newRefer_type, refer_name = @newRefer_name, priority = @newPriority, note = @newNote, addedBy_teamId = @newAddedBy_teamId
 
-  WHERE tasks.id = @taskId
+  WHERE (tasks.id = @taskIdOrName or tasks.name = @taskIdOrName)
 
  END
 
@@ -418,14 +464,14 @@ GO
  -- Delete event
  
  CREATE PROC spDeleteTasks_byId
- @id int
+ @taskIdOrName varchar(255)
 
  AS
  BEGIN
 
   UPDATE tasks
   SET status = 'DONE'
-  WHERE id = @id
+  WHERE id = @taskIdOrName
 
  END
 
@@ -486,3 +532,14 @@ GO
   WHERE id = @id
 
  END
+
+
+ -- Creating a Login
+ Go
+
+CREATE LOGIN CRM WITH PASSWORD = 'crm123'
+
+CREATE USER TeamAdmin FOR LOGIN CRM  -- ADMIN
+
+CREATE USER Team FOR LOGIN CRM -- EMPLOYEES
+
