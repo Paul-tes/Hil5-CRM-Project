@@ -13,6 +13,7 @@ namespace Hil5_CRM_Project
         private void btn_add_Click(object sender, EventArgs e)
         {
             DialogBox.AddTask addevent = new DialogBox.AddTask();
+            addevent.StartPosition = FormStartPosition.CenterParent;
             addevent.ShowDialog();
         }
     }

@@ -39,6 +39,7 @@
             this.lbl_required3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_required1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmb_source = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_save = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cmb_status = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_addedBy = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -53,7 +54,6 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.cmb_source = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -188,6 +188,27 @@
             this.lbl_required1.TabIndex = 10;
             this.lbl_required1.Text = "*";
             // 
+            // cmb_source
+            // 
+            this.cmb_source.AutoRoundedCorners = true;
+            this.cmb_source.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_source.BorderRadius = 17;
+            this.cmb_source.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_source.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_source.FillColor = System.Drawing.Color.Moccasin;
+            this.cmb_source.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_source.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_source.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_source.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmb_source.ItemHeight = 30;
+            this.cmb_source.Items.AddRange(new object[] {
+            "call",
+            "website"});
+            this.cmb_source.Location = new System.Drawing.Point(213, 130);
+            this.cmb_source.Name = "cmb_source";
+            this.cmb_source.Size = new System.Drawing.Size(210, 36);
+            this.cmb_source.TabIndex = 3;
+            // 
             // btn_save
             // 
             this.btn_save.BorderColor = System.Drawing.Color.Teal;
@@ -223,10 +244,10 @@
             this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmb_status.ItemHeight = 30;
             this.cmb_status.Items.AddRange(new object[] {
-            "Intern",
-            "Contract",
-            "Full-time",
-            "Part-time"});
+            "Potential",
+            "Prospect",
+            "Qualified",
+            "Lost"});
             this.cmb_status.Location = new System.Drawing.Point(213, 168);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(210, 36);
@@ -245,9 +266,6 @@
             this.cmb_addedBy.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmb_addedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmb_addedBy.ItemHeight = 30;
-            this.cmb_addedBy.Items.AddRange(new object[] {
-            "Admin",
-            "Employee"});
             this.cmb_addedBy.Location = new System.Drawing.Point(214, 206);
             this.cmb_addedBy.Name = "cmb_addedBy";
             this.cmb_addedBy.Size = new System.Drawing.Size(210, 36);
@@ -399,27 +417,6 @@
             this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl1.TargetControl = this.panel_drag;
             this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // cmb_source
-            // 
-            this.cmb_source.AutoRoundedCorners = true;
-            this.cmb_source.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_source.BorderRadius = 17;
-            this.cmb_source.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_source.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_source.FillColor = System.Drawing.Color.Moccasin;
-            this.cmb_source.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_source.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_source.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_source.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmb_source.ItemHeight = 30;
-            this.cmb_source.Items.AddRange(new object[] {
-            "call",
-            "website"});
-            this.cmb_source.Location = new System.Drawing.Point(213, 130);
-            this.cmb_source.Name = "cmb_source";
-            this.cmb_source.Size = new System.Drawing.Size(210, 36);
-            this.cmb_source.TabIndex = 3;
             // 
             // AddLead
             // 

@@ -33,7 +33,9 @@ namespace Hil5_CRM_Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_page));
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cb_minimize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txt_pswd = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cb_exit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txt_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_admin = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -41,8 +43,6 @@ namespace Hil5_CRM_Project
             this.btn_login = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.lbl_forgot = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.cb_minimize = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.cb_exit = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -77,7 +77,17 @@ namespace Hil5_CRM_Project
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(386, 600);
             this.guna2Panel1.TabIndex = 5;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // cb_minimize
+            // 
+            this.cb_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.cb_minimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.cb_minimize.IconColor = System.Drawing.Color.White;
+            this.cb_minimize.Location = new System.Drawing.Point(302, 4);
+            this.cb_minimize.Name = "cb_minimize";
+            this.cb_minimize.Size = new System.Drawing.Size(40, 38);
+            this.cb_minimize.TabIndex = 7;
             // 
             // txt_pswd
             // 
@@ -105,6 +115,18 @@ namespace Hil5_CRM_Project
             this.txt_pswd.TabIndex = 17;
             this.txt_pswd.UseSystemPasswordChar = true;
             this.txt_pswd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_pswd_KeyPress_1);
+            // 
+            // cb_exit
+            // 
+            this.cb_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.cb_exit.HoverState.FillColor = System.Drawing.Color.Red;
+            this.cb_exit.IconColor = System.Drawing.Color.White;
+            this.cb_exit.Location = new System.Drawing.Point(343, 3);
+            this.cb_exit.Name = "cb_exit";
+            this.cb_exit.Size = new System.Drawing.Size(40, 38);
+            this.cb_exit.TabIndex = 6;
+            this.cb_exit.Click += new System.EventHandler(this.cb_exit_Click);
             // 
             // txt_email
             // 
@@ -135,12 +157,11 @@ namespace Hil5_CRM_Project
             this.lbl_admin.BackColor = System.Drawing.Color.Transparent;
             this.lbl_admin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_admin.ForeColor = System.Drawing.Color.LightGray;
-            this.lbl_admin.Location = new System.Drawing.Point(304, 344);
+            this.lbl_admin.Location = new System.Drawing.Point(292, 344);
             this.lbl_admin.Name = "lbl_admin";
             this.lbl_admin.Size = new System.Drawing.Size(44, 19);
             this.lbl_admin.TabIndex = 16;
             this.lbl_admin.Text = "ADMIN";
-            this.lbl_admin.Click += new System.EventHandler(this.lbl_admin_Click);
             // 
             // guna2PictureBox1
             // 
@@ -152,7 +173,6 @@ namespace Hil5_CRM_Project
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // cb_admin
             // 
@@ -161,9 +181,9 @@ namespace Hil5_CRM_Project
             this.cb_admin.Image = ((System.Drawing.Image)(resources.GetObject("cb_admin.Image")));
             this.cb_admin.ImageOffset = new System.Drawing.Point(0, 0);
             this.cb_admin.ImageRotate = 0F;
-            this.cb_admin.Location = new System.Drawing.Point(267, 344);
+            this.cb_admin.Location = new System.Drawing.Point(268, 344);
             this.cb_admin.Name = "cb_admin";
-            this.cb_admin.Size = new System.Drawing.Size(31, 20);
+            this.cb_admin.Size = new System.Drawing.Size(18, 19);
             this.cb_admin.TabIndex = 15;
             // 
             // btn_login
@@ -177,11 +197,12 @@ namespace Hil5_CRM_Project
             this.btn_login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_login.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(124, 401);
+            this.btn_login.Location = new System.Drawing.Point(118, 418);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(125, 35);
             this.btn_login.TabIndex = 9;
             this.btn_login.Text = "Login";
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_forgot
             // 
@@ -203,28 +224,6 @@ namespace Hil5_CRM_Project
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(386, 600);
             this.guna2Panel2.TabIndex = 4;
-            // 
-            // cb_minimize
-            // 
-            this.cb_minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_minimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.cb_minimize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.cb_minimize.IconColor = System.Drawing.Color.White;
-            this.cb_minimize.Location = new System.Drawing.Point(288, 4);
-            this.cb_minimize.Name = "cb_minimize";
-            this.cb_minimize.Size = new System.Drawing.Size(40, 38);
-            this.cb_minimize.TabIndex = 7;
-            // 
-            // cb_exit
-            // 
-            this.cb_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cb_exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.cb_exit.HoverState.FillColor = System.Drawing.Color.Red;
-            this.cb_exit.IconColor = System.Drawing.Color.White;
-            this.cb_exit.Location = new System.Drawing.Point(343, 3);
-            this.cb_exit.Name = "cb_exit";
-            this.cb_exit.Size = new System.Drawing.Size(40, 38);
-            this.cb_exit.TabIndex = 6;
             // 
             // guna2Elipse1
             // 

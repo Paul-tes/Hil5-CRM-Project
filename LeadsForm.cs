@@ -13,8 +13,13 @@ namespace Hil5_CRM_Project
         private void btn_add_Click(object sender, EventArgs e)
         {
             AddLead addlead = new AddLead();
-            addlead.ShowDialog();
             addlead.StartPosition = FormStartPosition.CenterScreen;
+            addlead.ShowDialog();
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

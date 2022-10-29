@@ -413,6 +413,16 @@ namespace Hil5_CRM_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap personjpj {
+            get {
+                object obj = ResourceManager.GetObject("personjpj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap show1 {
             get {
                 object obj = ResourceManager.GetObject("show1", resourceCulture);

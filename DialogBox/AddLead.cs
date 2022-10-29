@@ -24,6 +24,9 @@ namespace Hil5_CRM_Project.DialogBox
             lbl_required5.Hide();
           
             txt_email.Text = null;
+            List<int> idListOfTeam = new List<int>() { 1, 2, 3 };
+             cmb_addedBy.DataSource = idListOfTeam;
+            
 
         }
 
@@ -31,9 +34,21 @@ namespace Hil5_CRM_Project.DialogBox
         {
             Leads lead = new Leads();
             lead.createDate = DateTime.Now;
-
+            lead.note = txt_note.Text;
             //Validation
-
+            //Name
+            if (String.IsNullOrEmpty(txt_name.Text))
+                lbl_required1.Show();
+            Regex rName = new Regex(@"^[A-Z a-z]{3,30}$");
+            if (rName.IsMatch(txt_name.Text))
+            {
+                lead.name = txt_name.Text;
+                //MessageBox.Show("Test");
+            }
+            else
+            {
+                lead.name = "abebe";
+            }
 
             //Email
             if (String.IsNullOrEmpty(txt_email.Text))
@@ -83,16 +98,23 @@ namespace Hil5_CRM_Project.DialogBox
             //Added By
             if (cmb_addedBy.SelectedItem == null)
             {
-                cmb_addedBy.BorderThickness = 2;
-                cmb_addedBy.BorderColor = Color.Red;
+                cmb_source.BorderThickness = 2;
+                cmb_source.BorderColor = Color.Red;
                 lbl_required5.Show();
-
             }
-            else
+            else 
             {
-                lead.addedBy = cmb_addedBy.SelectedItem.ToString();
-      
+                lead.addedBy = int.Parse(cmb_addedBy.SelectedItem.ToString()); 
             }
+
+            //note
+            if (txt_note.Text != null)
+            {
+                lead.note = txt_note.Text;
+            }
+            DbAccess dbaccess = new DbAccess();
+            dbaccess.AddLead(lead);
+
 
 
         }
@@ -120,8 +142,6 @@ namespace Hil5_CRM_Project.DialogBox
             }
         }
 
-     
-
-     
+       
     }
 }

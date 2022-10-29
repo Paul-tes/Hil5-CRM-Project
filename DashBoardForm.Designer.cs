@@ -343,8 +343,8 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(256, 279);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(60, 248);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(135, 37);
             this.guna2Button1.TabIndex = 6;

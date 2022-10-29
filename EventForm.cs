@@ -21,8 +21,13 @@ namespace Hil5_CRM_Project
         private void btn_add_Click(object sender, EventArgs e)
         {
             DialogBox.AddEvent addevent = new DialogBox.AddEvent();
-            addevent.ShowDialog();
             addevent.StartPosition = FormStartPosition.CenterScreen;
+            addevent.ShowDialog();
+        }
+
+        private void btn_pdfExport_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

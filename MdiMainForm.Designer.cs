@@ -50,7 +50,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_settings = new System.Windows.Forms.Button();
             this.p_top = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_role = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.flp_windowControl = new System.Windows.Forms.FlowLayoutPanel();
@@ -329,7 +329,7 @@
             // p_top
             // 
             this.p_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.p_top.Controls.Add(this.label3);
+            this.p_top.Controls.Add(this.lb_role);
             this.p_top.Controls.Add(this.label2);
             this.p_top.Controls.Add(this.guna2CirclePictureBox1);
             this.p_top.Controls.Add(this.flp_windowControl);
@@ -339,16 +339,17 @@
             this.p_top.Size = new System.Drawing.Size(1060, 43);
             this.p_top.TabIndex = 2;
             // 
-            // label3
+            // lb_role
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(693, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "[Admin]";
+            this.lb_role.AutoSize = true;
+            this.lb_role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_role.ForeColor = System.Drawing.Color.White;
+            this.lb_role.Location = new System.Drawing.Point(693, 13);
+            this.lb_role.Name = "lb_role";
+            this.lb_role.Size = new System.Drawing.Size(62, 20);
+            this.lb_role.TabIndex = 5;
+            this.lb_role.Text = "[Admin]";
+            this.lb_role.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -490,7 +491,7 @@
         private System.Windows.Forms.Button btn_maximize;
         private System.Windows.Forms.Button btn_close;
         private System.Windows.Forms.Timer timer_sideBar;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_role;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Panel DesktopPanel;

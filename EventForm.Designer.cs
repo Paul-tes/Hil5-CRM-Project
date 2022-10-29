@@ -270,6 +270,7 @@
             this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
             this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
             this.btn_pdfExport.TabIndex = 1;
+            this.btn_pdfExport.Click += new System.EventHandler(this.btn_pdfExport_Click);
             // 
             // btn_delete
             // 

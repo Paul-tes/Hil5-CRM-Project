@@ -17,9 +17,10 @@ namespace Hil5_CRM_Project
         private Button _previousBtn;
         private Form _activeForm;
         // constructor
-        public MdiMainForm()
+        public MdiMainForm(string role)
         {
             InitializeComponent();
+            lb_role.Text = role;
         }
         //child Form Control.
         private void OpenChildform(Form childForm, object btnSender)
@@ -154,6 +155,11 @@ namespace Hil5_CRM_Project
             AddOrganization setting = new AddOrganization();
             setting.ShowDialog();
             setting.StartPosition = FormStartPosition.CenterParent;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 } 

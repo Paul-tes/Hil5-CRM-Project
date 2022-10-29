@@ -65,8 +65,21 @@ namespace Hil5_CRM_Project.DialogBox
             //Validation
 
             //Name
-
-
+            if (String.IsNullOrEmpty(txt_Name.Text))
+                lbl_required1.Show();
+            Regex rName = new Regex(@"^[A-Z a-z]{3,30}$");
+            if (rName.IsMatch(txt_Name.Text))
+            {
+                customer.name = txt_Name.Text;
+                //MessageBox.Show("Test");
+            }
+            else
+            {
+                txt_Name.BorderColor = Color.Red;
+                txt_Name.BorderThickness = 1;
+                txt_Name.Text = "";
+                txt_Name.PlaceholderText = "first last";
+            }
             //Email
             if (String.IsNullOrEmpty(txt_email.Text))
                 lbl_required2.Show();
@@ -171,6 +184,9 @@ namespace Hil5_CRM_Project.DialogBox
             {
                 customer.website = null;
             }
+            // saving customer to database.
+            DbAccess dbAccess = new DbAccess();
+            dbAccess.AddCustomer(customer);
         }
 
         private void txt_Name_KeyDown(object sender, KeyEventArgs e)

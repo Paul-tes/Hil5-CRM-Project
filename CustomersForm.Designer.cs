@@ -51,27 +51,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_customor = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_Customer = new System.Windows.Forms.Label();
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_state = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_country = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_addedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_promotedFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_invitation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_Customer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -361,14 +359,12 @@
             this.col_email,
             this.col_mobile,
             this.col_city,
-            this.col_state,
             this.col_zip,
             this.col_country,
             this.col_addedBy,
             this.col_addedDate,
             this.col_website,
             this.col_promotedFrom,
-            this.col_invitation,
             this.col_photo,
             this.col_active});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -379,7 +375,6 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_customor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_customor.EnableHeadersVisualStyles = false;
             this.dgv_customor.Location = new System.Drawing.Point(0, 0);
             this.dgv_customor.Name = "dgv_customor";
@@ -387,109 +382,6 @@
             this.dgv_customor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_customor.Size = new System.Drawing.Size(1254, 400);
             this.dgv_customor.TabIndex = 0;
-            // 
-            // col_icon
-            // 
-            this.col_icon.FillWeight = 23.31082F;
-            this.col_icon.HeaderText = "";
-            this.col_icon.Name = "col_icon";
-            this.col_icon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_icon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // col_id
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.col_id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.col_id.FillWeight = 38.85136F;
-            this.col_id.HeaderText = "ID";
-            this.col_id.Name = "col_id";
-            // 
-            // col_name
-            // 
-            this.col_name.FillWeight = 77.70273F;
-            this.col_name.HeaderText = "Name";
-            this.col_name.Name = "col_name";
-            // 
-            // col_email
-            // 
-            this.col_email.FillWeight = 77.70273F;
-            this.col_email.HeaderText = "Email";
-            this.col_email.Name = "col_email";
-            // 
-            // col_mobile
-            // 
-            this.col_mobile.FillWeight = 77.70273F;
-            this.col_mobile.HeaderText = "Mobile";
-            this.col_mobile.Name = "col_mobile";
-            // 
-            // col_city
-            // 
-            this.col_city.FillWeight = 77.70273F;
-            this.col_city.HeaderText = "City";
-            this.col_city.Name = "col_city";
-            // 
-            // col_state
-            // 
-            this.col_state.FillWeight = 77.70273F;
-            this.col_state.HeaderText = "State";
-            this.col_state.Name = "col_state";
-            // 
-            // col_zip
-            // 
-            this.col_zip.FillWeight = 38.85136F;
-            this.col_zip.HeaderText = "Zip";
-            this.col_zip.Name = "col_zip";
-            // 
-            // col_country
-            // 
-            this.col_country.FillWeight = 77.70273F;
-            this.col_country.HeaderText = "Country";
-            this.col_country.Name = "col_country";
-            // 
-            // col_addedBy
-            // 
-            this.col_addedBy.FillWeight = 77.70273F;
-            this.col_addedBy.HeaderText = "Added By";
-            this.col_addedBy.Name = "col_addedBy";
-            // 
-            // col_addedDate
-            // 
-            dataGridViewCellStyle3.Format = "D";
-            dataGridViewCellStyle3.NullValue = null;
-            this.col_addedDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.col_addedDate.FillWeight = 77.70273F;
-            this.col_addedDate.HeaderText = "Added Date";
-            this.col_addedDate.Name = "col_addedDate";
-            // 
-            // col_website
-            // 
-            this.col_website.FillWeight = 77.70273F;
-            this.col_website.HeaderText = "Website";
-            this.col_website.Name = "col_website";
-            // 
-            // col_promotedFrom
-            // 
-            this.col_promotedFrom.FillWeight = 77.70273F;
-            this.col_promotedFrom.HeaderText = "Promoted From";
-            this.col_promotedFrom.Name = "col_promotedFrom";
-            // 
-            // col_invitation
-            // 
-            this.col_invitation.FillWeight = 50F;
-            this.col_invitation.HeaderText = "Invitation";
-            this.col_invitation.Name = "col_invitation";
-            // 
-            // col_photo
-            // 
-            this.col_photo.FillWeight = 38.85136F;
-            this.col_photo.HeaderText = "Photo";
-            this.col_photo.Name = "col_photo";
-            // 
-            // col_active
-            // 
-            this.col_active.FillWeight = 50F;
-            this.col_active.HeaderText = "Active";
-            this.col_active.Name = "col_active";
             // 
             // label1
             // 
@@ -551,6 +443,97 @@
             this.lb_Customer.TabIndex = 0;
             this.lb_Customer.Text = "Customers";
             // 
+            // col_icon
+            // 
+            this.col_icon.FillWeight = 23.31082F;
+            this.col_icon.HeaderText = "";
+            this.col_icon.Name = "col_icon";
+            this.col_icon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_icon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // col_id
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.col_id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.col_id.FillWeight = 38.85136F;
+            this.col_id.HeaderText = "ID";
+            this.col_id.Name = "col_id";
+            // 
+            // col_name
+            // 
+            this.col_name.FillWeight = 77.70273F;
+            this.col_name.HeaderText = "Name";
+            this.col_name.Name = "col_name";
+            // 
+            // col_email
+            // 
+            this.col_email.FillWeight = 77.70273F;
+            this.col_email.HeaderText = "Email";
+            this.col_email.Name = "col_email";
+            // 
+            // col_mobile
+            // 
+            this.col_mobile.FillWeight = 77.70273F;
+            this.col_mobile.HeaderText = "Mobile";
+            this.col_mobile.Name = "col_mobile";
+            // 
+            // col_city
+            // 
+            this.col_city.FillWeight = 77.70273F;
+            this.col_city.HeaderText = "City";
+            this.col_city.Name = "col_city";
+            // 
+            // col_zip
+            // 
+            this.col_zip.FillWeight = 38.85136F;
+            this.col_zip.HeaderText = "Zip";
+            this.col_zip.Name = "col_zip";
+            // 
+            // col_country
+            // 
+            this.col_country.FillWeight = 77.70273F;
+            this.col_country.HeaderText = "Country";
+            this.col_country.Name = "col_country";
+            // 
+            // col_addedBy
+            // 
+            this.col_addedBy.FillWeight = 77.70273F;
+            this.col_addedBy.HeaderText = "Added By";
+            this.col_addedBy.Name = "col_addedBy";
+            // 
+            // col_addedDate
+            // 
+            dataGridViewCellStyle3.Format = "D";
+            dataGridViewCellStyle3.NullValue = null;
+            this.col_addedDate.DefaultCellStyle = dataGridViewCellStyle3;
+            this.col_addedDate.FillWeight = 77.70273F;
+            this.col_addedDate.HeaderText = "Added Date";
+            this.col_addedDate.Name = "col_addedDate";
+            // 
+            // col_website
+            // 
+            this.col_website.FillWeight = 77.70273F;
+            this.col_website.HeaderText = "Website";
+            this.col_website.Name = "col_website";
+            // 
+            // col_promotedFrom
+            // 
+            this.col_promotedFrom.FillWeight = 77.70273F;
+            this.col_promotedFrom.HeaderText = "Promoted From";
+            this.col_promotedFrom.Name = "col_promotedFrom";
+            // 
+            // col_photo
+            // 
+            this.col_photo.FillWeight = 38.85136F;
+            this.col_photo.HeaderText = "Photo";
+            this.col_photo.Name = "col_photo";
+            // 
+            // col_active
+            // 
+            this.col_active.FillWeight = 50F;
+            this.col_active.HeaderText = "Active";
+            this.col_active.Name = "col_active";
+            // 
             // CustomersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,22 +574,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.DataGridViewImageColumn col_icon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_mobile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_city;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_state;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_zip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_country;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_website;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_promotedFrom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_invitation;
-        private System.Windows.Forms.DataGridViewImageColumn col_photo;
-        private System.Windows.Forms.DataGridViewImageColumn col_active;
         private Guna.UI2.WinForms.Guna2CircleButton btn_search;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btn_onleave;
@@ -620,5 +587,19 @@
         private Guna.UI2.WinForms.Guna2ImageButton btn_update;
         private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
         private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
+        private System.Windows.Forms.DataGridViewImageColumn col_icon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_city;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_zip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_country;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_website;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_promotedFrom;
+        private System.Windows.Forms.DataGridViewImageColumn col_photo;
+        private System.Windows.Forms.DataGridViewImageColumn col_active;
     }
 }

@@ -238,6 +238,13 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSetting.cs" />
+    <Compile Include="con demo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="con demo.designer.cs">
+      <DependentUpon>con demo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -327,12 +334,16 @@
     <Compile Include="ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlHelper.cs" />
     <Compile Include="TaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="con demo.resx">
+      <DependentUpon>con demo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomersForm.resx">
       <DependentUpon>CustomersForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -654,6 +665,7 @@
     <Content Include="Resources\logoicon32x32.ico" />
     <Content Include="Resources\mail.png" />
     <Content Include="Resources\pdf.png" />
+    <None Include="Resources\personjpj.jpg" />
     <Content Include="Resources\print.png" />
     <Content Include="Resources\view.png" />
     <Content Include="Resources\_contact_black.png" />
