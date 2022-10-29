@@ -54,6 +54,11 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+<<<<<<< HEAD
+=======
+            this.dtp_addedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lbl_addedDAte = new Guna.UI2.WinForms.Guna2HtmlLabel();
+>>>>>>> ee6d60d121bc282da60831b97f3a8c5582b63587
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +109,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.dtp_addedDate);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required4);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required5);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required3);
@@ -121,6 +127,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.txt_email);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_email);
             this.bunifuGradientPanel1.Controls.Add(this.txt_name);
+            this.bunifuGradientPanel1.Controls.Add(this.lbl_addedDAte);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_Name);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
@@ -418,6 +425,34 @@
             this.guna2DragControl1.TargetControl = this.panel_drag;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+<<<<<<< HEAD
+=======
+            // dtp_addedDate
+            // 
+            this.dtp_addedDate.Checked = true;
+            this.dtp_addedDate.FillColor = System.Drawing.Color.Snow;
+            this.dtp_addedDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_addedDate.Location = new System.Drawing.Point(543, 90);
+            this.dtp_addedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_addedDate.MinDate = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
+            this.dtp_addedDate.Name = "dtp_addedDate";
+            this.dtp_addedDate.Size = new System.Drawing.Size(234, 37);
+            this.dtp_addedDate.TabIndex = 12;
+            this.dtp_addedDate.Value = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
+            // 
+            // lbl_addedDAte
+            // 
+            this.lbl_addedDAte.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_addedDAte.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_addedDAte.ForeColor = System.Drawing.Color.Gold;
+            this.lbl_addedDAte.Location = new System.Drawing.Point(543, 61);
+            this.lbl_addedDAte.Name = "lbl_addedDAte";
+            this.lbl_addedDAte.Size = new System.Drawing.Size(103, 23);
+            this.lbl_addedDAte.TabIndex = 0;
+            this.lbl_addedDAte.Text = "Added Date";
+            // 
+>>>>>>> ee6d60d121bc282da60831b97f3a8c5582b63587
             // AddLead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,5 +497,7 @@
         private Guna.UI2.WinForms.Guna2MessageDialog msg_dialogError;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_source;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_addedDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_addedDAte;
     }
 }

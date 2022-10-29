@@ -22,7 +22,7 @@ namespace Hil5_CRM_Project.DialogBox
             lbl_required3.Hide();
             lbl_required4.Hide();
             lbl_required5.Hide();
-          
+            dtp_addedDate.MinDate = DateTime.Now;
             txt_email.Text = null;
             List<int> idListOfTeam = new List<int>() { 1, 2, 3 };
              cmb_addedBy.DataSource = idListOfTeam;
@@ -107,6 +107,7 @@ namespace Hil5_CRM_Project.DialogBox
                 lead.addedBy = int.Parse(cmb_addedBy.SelectedItem.ToString()); 
             }
 
+<<<<<<< HEAD
             //note
             if (txt_note.Text != null)
             {
@@ -115,6 +116,10 @@ namespace Hil5_CRM_Project.DialogBox
             DbAccess dbaccess = new DbAccess();
             dbaccess.AddLead(lead);
 
+=======
+            //added date
+            lead.createDate = DateTime.Parse(dtp_addedDate.ToString());
+>>>>>>> ee6d60d121bc282da60831b97f3a8c5582b63587
 
 
         }

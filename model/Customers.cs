@@ -22,7 +22,7 @@ namespace Hil5_CRM_Project.model
 
         public string addedBy { get; set; }
 
-        public string addedDate { get; set; }
+        public DateTime addedDate { get; set; }
         public byte[] photo { get; set; }
         public string website { get; set; }
         public int promoted { get; set; }
