@@ -136,7 +136,7 @@ namespace Hil5_CRM_Project.DialogBox
             }
             else
             {
-                events.Gustid = Int32.Parse(cmb_guestsList.SelectedItem.ToString());
+               // events.Gustid = Int32.Parse(cmb_guestsList.SelectedItem.ToString());
             }
 
             //start date
@@ -144,9 +144,13 @@ namespace Hil5_CRM_Project.DialogBox
             events.endDate = dtp_endDate.Value;
 
             if (events.startDate > events.endDate)
-            msg_dialogError.Show("Try again ):");
+            msg_dialogError.Show("The start date can't be higher than the end date!");
             else if (events.startDate == events.endDate  && events.startTime >= events.endTime)
-            msg_dialogError.Show("Try again ):");
+            msg_dialogError.Show("Check your time please!");
+
+            DbAccess dbaccess = new DbAccess();
+            dbaccess.AddEvent(events);
+
         }
 
         private void btn_exit_Click(object sender, EventArgs e)

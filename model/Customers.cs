@@ -24,7 +24,7 @@ namespace Hil5_CRM_Project.model
         public string website { get; set; }
         public bool status { get; set; }
         public int promoted { get; set; }
-        public string addedBy { get; set; }
+        public int addedBy { get; set; }
 
         public Team Team { get; set; }
         public Events Events { get; set; }

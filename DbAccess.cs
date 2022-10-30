@@ -186,6 +186,7 @@ namespace Hil5_CRM_Project
             return new List<Customers>();
         }
         // Add new Customer
+        // This works fine
         public void AddCustomer(Customers cust)
         {
             
@@ -193,20 +194,6 @@ namespace Hil5_CRM_Project
 
                 if (sqlhelper.isConnected())
                 {
-                /*
-                 * @name varchar(255),
-	@email varchar(255),
-	@mobile varchar(255),
-	@city varchar(255),
-	@zip varchar(255),
-	@country varchar(255),
-	@added_date datetime,
-	@photo varbinary(max),
-	@website varchar(255),
-	@status bit,
-	@promoted_leadsId int,
-	@addedBy_teamId int
-                 */
 
                 SqlCommand cmd = new SqlCommand("Add Customers", sqlhelper.connection());
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -222,24 +209,26 @@ namespace Hil5_CRM_Project
                 cmd.Parameters.Add("@photo", SqlDbType.VarBinary);
                 cmd.Parameters.Add("@website", SqlDbType.VarChar);
                 cmd.Parameters.Add("@status", SqlDbType.Bit);
+                cmd.Parameters.Add("@promoted_leadsId", SqlDbType.Int);
                 cmd.Parameters.Add("@addedBy_teamId", SqlDbType.Int);
 
-               // string pho = "photo"; 
+                // string pho = "photo"; 
                 // parameter values.
-                cmd.Parameters["@name"].Value = "abel";
-                cmd.Parameters["@email"].Value = "email";
-                cmd.Parameters["@mobile"].Value = "mobile";
-                cmd.Parameters["@city"].Value = "city";
-                cmd.Parameters["@zip"].Value = "zip";
-                cmd.Parameters["@country"].Value = "country";
-                cmd.Parameters["@added_date"].Value = DateTime.Now;
-                cmd.Parameters["@photo"].Value = Properties.Resources.personjpj;
-                cmd.Parameters["@website"].Value = "web";
-                cmd.Parameters["@status"].Value = 1;
-                cmd.Parameters["@addedBy_teamId"].Value = 1;
+                cmd.Parameters["@name"].Value = cust.name;
+                cmd.Parameters["@email"].Value = cust.email;
+                cmd.Parameters["@mobile"].Value = cust.mobile;
+                cmd.Parameters["@city"].Value = cust.city;
+                cmd.Parameters["@zip"].Value = cust.zip;
+                cmd.Parameters["@country"].Value = cust.country;
+                cmd.Parameters["@added_date"].Value = cust.addedDate;
+                cmd.Parameters["@photo"].Value = DBNull.Value;
+                cmd.Parameters["@website"].Value = DBNull.Value;
+                cmd.Parameters["@status"].Value = cust.status;
+                cmd.Parameters["@promoted_leadsId"].Value = DBNull.Value;
+                cmd.Parameters["@addedBy_teamId"].Value = cust.addedBy;
 
-                cmd.ExecuteNonQuery();
-
+                int rowsaffected = cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show(rowsaffected + "row affected");
 
             }
             sqlhelper.close();
@@ -504,6 +493,7 @@ namespace Hil5_CRM_Project
             return new List<Leads>();
         }
         // Add new Lead
+        //This works fine
         public void AddLead(Leads lead)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
@@ -512,17 +502,6 @@ namespace Hil5_CRM_Project
             {
                 SqlCommand cmd = new SqlCommand("Add Leads", sqlhelper.connection());
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                /*
-                     @name varchar(255),
-	@email varchar(255),
-	@source varchar(255),
-	@status varchar(255),
-	@note varchar(max),
-	@createdDate datetime,
-	@addedBy_teamId int,
-	@customerId int
-                 */
 
 
                 // store procedure parameters.
@@ -548,6 +527,7 @@ namespace Hil5_CRM_Project
 
                 int affectedRows = cmd.ExecuteNonQuery();
 
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
 
 
 
@@ -677,15 +657,58 @@ namespace Hil5_CRM_Project
             return new List<Events>();
         }
         // Add new Event
-        public void AddLead(int id, string topic, string type, string status, string note, DateTime startDate, DateTime startTime, DateTime endTime , int addedby)
+        // This needs fix on DateTime types
+        public void AddEvent(Events events)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
+            /*
+                     @topic varchar(255),
+	                 @type varchar(255),
+	                 @status varchar(255),
+	                 @note varchar(max),
+                     @startDate date,
+                     @startTime time,
+	                 @endDate date,
+                     @endTime time,
+	                 @addedBy_teamId int
+             */
+
+
             if (sqlhelper.isConnected())
             {
-                // do database operation
+                SqlCommand cmd = new SqlCommand("Add Events", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
 
+                // store procedure parameters.
+                cmd.Parameters.Add("@topic", SqlDbType.VarChar);
+                cmd.Parameters.Add("@type", SqlDbType.VarChar);
+                cmd.Parameters.Add("@status", SqlDbType.VarChar);
+                cmd.Parameters.Add("@note", SqlDbType.VarChar);
+                cmd.Parameters.Add("@startDate", SqlDbType.Date);
+                cmd.Parameters.Add("@startTime", SqlDbType.Time);
+                cmd.Parameters.Add("@endDate", SqlDbType.Date);
+                cmd.Parameters.Add("@endTime", SqlDbType.Time);
+                cmd.Parameters.Add("@addedBy_teamId", SqlDbType.Int);
+
+
+                // parameter values.
+                cmd.Parameters["@topic"].Value = events.topic;
+                cmd.Parameters["@type"].Value = events.type;
+                cmd.Parameters["@status"].Value = events.status;
+                cmd.Parameters["@note"].Value = events.note;
+                cmd.Parameters["@startDate"].Value = events.startDate;
+                cmd.Parameters["@startTime"].Value = events.startTime;
+                cmd.Parameters["@endDate"].Value = events.endDate;
+                cmd.Parameters["@endTime"].Value = events.endTime;
+                cmd.Parameters["@addedBy_teamId"].Value = events.addedBy;
+            
+
+
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
 
 
 

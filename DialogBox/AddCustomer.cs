@@ -29,6 +29,8 @@ namespace Hil5_CRM_Project.DialogBox
             txt_WebUrl.Text = null;
             List<int> idListOfTeam = new List<int>() { 1, 2, 3 };
             cmb_addedby.DataSource = idListOfTeam;
+
+            dtp_addedDate.MinDate = DateTime.Now;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -61,9 +63,12 @@ namespace Hil5_CRM_Project.DialogBox
         {
             Customers customer = new Customers();
 
+            customer.addedDate = dtp_addedDate.Value;
 
             //Validation
 
+            /*
+             // Commented the regex validation of name for a moment
             //Name
             if (String.IsNullOrEmpty(txt_Name.Text))
                 lbl_required1.Show();
@@ -80,6 +85,10 @@ namespace Hil5_CRM_Project.DialogBox
                 txt_Name.Text = "";
                 txt_Name.PlaceholderText = "first last";
             }
+            */
+
+            customer.name = txt_Name.Text;
+
             //Email
             if (String.IsNullOrEmpty(txt_email.Text))
                 lbl_required2.Show();
@@ -184,6 +193,12 @@ namespace Hil5_CRM_Project.DialogBox
             {
                 customer.website = null;
             }
+
+            //Added By
+
+            customer.addedBy = int.Parse(cmb_addedby.SelectedValue.ToString());
+
+
             // saving customer to database.
             DbAccess dbAccess = new DbAccess();
             dbAccess.AddCustomer(customer);

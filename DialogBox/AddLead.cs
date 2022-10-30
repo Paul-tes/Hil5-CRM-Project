@@ -112,6 +112,8 @@ namespace Hil5_CRM_Project.DialogBox
             {
                 lead.note = txt_note.Text;
             }
+            
+            
             DbAccess dbaccess = new DbAccess();
             dbaccess.AddLead(lead);
 
