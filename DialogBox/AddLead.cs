@@ -107,7 +107,6 @@ namespace Hil5_CRM_Project.DialogBox
                 lead.addedBy = int.Parse(cmb_addedBy.SelectedItem.ToString()); 
             }
 
-             // HEAD
             //note
             if (txt_note.Text != null)
             {
@@ -118,8 +117,7 @@ namespace Hil5_CRM_Project.DialogBox
 
 
             //added date
-            lead.createDate = DateTime.Parse(dtp_addedDate.ToString());
-
+            lead.createDate = DateTime.Parse(dtp_addedDate.Text.ToString());
 
 
         }

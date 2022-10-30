@@ -29,6 +29,6 @@ namespace Hil5_CRM_Project.model
         public bool Active { get; set; }
         public Team Team { get; set; }
         public Events Events { get; set; }
-        public List<Leads> Leads{ get; set; }
+        public List<Leads> Leads{ get; set; }   
     }
 }
