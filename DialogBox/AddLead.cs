@@ -107,7 +107,7 @@ namespace Hil5_CRM_Project.DialogBox
                 lead.addedBy = int.Parse(cmb_addedBy.SelectedItem.ToString()); 
             }
 
-<<<<<<< HEAD
+             // HEAD
             //note
             if (txt_note.Text != null)
             {
@@ -116,10 +116,10 @@ namespace Hil5_CRM_Project.DialogBox
             DbAccess dbaccess = new DbAccess();
             dbaccess.AddLead(lead);
 
-=======
+
             //added date
             lead.createDate = DateTime.Parse(dtp_addedDate.ToString());
->>>>>>> ee6d60d121bc282da60831b97f3a8c5582b63587
+
 
 
         }

@@ -54,11 +54,9 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-<<<<<<< HEAD
-=======
+
             this.dtp_addedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lbl_addedDAte = new Guna.UI2.WinForms.Guna2HtmlLabel();
->>>>>>> ee6d60d121bc282da60831b97f3a8c5582b63587
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -425,8 +423,6 @@
             this.guna2DragControl1.TargetControl = this.panel_drag;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-<<<<<<< HEAD
-=======
             // dtp_addedDate
             // 
             this.dtp_addedDate.Checked = true;
@@ -452,7 +448,6 @@
             this.lbl_addedDAte.TabIndex = 0;
             this.lbl_addedDAte.Text = "Added Date";
             // 
->>>>>>> ee6d60d121bc282da60831b97f3a8c5582b63587
             // AddLead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

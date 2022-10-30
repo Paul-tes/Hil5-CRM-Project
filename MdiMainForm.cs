@@ -11,7 +11,7 @@ using Hil5_CRM_Project.DialogBox;
 namespace Hil5_CRM_Project
 {
     public partial class MdiMainForm : Form
-    {
+    { 
         private bool sidebarExpand = false;
         private Button _currentBtn;
         private Button _previousBtn;

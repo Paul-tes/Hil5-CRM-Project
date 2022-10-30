@@ -224,7 +224,7 @@ namespace Hil5_CRM_Project
                 cmd.Parameters.Add("@status", SqlDbType.Bit);
                 cmd.Parameters.Add("@addedBy_teamId", SqlDbType.Int);
 
-                string pho = "photo"; 
+               // string pho = "photo"; 
                 // parameter values.
                 cmd.Parameters["@name"].Value = "abel";
                 cmd.Parameters["@email"].Value = "email";

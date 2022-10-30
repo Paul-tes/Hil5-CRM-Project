@@ -325,7 +325,6 @@
     <Compile Include="model\Organization.cs" />
     <Compile Include="model\Task.cs" />
     <Compile Include="model\Team.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportForm.cs">
@@ -380,19 +379,6 @@
     <EmbeddedResource Include="MdiMainForm.resx">
       <DependentUpon>MdiMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.CustomersForm.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DashBoardForm.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddEvent.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddLead.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddOrganization.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddTask.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.DialogBox.AddTeam.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.EventForm.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.LeadsForm.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.MdiMainForm.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.Properties.Resources.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.ReportForm.resources" />
-    <EmbeddedResource Include="obj\Debug\Hil5_CRM_Project.TaskForm.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -419,13 +405,6 @@
     <None Include=".vs\slnx.sqlite" />
     <None Include=".vs\VSWorkspaceState.json" />
     <None Include="bin\Debug\Hil5-CRM-Project.exe.config" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Debug\Hil5-CRM-Project.csproj.AssemblyReference.cache" />
-    <None Include="obj\Debug\Hil5-CRM-Project.csproj.CopyComplete" />
-    <None Include="obj\Debug\Hil5-CRM-Project.csproj.CoreCompileInputs.cache" />
-    <None Include="obj\Debug\Hil5-CRM-Project.csproj.GenerateResource.cache" />
-    <None Include="obj\Debug\Hil5-CRM-Project.csproj.SuggestedBindingRedirects.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -629,10 +608,6 @@
     <Content Include="bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll" />
     <Content Include="bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll" />
     <Content Include="Database sql script\CRM5_Script_with_sp.sql" />
-    <Content Include="obj\Debug\Hil5-CRM-Project.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\Hil5-CRM-Project.exe" />
-    <Content Include="obj\Debug\Hil5-CRM-Project.pdb" />
-    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
     <Content Include="Resources\add.png" />
     <Content Include="Resources\Bunifu_UI_v1.5.3.dll" />
     <Content Include="Resources\delete.png" />
