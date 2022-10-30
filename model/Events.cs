@@ -20,7 +20,6 @@ namespace Hil5_CRM_Project.model
         public DateTime startDate { get; set; }
         public DateTime startTime { get; set; }
         public DateTime endDate { get; set; }
-        public int Gustid { get; set; }
         public DateTime endTime { get; set; }
         public int addedBy { get; set; }
 

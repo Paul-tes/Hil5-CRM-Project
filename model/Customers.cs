@@ -19,14 +19,13 @@ namespace Hil5_CRM_Project.model
         public string zip { get; set; }
 
         public string country { get; set; }
-
-        public string addedBy { get; set; }
-
         public DateTime addedDate { get; set; }
         public byte[] photo { get; set; }
         public string website { get; set; }
+        public bool status { get; set; }
         public int promoted { get; set; }
-        public bool Active { get; set; }
+        public string addedBy { get; set; }
+
         public Team Team { get; set; }
         public Events Events { get; set; }
         public List<Leads> Leads{ get; set; }   

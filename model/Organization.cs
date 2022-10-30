@@ -9,7 +9,7 @@ namespace Hil5_CRM_Project.model
     internal class Organization
     {
         public int id { get; set; }
-        public string photo { get; set; }
+        public byte[] logo { get; set; }
         public string name { get; set; }
         public string email { get; set; }
         public string phone { get; set; }
