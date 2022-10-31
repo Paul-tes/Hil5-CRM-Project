@@ -16,11 +16,13 @@ namespace Hil5_CRM_Project
         private Button _currentBtn;
         private Button _previousBtn;
         private Form _activeForm;
+        public Form logIn;
         // constructor
         public MdiMainForm(string role)
         {
             InitializeComponent();
             lb_role.Text = role;
+            this.logIn = logIn;
         }
         //child Form Control.
         private void OpenChildform(Form childForm, object btnSender)
@@ -97,8 +99,10 @@ namespace Hil5_CRM_Project
 
         // Window control close button.
         private void btn_close_Click(object sender, EventArgs e)
-        {
+        { 
+            //close the current form.
             this.Close();
+            
         }
         // Window control minimiz button.
         private void btn_minimize_Click(object sender, EventArgs e)

@@ -85,6 +85,8 @@ namespace Hil5_CRM_Project
 
                }
            }
+            // show the dialog when the MdMainForm is Leaves the window.
+            this.Show();
             
         }
 

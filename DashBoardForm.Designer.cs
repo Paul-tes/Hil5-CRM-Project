@@ -310,7 +310,6 @@
             this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "DashBoard";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -333,7 +332,6 @@
             this.label2.Size = new System.Drawing.Size(69, 15);
             this.label2.TabIndex = 0;
             this.label2.Text = "DashBoard";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Button1
             // 
@@ -364,6 +362,7 @@
             this.Name = "DashBoardForm";
             this.Text = "DashBoardForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.DashBoardForm_Load);
             this.guna2GradientPanel4.ResumeLayout(false);
             this.guna2GradientPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
