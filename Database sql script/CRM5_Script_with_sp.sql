@@ -99,6 +99,34 @@ customerId INT FOREIGN KEY REFERENCES customers(id) NOT NULL
 
 
 GO
+
+
+/*--------------------------------------------------------------------------
+
+					 STORE PROCEDURE FOR LOGIN
+
+----------------------------------------------------------------------------*/
+CREATE PROC [LOGIN]
+      @email varchar(255),
+      @pswd varchar(255),
+      @status BIT output
+      WITH ENCRYPTION
+      AS
+      BEGIN
+
+            if exists(select * from team where email = @email and password = @pswd)
+            BEGIN
+			set @status = 1
+			END
+			ELSE
+			BEGIN
+			SET @status = 0
+			END
+
+			RETURN @status
+      END
+
+GO
 /*--------------------------------------------------------------------------
 
    STORE PROCEDURE ON ORGANIZATION ( insert, select, update, delete, Search )
