@@ -294,19 +294,15 @@ CREATE PROC [Add Customers]   -- Add Customers
 
 GO
 
-CREATE PROC [GetAll Customers]   -- Select all customers
+ALTER PROC [GetAll Customers]   -- Select all customers
       WITH ENCRYPTION
       AS
       BEGIN
-			 SELECT c.id, c.name, c.email, c.mobile, c.city, c.zip, c.country, c.added_date, c.photo, c.website, c.status, l.id AS [Leads Id], t.name AS [Added By] -- Q l.id AS [Leads Id]
+
+			 SELECT c.id, c.name, c.email, c.mobile, c.city, c.zip, c.country, c.added_date, c.photo, c.website, c.status, c.promoted_leadsId AS [Leads Id], c.addedBy_teamId AS [Added By] 
 			 FROM customers c
-		     join team t
-		     ON c.addedBy_teamId = t.id
-			 inner join leads l
-			 ON c.promoted_leadsId = l.id
 
 	  END
-
 
  GO
 
@@ -398,16 +394,13 @@ CREATE PROC [Add Leads]   -- Add Leads
 
 GO
 
-CREATE PROC [GetAll Leads]    -- select ALL leads
+ALTER PROC [GetAll Leads]    -- select ALL leads
       WITH ENCRYPTION
       AS
       BEGIN
-            SELECT l.id, l.name, l.email, l.source, l.status, l.note, l.createDate, t.name, c.id
-            FROM leads l
-            join team t
-            ON l.addedBy_teamId = t.id
-            join customers c
-            on l.customerId = c.id
+
+           SELECT l.id, l.name, l.email, l.source, l.status, l.note, l.createDate, l.addedBy_teamId, l.customerId
+           FROM leads l
 
       END
 
