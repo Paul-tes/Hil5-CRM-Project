@@ -75,7 +75,8 @@ namespace Hil5_CRM_Project
                         {
                             // if file are exist the same name ? : Dekete the file.
                             File.Delete(save.FileName);
-                        }catch (Exception ex)
+                        }
+                        catch (Exception ex)
                         {
                             _errorMessage = true;
                             MessageBox.Show(ex.Message, "file error");
@@ -99,7 +100,7 @@ namespace Hil5_CRM_Project
                             }
                             // writing on pdf sheet.
                             // each records or rows.
-                            foreach(DataGridViewRow row in dgv_customor.Rows)
+                            foreach (DataGridViewRow row in dgv_customor.Rows)
                             {
                                 foreach (DataGridViewCell dCell in row.Cells)
                                 {
@@ -119,10 +120,10 @@ namespace Hil5_CRM_Project
                                 MessageBox.Show("Customer File saaved.", "info");
                             };
                         }
-                        catch ( Exception ex)
+                        catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message, "export error");
-                        }           
+                        }
                     }
                 }
 
@@ -138,6 +139,33 @@ namespace Hil5_CRM_Project
             AddCustomer addCustomer = new AddCustomer();
             addCustomer.StartPosition = FormStartPosition.CenterParent;
             addCustomer.ShowDialog();
+        }
+
+        private void CustomersForm_Load(object sender, EventArgs e)
+        {
+            List<model.Customers> customers = null;
+            DbAccess data = new DbAccess();
+            customers = data.GetAllCustomers();
+            //dgv_event.DataSource = events;
+            /*
+            foreach (model.custForDb task in customers)
+            {
+                dgv_customor.Rows.Add(new object[]
+                {
+                    //imageList.Images[0],
+                    //task.id,
+                    //task.name,
+                    //task.status,
+                    //task.referType,
+                    //task.referName,
+                    //task.priority,
+                    //task.note,
+                    //DateTime.Now,
+                    //task.addedBy,
+                    //task.status == "progress" ? imageList.Images[1] : imageList.Images[2]
+                });
+            }
+            */
         }
     }
 }

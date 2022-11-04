@@ -14,6 +14,24 @@ namespace Hil5_CRM_Project
     {
         string con = String.Format("server ={0}; Database = {1};Integrated security = {2}; uid = {3}; pwd = {4};", "DESKTOP-V03ADMS", "CRM_PROJECT", "false", "TeamAdmin Login", "txt_pswd.Text");
 
+        // List object retriver.
+        private List<T> GetList<T>(IDataReader reader)
+        {
+            List<T> list = new List<T>();
+            while (reader.Read())
+            {
+                var type = typeof(T);
+                T obj = (T)Activator.CreateInstance(type);
+                foreach(var prop in type.GetProperties())
+                {
+                    var propType = prop.PropertyType;
+                    prop.SetValue(obj, Convert.ChangeType(reader[prop.Name].ToString(), propType), null);
+                }
+                list.Add(obj);
+            }
+            return list;
+        }
+
         // No: of Evetns.
         public int NoEvents()
         {
@@ -86,22 +104,35 @@ namespace Hil5_CRM_Project
         // All Customers
         public List<Customers> GetAllCustomers()
         {
+            List<model.Customers> customer = null;
+
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
-
-
-
-
-
+                SqlCommand cmd = new SqlCommand(@"SELECT id as id,
+	                                                name as name,
+	                                                email as email,
+	                                                mobile as mobile,
+	                                                city as city,
+	                                                zip as zip,
+	                                                country as country,
+	                                                added_date as addedDate,
+	                                                photo as photo,
+	                                                website as website,
+	                                                status as status,
+	                                                promoted_leadsId as promoted,
+	                                                addedBy_teamId as addedBy
+	                                                FROM customers;", sqlhelper.connection());
+                //cmd.CommandType = CommandType.StoredProcedure;
+                var dataReader = cmd.ExecuteReader();
+                // customer = GetList<model.custForDb>(dataReader);
             }
             sqlhelper.close();
-            return new List<Customers>();
+            return customer;
         }
         // Active Customers.
-        public List<Customers> GetActiveCustomers()
+        public List<Customers> GetActiveCustomers()     
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
@@ -274,19 +305,28 @@ namespace Hil5_CRM_Project
         // All Tasks.
         public List<model.Task> GetAllTasks()
         {
+            // make List of tasks to be return.
+            List<model.Task> tasks = null;
+
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
-
-
-
-
-
+                SqlCommand cmd = new SqlCommand(@"SELECT id as id, 
+	                                                name as name, 
+	                                                status as status,
+	                                                refer_type as referType,
+	                                                refer_name as referName,
+	                                                priority as priority,
+	                                                note as note,
+	                                                addedBy_teamid as addedBy
+	                                                FROM [dbo].tasks;", sqlhelper.connection());
+                //cmd.CommandType = CommandType.StoredProcedure;
+                var dataReader = cmd.ExecuteReader();
+                tasks = GetList<model.Task>(dataReader);
             }
             sqlhelper.close();
-            return new List<model.Task>();
+            return tasks;
         }
         // On Progress Task.
         public List<model.Task> GetProgressTask()
@@ -573,19 +613,27 @@ namespace Hil5_CRM_Project
         // All Events.
         public List<Events> GetAllEvents()
         {
+            List<model.Events> events = null;
+
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
-
-
-
-
-
+                SqlCommand cmd = new SqlCommand(@"SELECT id as id, 
+	                                                name as name, 
+	                                                status as status,
+	                                                refer_type as referType,
+	                                                refer_name as referName,
+	                                                priority as priority,
+	                                                note as note,
+	                                                addedBy_teamid as addedBy
+	                                                FROM [dbo].tasks;", sqlhelper.connection());
+                //cmd.CommandType = CommandType.StoredProcedure;
+                var dataReader = cmd.ExecuteReader();
+                events = GetList<model.Events>(dataReader);
             }
             sqlhelper.close();
-            return new List<Events>();
+            return events;
         }
         // Passed Events.
         public List<Events> GetPassedEvents()

@@ -23,8 +23,8 @@ namespace Hil5_CRM_Project.model
         public DateTime endTime { get; set; }
         public int addedBy { get; set; }
 
-        public List<Customers> customers { get; set; }
-        public Team team { get; set; }
+        //public List<Customers> customers { get; set; }
+        //public Team team { get; set; }
 
 
     }

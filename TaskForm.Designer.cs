@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Leads = new System.Windows.Forms.Label();
@@ -51,18 +52,18 @@
             this.btn_all = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.dgv_customor = new System.Windows.Forms.DataGridView();
+            this.dgv_tasks = new System.Windows.Forms.DataGridView();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_referName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_referType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_referName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +71,7 @@
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tasks)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -205,6 +206,7 @@
             this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
             this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
             this.btn_pdfExport.TabIndex = 4;
+            this.btn_pdfExport.Click += new System.EventHandler(this.btn_pdfExport_Click);
             // 
             // btn_delete
             // 
@@ -336,56 +338,63 @@
             this.guna2CircleButton1.Size = new System.Drawing.Size(32, 27);
             this.guna2CircleButton1.TabIndex = 1;
             // 
-            // dgv_customor
+            // dgv_tasks
             // 
-            this.dgv_customor.AllowUserToAddRows = false;
-            this.dgv_customor.AllowUserToDeleteRows = false;
-            this.dgv_customor.AllowUserToOrderColumns = true;
-            this.dgv_customor.AllowUserToResizeRows = false;
-            this.dgv_customor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_customor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.dgv_customor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_customor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_customor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_customor.ColumnHeadersHeight = 40;
-            this.dgv_customor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_customor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_tasks.AllowUserToAddRows = false;
+            this.dgv_tasks.AllowUserToDeleteRows = false;
+            this.dgv_tasks.AllowUserToOrderColumns = true;
+            this.dgv_tasks.AllowUserToResizeRows = false;
+            this.dgv_tasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tasks.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.dgv_tasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_tasks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_tasks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_tasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            this.dgv_tasks.ColumnHeadersHeight = 40;
+            this.dgv_tasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_tasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_icon,
             this.col_id,
             this.col_name,
             this.col_status,
-            this.col_referName,
             this.col_referType,
+            this.col_referName,
             this.col_priority,
             this.col_note,
             this.col_,
             this.col_addedBy,
-            this.col_photo,
             this.col_active});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_customor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_customor.EnableHeadersVisualStyles = false;
-            this.dgv_customor.Location = new System.Drawing.Point(0, 99);
-            this.dgv_customor.Name = "dgv_customor";
-            this.dgv_customor.RowHeadersVisible = false;
-            this.dgv_customor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_customor.Size = new System.Drawing.Size(1222, 370);
-            this.dgv_customor.TabIndex = 9;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tasks.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dgv_tasks.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tasks.EnableHeadersVisualStyles = false;
+            this.dgv_tasks.Location = new System.Drawing.Point(0, 99);
+            this.dgv_tasks.Name = "dgv_tasks";
+            this.dgv_tasks.RowHeadersVisible = false;
+            this.dgv_tasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_tasks.Size = new System.Drawing.Size(1222, 370);
+            this.dgv_tasks.TabIndex = 9;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "icons8-tasklist-50 (1).png");
+            this.imageList.Images.SetKeyName(1, "icons8-active-58.png");
+            this.imageList.Images.SetKeyName(2, "icons8-close-64.png");
             // 
             // col_icon
             // 
@@ -397,8 +406,8 @@
             // 
             // col_id
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.col_id.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.col_id.DefaultCellStyle = dataGridViewCellStyle17;
             this.col_id.FillWeight = 38.85136F;
             this.col_id.HeaderText = "ID";
             this.col_id.Name = "col_id";
@@ -414,21 +423,21 @@
             this.col_status.HeaderText = "Status";
             this.col_status.Name = "col_status";
             // 
-            // col_referName
-            // 
-            this.col_referName.HeaderText = "Refer Naem";
-            this.col_referName.Name = "col_referName";
-            // 
             // col_referType
             // 
             this.col_referType.HeaderText = "Refer Type";
             this.col_referType.Name = "col_referType";
             // 
+            // col_referName
+            // 
+            this.col_referName.HeaderText = "Refer Name";
+            this.col_referName.Name = "col_referName";
+            // 
             // col_priority
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = "0";
-            this.col_priority.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Format = "N2";
+            dataGridViewCellStyle18.NullValue = "0";
+            this.col_priority.DefaultCellStyle = dataGridViewCellStyle18;
             this.col_priority.HeaderText = "Priority";
             this.col_priority.Name = "col_priority";
             // 
@@ -439,9 +448,9 @@
             // 
             // col_
             // 
-            dataGridViewCellStyle4.Format = "D";
-            dataGridViewCellStyle4.NullValue = null;
-            this.col_.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.Format = "D";
+            dataGridViewCellStyle19.NullValue = null;
+            this.col_.DefaultCellStyle = dataGridViewCellStyle19;
             this.col_.HeaderText = "Created Date";
             this.col_.Name = "col_";
             // 
@@ -450,12 +459,6 @@
             this.col_addedBy.FillWeight = 77.70273F;
             this.col_addedBy.HeaderText = "Added By";
             this.col_addedBy.Name = "col_addedBy";
-            // 
-            // col_photo
-            // 
-            this.col_photo.FillWeight = 38.85136F;
-            this.col_photo.HeaderText = "Photo";
-            this.col_photo.Name = "col_photo";
             // 
             // col_active
             // 
@@ -469,13 +472,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1222, 505);
-            this.Controls.Add(this.dgv_customor);
+            this.Controls.Add(this.dgv_tasks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TaskForm";
             this.Text = "TaskForm";
+            this.Load += new System.EventHandler(this.TaskForm_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -484,7 +488,7 @@
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_tasks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,22 +508,22 @@
         private Guna.UI2.WinForms.Guna2Button btn_all;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
-        private System.Windows.Forms.DataGridView dgv_customor;
-        private System.Windows.Forms.DataGridViewImageColumn col_icon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_referName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_referType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_priority;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_note;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
-        private System.Windows.Forms.DataGridViewImageColumn col_photo;
-        private System.Windows.Forms.DataGridViewImageColumn col_active;
+        private System.Windows.Forms.DataGridView dgv_tasks;
         private Guna.UI2.WinForms.Guna2ImageButton btn_add;
         private Guna.UI2.WinForms.Guna2ImageButton btn_update;
         private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
         private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.DataGridViewImageColumn col_icon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_referType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_referName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_priority;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_note;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
+        private System.Windows.Forms.DataGridViewImageColumn col_active;
     }
 }

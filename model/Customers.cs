@@ -26,8 +26,8 @@ namespace Hil5_CRM_Project.model
         public int promoted { get; set; }
         public int addedBy { get; set; }
 
-        public Team Team { get; set; }
-        public Events Events { get; set; }
-        public List<Leads> Leads{ get; set; }   
+       // public Team Team { get; set; }
+        //public Events Events { get; set; }
+       // public List<Leads> Leads{ get; set; }   
     }
 }

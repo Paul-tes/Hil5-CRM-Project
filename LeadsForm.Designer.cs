@@ -48,10 +48,7 @@
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgv_customor = new System.Windows.Forms.DataGridView();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_Leads = new System.Windows.Forms.Label();
+            this.dgv_leads = new System.Windows.Forms.DataGridView();
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +59,14 @@
             this.col_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_Leads = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_leads)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -141,6 +141,7 @@
             this.btn_pdfExport.PressedState.ImageSize = new System.Drawing.Size(45, 45);
             this.btn_pdfExport.Size = new System.Drawing.Size(45, 48);
             this.btn_pdfExport.TabIndex = 4;
+            this.btn_pdfExport.Click += new System.EventHandler(this.btn_pdfExport_Click);
             // 
             // btn_delete
             // 
@@ -317,17 +318,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Leads";
             // 
-            // dgv_customor
+            // dgv_leads
             // 
-            this.dgv_customor.AllowUserToAddRows = false;
-            this.dgv_customor.AllowUserToDeleteRows = false;
-            this.dgv_customor.AllowUserToOrderColumns = true;
-            this.dgv_customor.AllowUserToResizeRows = false;
-            this.dgv_customor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_customor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.dgv_customor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_customor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_customor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_leads.AllowUserToAddRows = false;
+            this.dgv_leads.AllowUserToDeleteRows = false;
+            this.dgv_leads.AllowUserToOrderColumns = true;
+            this.dgv_leads.AllowUserToResizeRows = false;
+            this.dgv_leads.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_leads.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.dgv_leads.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_leads.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_leads.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -335,10 +336,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_customor.ColumnHeadersHeight = 40;
-            this.dgv_customor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_customor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_leads.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_leads.ColumnHeadersHeight = 40;
+            this.dgv_leads.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_leads.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_icon,
             this.col_id,
             this.col_name,
@@ -356,56 +357,15 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_customor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_customor.EnableHeadersVisualStyles = false;
-            this.dgv_customor.Location = new System.Drawing.Point(0, 99);
-            this.dgv_customor.Name = "dgv_customor";
-            this.dgv_customor.RowHeadersVisible = false;
-            this.dgv_customor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_customor.Size = new System.Drawing.Size(1238, 418);
-            this.dgv_customor.TabIndex = 7;
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuGradientPanel1.Controls.Add(this.lb_Leads);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1238, 39);
-            this.bunifuGradientPanel1.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_client_64__1_2;
-            this.pictureBox1.Location = new System.Drawing.Point(1036, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lb_Leads
-            // 
-            this.lb_Leads.AutoSize = true;
-            this.lb_Leads.BackColor = System.Drawing.Color.Transparent;
-            this.lb_Leads.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lb_Leads.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Leads.ForeColor = System.Drawing.Color.White;
-            this.lb_Leads.Location = new System.Drawing.Point(1082, 9);
-            this.lb_Leads.Name = "lb_Leads";
-            this.lb_Leads.Size = new System.Drawing.Size(58, 20);
-            this.lb_Leads.TabIndex = 0;
-            this.lb_Leads.Text = "Leads";
+            this.dgv_leads.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_leads.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_leads.EnableHeadersVisualStyles = false;
+            this.dgv_leads.Location = new System.Drawing.Point(0, 99);
+            this.dgv_leads.Name = "dgv_leads";
+            this.dgv_leads.RowHeadersVisible = false;
+            this.dgv_leads.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_leads.Size = new System.Drawing.Size(1238, 418);
+            this.dgv_leads.TabIndex = 7;
             // 
             // col_icon
             // 
@@ -471,13 +431,54 @@
             this.col_active.HeaderText = "Active";
             this.col_active.Name = "col_active";
             // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.lb_Leads);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1238, 39);
+            this.bunifuGradientPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_client_64__1_2;
+            this.pictureBox1.Location = new System.Drawing.Point(1036, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lb_Leads
+            // 
+            this.lb_Leads.AutoSize = true;
+            this.lb_Leads.BackColor = System.Drawing.Color.Transparent;
+            this.lb_Leads.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_Leads.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Leads.ForeColor = System.Drawing.Color.White;
+            this.lb_Leads.Location = new System.Drawing.Point(1082, 9);
+            this.lb_Leads.Name = "lb_Leads";
+            this.lb_Leads.Size = new System.Drawing.Size(58, 20);
+            this.lb_Leads.TabIndex = 0;
+            this.lb_Leads.Text = "Leads";
+            // 
             // LeadsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1238, 553);
-            this.Controls.Add(this.dgv_customor);
+            this.Controls.Add(this.dgv_leads);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -489,7 +490,7 @@
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_leads)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -511,7 +512,7 @@
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgv_customor;
+        private System.Windows.Forms.DataGridView dgv_leads;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ImageButton btn_add;
         private Guna.UI2.WinForms.Guna2ImageButton btn_update;

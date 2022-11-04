@@ -16,6 +16,6 @@ namespace Hil5_CRM_Project.model
         public string priority { get; set; }
         public string note { get; set; }
         public int addedBy { get; set; }
-        public Team team { get; set; }
+        //public Team team { get; set; }
     }
 }

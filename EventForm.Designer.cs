@@ -46,7 +46,7 @@
             this.btn_pdfExport = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgv_customor = new System.Windows.Forms.DataGridView();
+            this.dgv_event = new System.Windows.Forms.DataGridView();
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +67,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_event)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -295,17 +295,17 @@
             this.panel1.Size = new System.Drawing.Size(1222, 60);
             this.panel1.TabIndex = 8;
             // 
-            // dgv_customor
+            // dgv_event
             // 
-            this.dgv_customor.AllowUserToAddRows = false;
-            this.dgv_customor.AllowUserToDeleteRows = false;
-            this.dgv_customor.AllowUserToOrderColumns = true;
-            this.dgv_customor.AllowUserToResizeRows = false;
-            this.dgv_customor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_customor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.dgv_customor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_customor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_customor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_event.AllowUserToAddRows = false;
+            this.dgv_event.AllowUserToDeleteRows = false;
+            this.dgv_event.AllowUserToOrderColumns = true;
+            this.dgv_event.AllowUserToResizeRows = false;
+            this.dgv_event.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_event.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.dgv_event.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_event.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_event.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -313,10 +313,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_customor.ColumnHeadersHeight = 40;
-            this.dgv_customor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_customor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_event.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_event.ColumnHeadersHeight = 40;
+            this.dgv_event.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_event.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_icon,
             this.col_id,
             this.col_name,
@@ -337,15 +337,15 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_customor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_customor.EnableHeadersVisualStyles = false;
-            this.dgv_customor.Location = new System.Drawing.Point(0, 99);
-            this.dgv_customor.Name = "dgv_customor";
-            this.dgv_customor.RowHeadersVisible = false;
-            this.dgv_customor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_customor.Size = new System.Drawing.Size(1222, 367);
-            this.dgv_customor.TabIndex = 10;
+            this.dgv_event.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_event.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_event.EnableHeadersVisualStyles = false;
+            this.dgv_event.Location = new System.Drawing.Point(0, 99);
+            this.dgv_event.Name = "dgv_event";
+            this.dgv_event.RowHeadersVisible = false;
+            this.dgv_event.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_event.Size = new System.Drawing.Size(1222, 367);
+            this.dgv_event.TabIndex = 10;
             // 
             // col_icon
             // 
@@ -469,7 +469,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1222, 510);
-            this.Controls.Add(this.dgv_customor);
+            this.Controls.Add(this.dgv_event);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -477,12 +477,13 @@
             this.Name = "EventForm";
             this.Text = "EventForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.EventForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_event)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -507,7 +508,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_all;
         private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dgv_customor;
+        private System.Windows.Forms.DataGridView dgv_event;
         private System.Windows.Forms.DataGridViewImageColumn col_icon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
