@@ -117,20 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="msg_dialogError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFvSURBVChTBcF5S9NxAMDh74sIIhKxZDqP5e3cPXff9367
-        73vu0jlvjaVYYkkqhiSCCBFI//QKPz6PWD/4j3bwD2XvL4sbzyiqj8gL94ynbxmNXfEudMEb7xnCsveC
-        of8HdeeJlcYD8+VfzOSumUh+50P0KyOBL7x1HyMcg2fMvUf0G/eoqrcsF66YS18wHTtDFvrMmPeA944B
-        wt3/ja1zx3rjJ9ryJcrcOYvJIYroEfLALuPuLUZtbYR/8wZX6wfW2jeMxVM0mRNW4/sshLeZ9XWZdDb5
-        aKkgQt1LvM1zHJUh5vwR+tQuKmmL5WCbOU+daXsJmSmLkNqnBOsneEr72LPbmBJddJEma/4KS648n6wp
-        powSItE8JFLZwZ/fxJVqYZVqGINFNJ4Mq/Y4C6YwszofIlPvEy91CGcb+BJlnJEcFn8SgyuK2hpgxehm
-        XmND5KstUoUaUrpIMJbBE4pj94YxOXzozE7W9BaWVAZeARQwzBGpfthnAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADPSURBVChTjdALEkJgAADh/1gGSSqk9CCKQl7piXH/me0I
+        OcF+s2IYBr7fL4/Hg7IsSdOUKIo4Ho/sdjscx2G5XCL6vuf9fnO/38nznOv1yul0wvM8XNfFtm3m8zmi
+        6zperxd1XXO73bhcLoRhyOFwYLPZYFkWhmEg2rbl+XxSVRVZlhHHMUEQsN/vWa/XmKbJbDZDfD4fmqah
+        KAqSJOF8PuP7PtvtltVqxWKxYDqdIsb4NE1DjMmqqor4t0XXdRRFQYzxybKM+LdlMpkgSRI/G6HHOYnV
+        nt8AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -863,4 +858,7 @@
         giAIgiAIgiBGHOc/oudPNl9LmUgAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="msg_dialogError.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

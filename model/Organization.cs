@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hil5_CRM_Project.model
 {
-    internal class Organization
+    public class Organization
     {
         public int id { get; set; }
         public byte[] logo { get; set; }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Hil5_CRM_Project.model;
 using System.Data;
+using System.IO;
 
 namespace Hil5_CRM_Project
 {
@@ -152,21 +153,68 @@ namespace Hil5_CRM_Project
             return new List<Customers>();
         }
         // search by id from customers record.
-        public List<Customers> SearchCustomers(int id)
+        public Customers SearchCustomers(int id)
         {
+            Customers cust;
+            Byte[] img1 = null;
             SqlHelper sqlhelper = new SqlHelper(con);
-
+           
             if (sqlhelper.isConnected())
             {
-                // do database operation
+                SqlCommand cmd = new SqlCommand("spGet_customerBy_id", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
 
+                // store procedure parameters.
+                cmd.Parameters.Add("@idOrName", SqlDbType.VarChar);
 
+                // parameter values.
+                cmd.Parameters["@idOrName"].Value = id;
 
+                SqlDataReader custReader = cmd.ExecuteReader(CommandBehavior.SingleRow);
+                if (custReader.Read())
+                {
+                    cust = new Customers();
+                    cust.id = custReader.GetInt32(0);
+                    cust.name = custReader.GetString(1);
+                    cust.email = custReader.GetString(2);
+                    cust.mobile = custReader.GetString(3);
+                    cust.city = custReader.GetString(4);
+                    cust.zip = custReader.GetString(5);
+                    cust.country = custReader.GetString(6);
+                    cust.addedDate = custReader.GetDateTime(7);
+                    if (custReader["photo"] != DBNull.Value)
+                    {
+                        img1 = (byte[])(custReader["photo"]);
+                        MemoryStream ms = new MemoryStream(img1);
+                        cust.photo = img1;
+                    }
+                    else
+                    {
+                        cust.photo = null;
+                    }
+                    if (custReader["website"] != DBNull.Value)
+                    {
+                        cust.website = custReader.GetString(9);
+                    }
+                    else
+                    {
+                        cust.website = null;
+                    }
+                    cust.status = custReader.GetBoolean(10);
+                    cust.addedBy = (int)custReader["addedBy_teamId"];
+                    return cust;
+                    System.Windows.Forms.MessageBox.Show("success");
+                }
+                else
+                {
+                    return null;
+                }
 
             }
             sqlhelper.close();
-            return new List<Customers>();
+            return null;
+          
         }
         // search by name from customers record.
         public List<Customers> SearchCustomers(string name)
@@ -251,14 +299,67 @@ namespace Hil5_CRM_Project
 
         }
         // update existing customer.
-        public void UpdateCustomer(object cust)
+        public void UpdateCustomer(Customers cust)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
 
+                SqlCommand cmd = new SqlCommand("Update Customers_byId", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // store procedure parameters.
+                cmd.Parameters.Add("@customerId", SqlDbType.Int);
+                cmd.Parameters.Add("@newName", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newEmail", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newMobile", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newCity", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newZip", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newCountry", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newAdded_date", SqlDbType.DateTime);
+                cmd.Parameters.Add("@newPhoto", SqlDbType.VarBinary);
+                cmd.Parameters.Add("@newWebsite", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newStatus", SqlDbType.Bit);
+                cmd.Parameters.Add("@newPromoted_leadsId", SqlDbType.Int);
+                cmd.Parameters.Add("@newAddedBy_teamId", SqlDbType.Int);
+
+                // string pho = "photo"; 
+                // parameter values.
+                cmd.Parameters["@customerId"].Value = cust.id;
+                cmd.Parameters["@newName"].Value = cust.name;
+                cmd.Parameters["@newName"].Value = cust.name;
+                cmd.Parameters["@newEmail"].Value = cust.email;
+                cmd.Parameters["@newMobile"].Value = cust.mobile;
+                cmd.Parameters["@newCity"].Value = cust.city;
+                cmd.Parameters["@newZip"].Value = cust.zip;
+                cmd.Parameters["@newCountry"].Value = cust.country;
+                cmd.Parameters["@newAdded_date"].Value = cust.addedDate;
+
+                if (cust.photo == null)
+                {
+                    cmd.Parameters["@newPhoto"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@newPhoto"].Value = cust.photo;
+                }
+
+                if (cust.website == null)
+                {
+                    cmd.Parameters["@newWebsite"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@newWebsite"].Value = cust.website;
+                }
+
+                cmd.Parameters["@newStatus"].Value = cust.status;
+                cmd.Parameters["@newPromoted_leadsId"].Value = DBNull.Value;
+                cmd.Parameters["@newAddedBy_teamId"].Value = cust.addedBy;
+
+                int rowsaffected = cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show(rowsaffected + "row affected");
 
 
 
@@ -804,21 +905,54 @@ namespace Hil5_CRM_Project
         // -------------------------------------------------------  Organization DB Access methods------------------------------------------------------------------- 
         
         // search by name from Leads record.
-        public List<Organization> SearchOrganization(string name)
+        public Organization SearchOrganization(int id)
         {
+            Organization org;
+            Byte[] img1 = null;
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
+                SqlCommand cmd = new SqlCommand("spGet_organizationBy_id", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
 
+                // store procedure parameters.
+                cmd.Parameters.Add("@idOrName", SqlDbType.VarChar);
 
+                // parameter values.
+                cmd.Parameters["@idOrName"].Value = id;
 
+                SqlDataReader orgReader = cmd.ExecuteReader(CommandBehavior.SingleRow);
+                if (orgReader.Read())
+                {
+                    org = new Organization();
+                    org.id = orgReader.GetInt32(0);
+                    if (orgReader["logo"] != DBNull.Value)
+                    {
+                        img1 = (byte[])(orgReader["logo"]);
+                        MemoryStream ms = new MemoryStream(img1);
+                        org.logo = img1;
+                    }
+                    else
+                    {
+                        org.logo = null;
+                    }
+                    org.name = orgReader.GetString(2);
+                    org.email = orgReader.GetString(3);
+                    org.phone = orgReader.GetString(4);
+                    org.addres = orgReader.GetString(5);
+                    return org;
+                    System.Windows.Forms.MessageBox.Show("success");
+                }
+                else
+                {
+                    return null;
+                }
 
             }
             sqlhelper.close();
-            return new List<Organization>();
+            return null;
         }
         // Add new Org
         //This works fine
@@ -872,8 +1006,45 @@ namespace Hil5_CRM_Project
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
+                /*
+                    @newName varchar(255),
+                      @newEmail varchar(255),
+                      @newPhone varchar(255),
+                      @newAddress varchar(255)
+                 */
 
+                SqlCommand cmd = new SqlCommand("spUpdateOrganization_byIdOrName", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // store procedure parameters.
+                cmd.Parameters.Add("@orgIdOrName", SqlDbType.Int);
+                cmd.Parameters.Add("@newLogo", SqlDbType.VarBinary);
+                cmd.Parameters.Add("@newName", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newEmail", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newPhone", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newAddress", SqlDbType.VarChar);
+
+                // string pho = "photo"; 
+                // parameter values.
+                cmd.Parameters["@orgIdOrName"].Value = org.id;
+
+                if (org.logo == null)
+                {
+                    cmd.Parameters["@newLogo"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@newLogo"].Value = org.logo;
+                }
+
+                cmd.Parameters["@newName"].Value = org.name;
+                cmd.Parameters["@newEmail"].Value = org.email;
+                cmd.Parameters["@newPhone"].Value = org.phone;
+                cmd.Parameters["@newAddress"].Value = org.addres;
+               
+
+                int rowsaffected = cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show(rowsaffected + "row affected");
 
 
 

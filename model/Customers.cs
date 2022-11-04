@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hil5_CRM_Project.model
 {
-    internal class Customers
+    public class Customers
     {
         public int id { get; set; }
         public string name { get; set; }
