@@ -34,8 +34,6 @@
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.dtp_endTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtp_startTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtp_endDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtp_startDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lbl_required4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,8 +56,6 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_gender = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_topic = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_endTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_startTime = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_endDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_startDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_Topic = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -77,7 +73,7 @@
             this.panel_drag.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_drag.Location = new System.Drawing.Point(0, 0);
             this.panel_drag.Name = "panel_drag";
-            this.panel_drag.Size = new System.Drawing.Size(1073, 88);
+            this.panel_drag.Size = new System.Drawing.Size(666, 88);
             this.panel_drag.TabIndex = 3;
             // 
             // btn_exit
@@ -93,7 +89,7 @@
             this.btn_exit.ImageZoom = 50;
             this.btn_exit.LabelPosition = 35;
             this.btn_exit.LabelText = "X";
-            this.btn_exit.Location = new System.Drawing.Point(1015, 33);
+            this.btn_exit.Location = new System.Drawing.Point(597, 36);
             this.btn_exit.Margin = new System.Windows.Forms.Padding(6);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(43, 46);
@@ -104,7 +100,7 @@
             // 
             this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Title.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.Location = new System.Drawing.Point(49, 33);
+            this.lbl_Title.Location = new System.Drawing.Point(56, 36);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(63, 26);
             this.lbl_Title.TabIndex = 0;
@@ -115,8 +111,6 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.dtp_endTime);
-            this.bunifuGradientPanel1.Controls.Add(this.dtp_startTime);
             this.bunifuGradientPanel1.Controls.Add(this.dtp_endDate);
             this.bunifuGradientPanel1.Controls.Add(this.dtp_startDate);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_required4);
@@ -139,8 +133,6 @@
             this.bunifuGradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_gender);
             this.bunifuGradientPanel1.Controls.Add(this.txt_topic);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_endTime);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_startTime);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_endDate);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_startDate);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_Topic);
@@ -152,47 +144,17 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 88);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1073, 464);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(666, 464);
             this.bunifuGradientPanel1.TabIndex = 4;
-            // 
-            // dtp_endTime
-            // 
-            this.dtp_endTime.Checked = true;
-            this.dtp_endTime.FillColor = System.Drawing.Color.Gold;
-            this.dtp_endTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_endTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_endTime.Location = new System.Drawing.Point(736, 251);
-            this.dtp_endTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_endTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_endTime.Name = "dtp_endTime";
-            this.dtp_endTime.ShowUpDown = true;
-            this.dtp_endTime.Size = new System.Drawing.Size(256, 36);
-            this.dtp_endTime.TabIndex = 13;
-            this.dtp_endTime.Value = new System.DateTime(2022, 10, 14, 20, 47, 15, 997);
-            // 
-            // dtp_startTime
-            // 
-            this.dtp_startTime.Checked = true;
-            this.dtp_startTime.FillColor = System.Drawing.Color.Snow;
-            this.dtp_startTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_startTime.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.dtp_startTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtp_startTime.Location = new System.Drawing.Point(736, 99);
-            this.dtp_startTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_startTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_startTime.Name = "dtp_startTime";
-            this.dtp_startTime.ShowUpDown = true;
-            this.dtp_startTime.Size = new System.Drawing.Size(256, 36);
-            this.dtp_startTime.TabIndex = 13;
-            this.dtp_startTime.Value = new System.DateTime(2022, 10, 14, 20, 47, 15, 997);
             // 
             // dtp_endDate
             // 
             this.dtp_endDate.Checked = true;
+            this.dtp_endDate.CustomFormat = "\"MM/dd/yyyy hh:mm:ss\"";
             this.dtp_endDate.FillColor = System.Drawing.Color.Gold;
             this.dtp_endDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_endDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_endDate.Location = new System.Drawing.Point(496, 250);
+            this.dtp_endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_endDate.Location = new System.Drawing.Point(364, 329);
             this.dtp_endDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_endDate.MinDate = new System.DateTime(2022, 10, 14, 0, 0, 0, 0);
             this.dtp_endDate.Name = "dtp_endDate";
@@ -203,10 +165,11 @@
             // dtp_startDate
             // 
             this.dtp_startDate.Checked = true;
+            this.dtp_startDate.CustomFormat = "\"MM/dd/yyyy hh:mm:ss\"";
             this.dtp_startDate.FillColor = System.Drawing.Color.Snow;
             this.dtp_startDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_startDate.Location = new System.Drawing.Point(496, 98);
+            this.dtp_startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_startDate.Location = new System.Drawing.Point(56, 329);
             this.dtp_startDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtp_startDate.MinDate = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
             this.dtp_startDate.Name = "dtp_startDate";
@@ -219,7 +182,7 @@
             this.lbl_required4.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required4.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required4.Location = new System.Drawing.Point(180, 225);
+            this.lbl_required4.Location = new System.Drawing.Point(181, 159);
             this.lbl_required4.Name = "lbl_required4";
             this.lbl_required4.Size = new System.Drawing.Size(13, 24);
             this.lbl_required4.TabIndex = 10;
@@ -230,7 +193,7 @@
             this.lbl_required7.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required7.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required7.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required7.Location = new System.Drawing.Point(577, 206);
+            this.lbl_required7.Location = new System.Drawing.Point(445, 285);
             this.lbl_required7.Name = "lbl_required7";
             this.lbl_required7.Size = new System.Drawing.Size(13, 24);
             this.lbl_required7.TabIndex = 10;
@@ -241,7 +204,7 @@
             this.lbl_required6.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required6.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required6.Location = new System.Drawing.Point(154, 308);
+            this.lbl_required6.Location = new System.Drawing.Point(155, 242);
             this.lbl_required6.Name = "lbl_required6";
             this.lbl_required6.Size = new System.Drawing.Size(13, 24);
             this.lbl_required6.TabIndex = 10;
@@ -252,7 +215,7 @@
             this.lbl_required5.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required5.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required5.Location = new System.Drawing.Point(149, 269);
+            this.lbl_required5.Location = new System.Drawing.Point(150, 203);
             this.lbl_required5.Name = "lbl_required5";
             this.lbl_required5.Size = new System.Drawing.Size(13, 24);
             this.lbl_required5.TabIndex = 10;
@@ -263,7 +226,7 @@
             this.lbl_required3.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required3.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required3.Location = new System.Drawing.Point(138, 188);
+            this.lbl_required3.Location = new System.Drawing.Point(139, 122);
             this.lbl_required3.Name = "lbl_required3";
             this.lbl_required3.Size = new System.Drawing.Size(13, 24);
             this.lbl_required3.TabIndex = 10;
@@ -274,7 +237,7 @@
             this.lbl_required2.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required2.Location = new System.Drawing.Point(141, 144);
+            this.lbl_required2.Location = new System.Drawing.Point(142, 78);
             this.lbl_required2.Name = "lbl_required2";
             this.lbl_required2.Size = new System.Drawing.Size(13, 24);
             this.lbl_required2.TabIndex = 10;
@@ -285,7 +248,7 @@
             this.lbl_required1.BackColor = System.Drawing.Color.Transparent;
             this.lbl_required1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_required1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required1.Location = new System.Drawing.Point(146, 106);
+            this.lbl_required1.Location = new System.Drawing.Point(147, 40);
             this.lbl_required1.Name = "lbl_required1";
             this.lbl_required1.Size = new System.Drawing.Size(13, 24);
             this.lbl_required1.TabIndex = 10;
@@ -305,7 +268,7 @@
             this.btn_save.FillColor2 = System.Drawing.Color.Gray;
             this.btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_save.ForeColor = System.Drawing.Color.Black;
-            this.btn_save.Location = new System.Drawing.Point(812, 397);
+            this.btn_save.Location = new System.Drawing.Point(384, 398);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(180, 45);
             this.btn_save.TabIndex = 4;
@@ -330,7 +293,7 @@
             "Held",
             "Not Held",
             "Other"});
-            this.cmb_note.Location = new System.Drawing.Point(213, 134);
+            this.cmb_note.Location = new System.Drawing.Point(214, 68);
             this.cmb_note.Name = "cmb_note";
             this.cmb_note.Size = new System.Drawing.Size(210, 36);
             this.cmb_note.TabIndex = 3;
@@ -348,7 +311,7 @@
             this.cmb_guestsList.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmb_guestsList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmb_guestsList.ItemHeight = 30;
-            this.cmb_guestsList.Location = new System.Drawing.Point(209, 297);
+            this.cmb_guestsList.Location = new System.Drawing.Point(210, 231);
             this.cmb_guestsList.Name = "cmb_guestsList";
             this.cmb_guestsList.Size = new System.Drawing.Size(210, 36);
             this.cmb_guestsList.TabIndex = 3;
@@ -370,7 +333,7 @@
             "New",
             "In Progress",
             "Finished"});
-            this.cmb_Status.Location = new System.Drawing.Point(211, 257);
+            this.cmb_Status.Location = new System.Drawing.Point(212, 191);
             this.cmb_Status.Name = "cmb_Status";
             this.cmb_Status.Size = new System.Drawing.Size(210, 36);
             this.cmb_Status.TabIndex = 3;
@@ -395,7 +358,7 @@
             "Social",
             "Fundraising",
             "Other"});
-            this.cmb_type.Location = new System.Drawing.Point(211, 175);
+            this.cmb_type.Location = new System.Drawing.Point(212, 109);
             this.cmb_type.Name = "cmb_type";
             this.cmb_type.Size = new System.Drawing.Size(210, 36);
             this.cmb_type.TabIndex = 3;
@@ -413,7 +376,7 @@
             this.cmb_addedBy.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmb_addedBy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmb_addedBy.ItemHeight = 30;
-            this.cmb_addedBy.Location = new System.Drawing.Point(213, 216);
+            this.cmb_addedBy.Location = new System.Drawing.Point(214, 150);
             this.cmb_addedBy.Name = "cmb_addedBy";
             this.cmb_addedBy.Size = new System.Drawing.Size(210, 36);
             this.cmb_addedBy.TabIndex = 3;
@@ -423,7 +386,7 @@
             this.lbl_guests.BackColor = System.Drawing.Color.Transparent;
             this.lbl_guests.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_guests.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_guests.Location = new System.Drawing.Point(97, 310);
+            this.lbl_guests.Location = new System.Drawing.Point(98, 244);
             this.lbl_guests.Name = "lbl_guests";
             this.lbl_guests.Size = new System.Drawing.Size(56, 23);
             this.lbl_guests.TabIndex = 0;
@@ -434,7 +397,7 @@
             this.lbl_status.BackColor = System.Drawing.Color.Transparent;
             this.lbl_status.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_status.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_status.Location = new System.Drawing.Point(99, 270);
+            this.lbl_status.Location = new System.Drawing.Point(100, 204);
             this.lbl_status.Name = "lbl_status";
             this.lbl_status.Size = new System.Drawing.Size(52, 23);
             this.lbl_status.TabIndex = 0;
@@ -445,7 +408,7 @@
             this.lbl_AddedBy.BackColor = System.Drawing.Color.Transparent;
             this.lbl_AddedBy.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_AddedBy.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_AddedBy.Location = new System.Drawing.Point(99, 229);
+            this.lbl_AddedBy.Location = new System.Drawing.Point(100, 163);
             this.lbl_AddedBy.Name = "lbl_AddedBy";
             this.lbl_AddedBy.Size = new System.Drawing.Size(80, 23);
             this.lbl_AddedBy.TabIndex = 0;
@@ -456,7 +419,7 @@
             this.lbl_type.BackColor = System.Drawing.Color.Transparent;
             this.lbl_type.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_type.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_type.Location = new System.Drawing.Point(99, 188);
+            this.lbl_type.Location = new System.Drawing.Point(100, 122);
             this.lbl_type.Name = "lbl_type";
             this.lbl_type.Size = new System.Drawing.Size(40, 23);
             this.lbl_type.TabIndex = 0;
@@ -478,7 +441,7 @@
             this.lbl_gender.BackColor = System.Drawing.Color.Transparent;
             this.lbl_gender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_gender.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_gender.Location = new System.Drawing.Point(99, 148);
+            this.lbl_gender.Location = new System.Drawing.Point(100, 82);
             this.lbl_gender.Name = "lbl_gender";
             this.lbl_gender.Size = new System.Drawing.Size(42, 23);
             this.lbl_gender.TabIndex = 0;
@@ -496,7 +459,7 @@
             this.txt_topic.FocusedState.BorderColor = System.Drawing.Color.HotPink;
             this.txt_topic.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_topic.HoverState.BorderColor = System.Drawing.Color.HotPink;
-            this.txt_topic.Location = new System.Drawing.Point(213, 101);
+            this.txt_topic.Location = new System.Drawing.Point(214, 35);
             this.txt_topic.Name = "txt_topic";
             this.txt_topic.PasswordChar = '\0';
             this.txt_topic.PlaceholderText = "";
@@ -505,34 +468,12 @@
             this.txt_topic.TabIndex = 1;
             this.txt_topic.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_topic_KeyDown);
             // 
-            // lbl_endTime
-            // 
-            this.lbl_endTime.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_endTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_endTime.ForeColor = System.Drawing.Color.LawnGreen;
-            this.lbl_endTime.Location = new System.Drawing.Point(736, 206);
-            this.lbl_endTime.Name = "lbl_endTime";
-            this.lbl_endTime.Size = new System.Drawing.Size(73, 23);
-            this.lbl_endTime.TabIndex = 0;
-            this.lbl_endTime.Text = "End Time";
-            // 
-            // lbl_startTime
-            // 
-            this.lbl_startTime.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_startTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_startTime.ForeColor = System.Drawing.Color.LawnGreen;
-            this.lbl_startTime.Location = new System.Drawing.Point(736, 54);
-            this.lbl_startTime.Name = "lbl_startTime";
-            this.lbl_startTime.Size = new System.Drawing.Size(81, 23);
-            this.lbl_startTime.TabIndex = 0;
-            this.lbl_startTime.Text = "Start Time";
-            // 
             // lbl_endDate
             // 
             this.lbl_endDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_endDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_endDate.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_endDate.Location = new System.Drawing.Point(496, 206);
+            this.lbl_endDate.Location = new System.Drawing.Point(364, 285);
             this.lbl_endDate.Name = "lbl_endDate";
             this.lbl_endDate.Size = new System.Drawing.Size(77, 23);
             this.lbl_endDate.TabIndex = 0;
@@ -543,7 +484,7 @@
             this.lbl_startDate.BackColor = System.Drawing.Color.Transparent;
             this.lbl_startDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_startDate.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_startDate.Location = new System.Drawing.Point(496, 54);
+            this.lbl_startDate.Location = new System.Drawing.Point(56, 285);
             this.lbl_startDate.Name = "lbl_startDate";
             this.lbl_startDate.Size = new System.Drawing.Size(85, 23);
             this.lbl_startDate.TabIndex = 0;
@@ -554,7 +495,7 @@
             this.lbl_Topic.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Topic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Topic.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_Topic.Location = new System.Drawing.Point(99, 107);
+            this.lbl_Topic.Location = new System.Drawing.Point(100, 41);
             this.lbl_Topic.Name = "lbl_Topic";
             this.lbl_Topic.Size = new System.Drawing.Size(45, 23);
             this.lbl_Topic.TabIndex = 0;
@@ -579,7 +520,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 552);
+            this.ClientSize = new System.Drawing.Size(666, 552);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.panel_drag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -599,8 +540,6 @@
         private Bunifu.Framework.UI.BunifuTileButton btn_exit;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Title;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_endTime;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtp_startTime;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_endDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtp_startDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required4;
@@ -620,8 +559,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_gender;
         private Guna.UI2.WinForms.Guna2TextBox txt_topic;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_endTime;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_startTime;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_endDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_startDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Topic;

@@ -703,9 +703,9 @@ namespace Hil5_CRM_Project
                 cmd.Parameters.Add("@status", SqlDbType.VarChar);
                 cmd.Parameters.Add("@note", SqlDbType.VarChar);
                 cmd.Parameters.Add("@startDate", SqlDbType.Date);
-                cmd.Parameters.Add("@startTime", SqlDbType.Time);
+              //  cmd.Parameters.Add("@startTime", SqlDbType.Time);
                 cmd.Parameters.Add("@endDate", SqlDbType.Date);
-                cmd.Parameters.Add("@endTime", SqlDbType.Time);
+              //  cmd.Parameters.Add("@endTime", SqlDbType.Time);
                 cmd.Parameters.Add("@addedBy_teamId", SqlDbType.Int);
 
 
@@ -715,9 +715,9 @@ namespace Hil5_CRM_Project
                 cmd.Parameters["@status"].Value = events.status;
                 cmd.Parameters["@note"].Value = events.note;
                 cmd.Parameters["@startDate"].Value = events.startDate;
-                cmd.Parameters["@startTime"].Value = events.startTime;
+              //  cmd.Parameters["@startTime"].Value = events.startTime;
                 cmd.Parameters["@endDate"].Value = events.endDate;
-                cmd.Parameters["@endTime"].Value = events.endTime;
+              //  cmd.Parameters["@endTime"].Value = events.endTime;
                 cmd.Parameters["@addedBy_teamId"].Value = events.addedBy;
             
 

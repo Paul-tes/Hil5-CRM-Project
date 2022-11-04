@@ -340,6 +340,12 @@
     <Compile Include="TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\TeamCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\TeamCard.Designer.cs">
+      <DependentUpon>TeamCard.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="con demo.resx">
       <DependentUpon>con demo.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\TeamCard.resx">
+      <DependentUpon>TeamCard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />

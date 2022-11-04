@@ -145,8 +145,6 @@ namespace Hil5_CRM_Project.DialogBox
 
             if (events.startDate > events.endDate)
             msg_dialogError.Show("The start date can't be higher than the end date!");
-            else if (events.startDate == events.endDate  && events.startTime >= events.endTime)
-            msg_dialogError.Show("Check your time please!");
 
             DbAccess dbaccess = new DbAccess();
             dbaccess.AddEvent(events);
