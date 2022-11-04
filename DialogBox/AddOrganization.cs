@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -24,11 +25,16 @@ namespace Hil5_CRM_Project.DialogBox
             txt_email.Text = null;
             txt_phone.Text = null;
             txt_name.Text = null;
+            //  pictureBox_Logo.Image = null;   
         }
+
+        string imgLocation = "";
 
         private void btn_save_Click(object sender, EventArgs e)
         {
             Organization organization = new Organization();
+
+
 
             //Validation
             //Name
@@ -83,6 +89,22 @@ namespace Hil5_CRM_Project.DialogBox
                 lbl_required4.Show();
             }
 
+            //logo
+            organization.logo = null;
+            if (imgLocation != "")
+            { 
+            FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+            BinaryReader brs = new BinaryReader(fs);
+            organization.logo = brs.ReadBytes((int)fs.Length);
+             }
+            else 
+            {
+                organization.logo = null;
+            }
+       
+            DbAccess dbaccess = new DbAccess();
+            dbaccess.AddOrganization(organization);
+           // picTest.Image = ConvertByteArrayToImage(organization.logo);
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -92,7 +114,7 @@ namespace Hil5_CRM_Project.DialogBox
 
         private void btn_attach_Click(object sender, EventArgs e)
         {
-            string imgLocation = "";
+           
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
@@ -110,6 +132,27 @@ namespace Hil5_CRM_Project.DialogBox
                 msg_dialogError.Show("An error has occured");
             }
         }
+
+
+        //image to array
+        byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        // array to image
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
+
 
         private void txt_email_KeyDown(object sender, KeyEventArgs e)
         {

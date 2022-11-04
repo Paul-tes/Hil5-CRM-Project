@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -32,6 +33,7 @@ namespace Hil5_CRM_Project.DialogBox
 
             dtp_addedDate.MinDate = DateTime.Now;
         }
+        string imgLocation = "";
 
         private void btn_exit_Click(object sender, EventArgs e)
         {
@@ -40,7 +42,7 @@ namespace Hil5_CRM_Project.DialogBox
 
         private void btn_Attach_Click(object sender, EventArgs e)
         {
-            string imgLocation = "";
+          
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
@@ -199,9 +201,43 @@ namespace Hil5_CRM_Project.DialogBox
             customer.addedBy = int.Parse(cmb_addedby.SelectedValue.ToString());
 
 
+            //photo
+            customer.photo = null;
+            if (imgLocation != "")
+            {
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(fs);
+                customer.photo = brs.ReadBytes((int)fs.Length);
+            }
+            else
+            {
+                customer.photo = null;
+            }
+
+          //  if (customer.photo!= null)
+          //  pic_test.Image = ConvertByteArrayToImage(customer.photo); 
+
             // saving customer to database.
             DbAccess dbAccess = new DbAccess();
             dbAccess.AddCustomer(customer);
+        }
+
+        //image to array
+        byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        // array to image
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void txt_Name_KeyDown(object sender, KeyEventArgs e)

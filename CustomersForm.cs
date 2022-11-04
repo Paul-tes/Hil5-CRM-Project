@@ -139,5 +139,10 @@ namespace Hil5_CRM_Project
             addCustomer.StartPosition = FormStartPosition.CenterParent;
             addCustomer.ShowDialog();
         }
+
+        private void dgv_customor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

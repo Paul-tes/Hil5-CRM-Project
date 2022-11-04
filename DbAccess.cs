@@ -221,8 +221,24 @@ namespace Hil5_CRM_Project
                 cmd.Parameters["@zip"].Value = cust.zip;
                 cmd.Parameters["@country"].Value = cust.country;
                 cmd.Parameters["@added_date"].Value = cust.addedDate;
-                cmd.Parameters["@photo"].Value = DBNull.Value;
-                cmd.Parameters["@website"].Value = DBNull.Value;
+               
+                if (cust.photo == null)
+                {
+                    cmd.Parameters["@photo"].Value = DBNull.Value;
+                }
+                else {
+                    cmd.Parameters["@photo"].Value = cust.photo;
+                }
+               
+                if (cust.website == null)
+                {
+                    cmd.Parameters["@website"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@website"].Value = cust.website;
+                }
+             
                 cmd.Parameters["@status"].Value = cust.status;
                 cmd.Parameters["@promoted_leadsId"].Value = DBNull.Value;
                 cmd.Parameters["@addedBy_teamId"].Value = cust.addedBy;
@@ -748,6 +764,227 @@ namespace Hil5_CRM_Project
             }
             sqlhelper.close();
         }
+
+
+
+        // -------------------------------------------------------  Organization DB Access methods------------------------------------------------------------------- 
+        
+        // search by name from Leads record.
+        public List<Organization> SearchOrganization(string name)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+            return new List<Organization>();
+        }
+        // Add new Org
+        //This works fine
+        public void AddOrganization(Organization org)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+
+                SqlCommand cmd = new SqlCommand("Add organization", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+
+                // store procedure parameters.
+
+                cmd.Parameters.Add("@logo", SqlDbType.VarBinary);
+                cmd.Parameters.Add("@name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@email", SqlDbType.VarChar);
+                cmd.Parameters.Add("@phone", SqlDbType.VarChar);
+                cmd.Parameters.Add("@address", SqlDbType.VarChar);
+                // parameter values.
+                if (org.logo == null)
+                {
+                    cmd.Parameters["@logo"].Value = DBNull.Value;
+                }
+                else 
+                {
+                    cmd.Parameters["@logo"].Value = org.logo;
+                }
+           
+                cmd.Parameters["@name"].Value = org.name;
+                cmd.Parameters["@email"].Value = org.email;
+                cmd.Parameters["@phone"].Value = org.phone;
+                cmd.Parameters["@address"].Value = org.addres;
+
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // update existing Organization.
+        public void UpdateOrganization(Organization org)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // Delete org
+        public void DeleteOrganization(int id)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+
+
+
+
+
+        // -------------------------------------------------------  Team DB Access methods------------------------------------------------------------------- 
+
+        // search by name from Team record.
+        public List<Team> searchTeam(string name)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+            return new List<Team>();
+        }
+        // Add new Team
+        //This works fine
+        public void AddTeam(Team team)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+
+                SqlCommand cmd = new SqlCommand("Add Team", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                /*
+                    @picture varbinary(max),
+                    @name varchar(255),
+	                @gender varchar(255),
+	                @email varchar(255),
+	                @password varchar(255),
+	                @type varchar(255),
+	                @department varchar(255),
+	                @role varchar(255),
+	                @status bit
+                 */
+
+                // store procedure parameters.
+
+                cmd.Parameters.Add("@picture", SqlDbType.VarBinary);
+                cmd.Parameters.Add("@name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@gender", SqlDbType.VarChar);
+                cmd.Parameters.Add("@email", SqlDbType.VarChar);
+                cmd.Parameters.Add("@password", SqlDbType.VarChar);
+                cmd.Parameters.Add("@type", SqlDbType.VarChar);
+                cmd.Parameters.Add("@department", SqlDbType.VarChar);
+                cmd.Parameters.Add("@role", SqlDbType.VarChar);
+                cmd.Parameters.Add("@status", SqlDbType.Bit);
+                
+                // parameter values.
+                if (team.picture == null)
+                {
+                    cmd.Parameters["@picture"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@picture"].Value = team.picture;
+                }
+
+                cmd.Parameters["@name"].Value = team.name;
+                cmd.Parameters["@gender"].Value = team.gender;
+                cmd.Parameters["@email"].Value = team.email;
+                cmd.Parameters["@password"].Value = team.password;
+                cmd.Parameters["@type"].Value = team.type;
+                cmd.Parameters["@department"].Value = team.departement;
+                cmd.Parameters["@role"].Value = team.role;
+                cmd.Parameters["@status"].Value = team.status;
+
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // update existing Team.
+        public void updateTeam(Team team)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // Delete org
+        public void DeleteTeam(int id)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+
+
         // -------------------------------------------------------  Guest DB Access methods------------------------------------------------------------------- 
 
 
