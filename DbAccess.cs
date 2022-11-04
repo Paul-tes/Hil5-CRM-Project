@@ -373,15 +373,49 @@ namespace Hil5_CRM_Project
             return new List<model.Task>();
         }
         // Add new Task
-        public void AddTask(int id, string name, string addedby, string status, string referType, string referName, string priority, string note)
+        public void AddTask(Hil5_CRM_Project.model.Task task)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
 
+                SqlCommand cmd = new SqlCommand("Add Tasks", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+                /*
+                   @name varchar(255),
+	                @status varchar(255),
+	                @refer_type varchar(255),
+	                @refer_name varchar(255),
+	                @priority varchar(255),
+	                @note varchar(max),
+	                @addedBy_teamId int
+                 */
+
+                // store procedure parameters.
+
+               
+                cmd.Parameters.Add("@name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@status", SqlDbType.VarChar);
+                cmd.Parameters.Add("@refer_type", SqlDbType.VarChar);
+                cmd.Parameters.Add("@refer_name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@priority", SqlDbType.VarChar);
+                cmd.Parameters.Add("@note", SqlDbType.VarChar);
+                cmd.Parameters.Add("@addedBy_teamId", SqlDbType.VarChar);
+ 
+                // parameter values.
+                
+                cmd.Parameters["@name"].Value = task.name;
+                cmd.Parameters["@status"].Value = task.status;
+                cmd.Parameters["@refer_type"].Value = task.referType;
+                cmd.Parameters["@refer_name"].Value = task.referName;
+                cmd.Parameters["@priority"].Value = task.priority;
+                cmd.Parameters["@note"].Value = task.note;
+                cmd.Parameters["@addedBy_teamId"].Value = task.addedBy;
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
 
 
 
@@ -389,7 +423,7 @@ namespace Hil5_CRM_Project
             sqlhelper.close();
         }
         // update existing Tasks.
-        public void UpdateCustomer(int id, string name, string addedby, string status, string referType, string referName, string priority, string note)
+        public void UpdateCustomer(Hil5_CRM_Project.model.Task task)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
