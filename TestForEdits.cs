@@ -44,5 +44,17 @@ namespace Hil5_CRM_Project
             
             editCust.Show();
         }
+
+        private void btn_editTask_Click(object sender, EventArgs e)
+        {
+            Hil5_CRM_Project.model.Task task = new Hil5_CRM_Project.model.Task();
+            int id = int.Parse(txt_IdTask.Text);
+            DbAccess dbaccess = new DbAccess();
+            task = dbaccess.SearchTasks(id);
+
+            EditTask editTask = new EditTask(task);
+            editTask.Show();
+
+        }
     }
 }

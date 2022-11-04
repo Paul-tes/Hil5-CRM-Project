@@ -421,6 +421,9 @@
     <EmbeddedResource Include="Edit\EditOrganization.resx">
       <DependentUpon>EditOrganization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditTask.resx">
+      <DependentUpon>EditTask.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>

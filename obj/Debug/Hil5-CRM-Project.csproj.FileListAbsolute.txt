@@ -101,3 +101,4 @@ C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\AddTeam.TeamCard.resou
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.TestForEdits.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditCustomers.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditOrganization.resources
+C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditTask.resources

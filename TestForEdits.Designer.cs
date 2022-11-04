@@ -32,6 +32,8 @@
             this.txtIdOrg = new System.Windows.Forms.TextBox();
             this.txtIdCustomer = new System.Windows.Forms.TextBox();
             this.btn_editCustomer = new System.Windows.Forms.Button();
+            this.txt_IdTask = new System.Windows.Forms.TextBox();
+            this.btn_editTask = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnEditOrg
@@ -69,11 +71,30 @@
             this.btn_editCustomer.UseVisualStyleBackColor = true;
             this.btn_editCustomer.Click += new System.EventHandler(this.btn_editCustomer_Click);
             // 
+            // txt_IdTask
+            // 
+            this.txt_IdTask.Location = new System.Drawing.Point(245, 319);
+            this.txt_IdTask.Name = "txt_IdTask";
+            this.txt_IdTask.Size = new System.Drawing.Size(171, 20);
+            this.txt_IdTask.TabIndex = 1;
+            // 
+            // btn_editTask
+            // 
+            this.btn_editTask.Location = new System.Drawing.Point(75, 293);
+            this.btn_editTask.Name = "btn_editTask";
+            this.btn_editTask.Size = new System.Drawing.Size(140, 58);
+            this.btn_editTask.TabIndex = 3;
+            this.btn_editTask.Text = "Edit Task";
+            this.btn_editTask.UseVisualStyleBackColor = true;
+            this.btn_editTask.Click += new System.EventHandler(this.btn_editTask_Click);
+            // 
             // TestForEdits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 537);
+            this.Controls.Add(this.btn_editTask);
+            this.Controls.Add(this.txt_IdTask);
             this.Controls.Add(this.btn_editCustomer);
             this.Controls.Add(this.txtIdCustomer);
             this.Controls.Add(this.txtIdOrg);
@@ -91,5 +112,7 @@
         private System.Windows.Forms.TextBox txtIdOrg;
         private System.Windows.Forms.TextBox txtIdCustomer;
         private System.Windows.Forms.Button btn_editCustomer;
+        private System.Windows.Forms.TextBox txt_IdTask;
+        private System.Windows.Forms.Button btn_editTask;
     }
 }

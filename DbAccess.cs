@@ -440,21 +440,48 @@ namespace Hil5_CRM_Project
             return new List<model.Task>();
         }
         // search by id from Tasks record.
-        public List<model.Task> SearchTasks(int id)
+        public model.Task SearchTasks(int id)
         {
+            model.Task task;    
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
+                SqlCommand cmd = new SqlCommand("spGetTAskById", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
 
+                // store procedure parameters.
+                cmd.Parameters.Add("@idOrName", SqlDbType.VarChar);
 
+                // parameter values.
+                cmd.Parameters["@idOrName"].Value = id;
 
+                SqlDataReader taskReader = cmd.ExecuteReader(CommandBehavior.SingleRow);
+                if (taskReader.Read())
+                {
+                    task = new model.Task();
+                    task.id = taskReader.GetInt32(0);
+                    task.name = taskReader.GetString(1);
+                    task.status = taskReader.GetString(2);
+                    task.referType = taskReader.GetString(3);
+                    task.referName = taskReader.GetString(4);
+                    task.priority = taskReader.GetString(5); 
+                    if (taskReader["note"] != null)
+                    task.note = taskReader.GetString(6);
+                    task.addedBy = taskReader.GetInt32(7);
+                    return task;
+                    System.Windows.Forms.MessageBox.Show("success");
+                }
+                else
+                {
+                    return null;
+                }
 
             }
             sqlhelper.close();
-            return new List<model.Task>();
+            return null;
+
         }
         // search by name from Tasks record.
         public List<model.Task> SearchTasks(string name)
@@ -524,14 +551,51 @@ namespace Hil5_CRM_Project
             sqlhelper.close();
         }
         // update existing Tasks.
-        public void UpdateCustomer(Hil5_CRM_Project.model.Task task)
+        public void UpdateTask(Hil5_CRM_Project.model.Task task)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
 
+                SqlCommand cmd = new SqlCommand("spUpdateTask_byIdOrName", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                /*
+                 
+                     @taskIdOrName varchar(255),
+	                   @newName varchar(255),
+	                   @newStatus varchar(255),
+	                   @newRefer_type varchar(255),
+	                   @newRefer_name varchar(255),
+	                   @newPriority varchar(255),
+	                   @newNote varchar(MAX),
+	                   @newAddedBy_teamId int
+                 */
+
+                // store procedure parameters.
+                cmd.Parameters.Add("@taskIdOrName", SqlDbType.Int);
+                cmd.Parameters.Add("@newName", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newStatus", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newRefer_type", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newRefer_name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newPriority", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newNote", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newAddedBy_teamId", SqlDbType.Int);
+
+              // parameter values
+                cmd.Parameters["@taskIdOrName"].Value = task.id;
+                cmd.Parameters["@newName"].Value = task.name;
+                cmd.Parameters["@newStatus"].Value = task.status;
+                cmd.Parameters["@newRefer_type"].Value = task.referType;
+                cmd.Parameters["@newRefer_name"].Value = task.referName;
+                cmd.Parameters["@newPriority"].Value = task.priority;
+                cmd.Parameters["@newNote"].Value = task.note;
+                cmd.Parameters["@newAddedBy_teamId"].Value = task.addedBy;
+
+
+                int rowsaffected = cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show(rowsaffected + " row affected");
 
 
 
@@ -1044,7 +1108,7 @@ namespace Hil5_CRM_Project
                
 
                 int rowsaffected = cmd.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show(rowsaffected + "row affected");
+                System.Windows.Forms.MessageBox.Show(rowsaffected + " row affected");
 
 
 
