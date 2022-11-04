@@ -75,6 +75,9 @@ addedBy_teamId INT FOREIGN KEY REFERENCES team(id),
 ALTER TABLE events DROP COLUMN start_time
 ALTER TABLE events DROP COLUMN end_time
 
+ALTER TABLE events ALTER COLUMN startDate datetime;
+ALTER TABLE events ALTER COLUMN end_date datetime;
+
 
 select * from events
 
@@ -96,20 +99,17 @@ eventId INT Foreign Key REFERENCES events(id) NOT NULL,
 customerId INT FOREIGN KEY REFERENCES customers(id) NOT NULL
 )
 
-
-
 GO
-
 
 /*--------------------------------------------------------------------------
 
 					 STORE PROCEDURE FOR LOGIN
 
 ----------------------------------------------------------------------------*/
-CREATE PROC [LOGIN]
+ALTER PROC [LOGIN]
       @email varchar(255),
       @pswd varchar(255),
-      @status BIT output
+      @status INT output
       WITH ENCRYPTION
       AS
       BEGIN
@@ -149,18 +149,23 @@ CREATE PROC [Add organization]   -- insert organization
 
 GO
 
-CREATE PROC [Get Organization]    -- Select organization
+CREATE PROC [Get Organization_byId]    -- Select organization
+      @idOrName varchar(255)
       WITH ENCRYPTION
       AS
 	  BEGIN
 
 	       SELECT id, logo, name, email,phone, address 
 		   FROM organization
+		   WHERE id like @idOrName
 
       END
 
  GO
 
+ drop proc [Get Organization]
+
+ GO
 CREATE PROC [Update Organization_byName]    -- Update organization
       @orgName varchar(255),
 	  @newLogo varbinary(max),
@@ -180,15 +185,19 @@ CREATE PROC [Update Organization_byName]    -- Update organization
 
 GO
  
-CREATE PROC [Delete Organization_byIdOrName]   -- Delete organization
+CREATE PROC [Delete Organization_byId]   -- Delete organization
+       @id int
        WITH ENCRYPTION
        AS
        BEGIN
 
-             DELETE FROM organization 
+             DELETE organization 
+			 WHERE id LIKE @id
 
        END
 
+GO
+DROP proc [Delete Organization_byIdOrName]
 GO
 -- if it's only one organization, there shouldn't be any proc for search
 --CREATE PROC [Search Organization_byIdOrName]  -- Search organization
@@ -240,7 +249,7 @@ GO
              FROM team
 
        END
-
+	  
  GO
 
  CREATE PROC [Update Team_byId]     -- Update team
@@ -266,7 +275,7 @@ GO
 
  GO
  
- CREATE PROC [Delete Team_byIdOrName]    -- Delete team
+ ALTER PROC [Delete Team_byIdOrName]    -- Delete team
        @idOrName varchar(255)
 	   WITH ENCRYPTION
        AS
@@ -274,13 +283,13 @@ GO
 
 			 UPDATE team
 			 SET status = 0  -- bit ( false )
-			 WHERE (id = TRIM(@idOrName) or name = TRIM(@idOrName))
+			 WHERE ( id like @idOrName or name like @idOrName)
 
        END
 
 GO
 
-CREATE PROC [Search Team_byIdOrName]   -- Search team
+ALTER PROC [Search Team_byIdOrName]   -- Search team
        @idOrName varchar(255)
 	   WITH ENCRYPTION
        AS
@@ -288,7 +297,7 @@ CREATE PROC [Search Team_byIdOrName]   -- Search team
 
              SELECT id, picture, name, gender, email, password, type, department, role, status 
              FROM team
-             WHERE (id = TRIM(@idOrName) or name = TRIM(@idOrName))
+             WHERE ( id like @idOrName or name like @idOrName)
 
        END
 
@@ -363,7 +372,7 @@ ALTER PROC [GetAll Customers]   -- Select all customers
 
  GO
  
- CREATE PROC [Delete Customers_byIdOrName]    -- Delete customers
+ ALTER PROC [Delete Customers_byIdOrName]    -- Delete customers
        @idOrName varchar(255)
 	   WITH ENCRYPTION
        AS
@@ -371,25 +380,21 @@ ALTER PROC [GetAll Customers]   -- Select all customers
 
              UPDATE customers
              SET status = 0
-             WHERE (id = TRIM(@idOrName) or name = TRIM(@idOrName))
+             WHERE ( id like @idOrName or name like @idOrName)
 
        END
 
  GO
 
-CREATE PROC [Search Customers_byIdOrName]   -- Search customers
+ALTER PROC [Search Customers_byIdOrName]   -- Search customers
        @idOrName varchar(255)
 	   WITH ENCRYPTION
        AS
        BEGIN
 
-			 SELECT c.id, c.name, c.email, c.mobile, c.city, c.zip, c.country, c.added_date, c.photo, c.website, c.status, t.name AS [Added By], l.id AS [Leads Id]
+			 SELECT c.id, c.name, c.email, c.mobile, c.city, c.zip, c.country, c.added_date, c.photo, c.website, c.status, c.addedBy_teamId, c.promoted_leadsId
 			 FROM customers c
-		     join team t
-		     ON c.addedBy_teamId = t.id
-			 inner join leads l
-			 ON c.promoted_leadsId = l.id
-             WHERE (c.id = TRIM(@idOrName) or c.name = TRIM(@idOrName))
+             WHERE ( c.id like @idOrName or c.name like @idOrName)
 
 	   END
 
@@ -434,8 +439,8 @@ ALTER PROC [GetAll Leads]    -- select ALL leads
 
  GO
 
- CREATE PROC [Update Leads_byIdOrName]     -- Update leads
-		@leadsIdOrName varchar(255),
+ ALTER PROC [Update Leads_byIdOrName]     -- Update leads
+		@idOrName varchar(255),
 		@newName varchar(255),
 		@newEmail varchar(255),
 		@newSources varchar(255),
@@ -452,40 +457,35 @@ ALTER PROC [GetAll Leads]    -- select ALL leads
 			 SET name = @newName, email = @newEmail, source = @newSources, status = @newStatus, 
 		     note = @newNote, createDate = @newCreateDate, addedBy_teamId = @newAddedBy_teamId, 
 		     customerId = @newCustomerId
-			 WHERE (leads.id = Trim(@leadsIdOrName) or leads.name = Trim(@leadsIdOrName))
+			 WHERE ( id like @idOrName or name like @idOrName)
 
 		END
 
  GO
  
- CREATE PROC [Delete Leads_byIdOrName]    -- Delete leads
-		@leadsIdOrName varchar(255)
+ ALTER PROC [Delete Leads_byIdOrName]    -- Delete leads
+		@idOrName varchar(255)
 		WITH ENCRYPTION
 		AS
 		BEGIN
 
 			 UPDATE leads
 			 SET status = 'Lost'
-			 WHERE (leads.id = Trim(@leadsIdOrName) or leads.name = Trim(@leadsIdOrName))
+			 WHERE ( id like @idOrName or name like @idOrName)
 
 		END
 
  GO
 
- CREATE PROC [Search Leads_byIdOrName]   -- Search leads
+ ALTER PROC [Search Leads_byIdOrName]   -- Search leads
        @idOrName varchar(255)
 	   WITH ENCRYPTION
        AS
        BEGIN
 
-			SELECT l.id, l.name, l.email, l.source, l.status, l.note, l.createDate, t.name, c.id
+			SELECT l.id, l.name, l.email, l.source, l.status, l.note, l.createDate, l.addedBy_teamId, l.customerId
             FROM leads l
-            join team t
-            ON l.addedBy_teamId = t.id
-            join customers c
-            on l.customerId = c.id
-            WHERE (l.id = Trim(@idOrName) or l.name = Trim(@idOrName))
-            ORDER BY l.id
+            WHERE ( id like @idOrName or name like @idOrName)
 
 	   END
 
@@ -554,7 +554,7 @@ GO
 
  GO
  
- CREATE PROC [Delete Event_byIdOrTopic]    -- Delete event
+ ALTER PROC [Delete Event_byIdOrTopic]    -- Delete event
        @idOrTopic varchar(255)
 	   WITH ENCRYPTION
        AS
@@ -562,7 +562,7 @@ GO
 
 			 UPDATE events
 			 SET status = 'not_heled'
-             WHERE (id = Trim(@idOrTopic) or topic = Trim(@idOrTopic))
+             WHERE ( id like @idOrTopic or topic like @idOrTopic)
 
        END
 
@@ -578,7 +578,7 @@ GO
 			 FROM events e
 			 join team t
 			 ON e.addedBy_teamId = t.id
-			 WHERE (e.id = Trim(@idOrTopic) or e.topic = Trim(@idOrTopic))
+			 WHERE ( e.id like @idOrTopic or e.topic like @idOrTopic)
 
 	   END
  
@@ -620,8 +620,8 @@ GO
 
  GO
 
- CREATE PROC [Update Tasks_byIdOrName]    -- Update events
-	   @taskIdOrName varchar(255),
+ ALTER PROC [Update Tasks_byIdOrName]    -- Update task
+	   @idOrName varchar(255),
 	   @newName varchar(255),
 	   @newStatus varchar(255),
 	   @newRefer_type varchar(255),
@@ -635,7 +635,7 @@ GO
 
 			UPDATE tasks
 			SET name = @newName, status = @newStatus, refer_type = @newRefer_type, refer_name = @newRefer_name, priority = @newPriority, note = @newNote, addedBy_teamId = @newAddedBy_teamId
-			WHERE (tasks.id = Trim(@taskIdOrName) or tasks.name = Trim(@taskIdOrName))
+			WHERE ( id like @idOrName or name like @idOrName)
 
        END
 
@@ -655,7 +655,7 @@ GO
 
  GO
 
- CREATE PROC [Search Tasks_byIdOrName]   -- Search Tasks
+ ALTER PROC [Search Tasks_byIdOrName]   -- Search Tasks
        @idOrName varchar(255)
 	   WITH ENCRYPTION
        AS
@@ -665,7 +665,7 @@ GO
 			 FROM tasks t
 			 join team tm
 			 ON t.addedBy_teamId = tm.id
-			 WHERE (t.id = @idOrName or t.name = @idOrName)
+			 WHERE ( t.id like @idOrName or t.name like @idOrName)
 
 	   END
 
@@ -734,8 +734,8 @@ GO
 
  GO
 
- CREATE PROC [Search Guest_byId]   -- Search guest
-        @guestOrEventorCustomer_id int
+ ALTER PROC [Search Guest_byId]   -- Search guest
+        @id int
 		WITH ENCRYPTION
         AS
         BEGIN
@@ -745,7 +745,7 @@ GO
               ON g.customerId = c.id
               join events e
               ON g.eventId = e.id
-              WHERE (g.id = @guestOrEventorCustomer_id or e.id = @guestOrEventorCustomer_id or c.id = @guestOrEventorCustomer_id)
+              WHERE g.id = @id
   
         END
 
@@ -938,7 +938,7 @@ where L.status  LIKE 'Lost'
 ---Events
 
 GO
-ALTER FUNCTION [getAllEvents]
+CREATE FUNCTION [getAllEvents]
 ()
 returns TABLE
 WITH Encryption,
@@ -951,7 +951,7 @@ FROM dbo.events E
 join dbo.team T on E.addedBy_teamId = T.id
 )
 GO
-ALTER FUNCTION [getPastEvents]
+CREATE FUNCTION [getPastEvents]
 ()
 returns TABLE
 WITH Encryption,
@@ -966,7 +966,7 @@ where E.end_date > GETDATE()
 )
 
 GO
-ALTER FUNCTION [getUpcomingEvents]
+CREATE FUNCTION [getUpcomingEvents]
 ()
 returns TABLE
 WITH Encryption,
@@ -980,7 +980,11 @@ join dbo.team T on E.addedBy_teamId = T.id
 where E.startDate < GETDATE()
 )
 
-
+GO
+DROP FUNCTION [getAllEvents]
+DROP FUNCTION [getPastEvents]
+DROP FUNCTION [getUpcomingEvents]
+GO
 
 ---Tasks
 
