@@ -30,10 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomersForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_add = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -50,30 +46,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgv_customor = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Customer = new System.Windows.Forms.Label();
-            this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_zip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_addedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_website = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_promotedFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lb_CustFilter = new System.Windows.Forms.Label();
+            this.flp_customers = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,6 +113,7 @@
             this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
             this.btn_update.Size = new System.Drawing.Size(40, 40);
             this.btn_update.TabIndex = 7;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click_1);
             // 
             // btn_pdfExport
             // 
@@ -296,10 +280,11 @@
             this.btn_search.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btn_search.Size = new System.Drawing.Size(32, 27);
             this.btn_search.TabIndex = 1;
-            this.btn_search.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lb_CustFilter);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 499);
@@ -322,77 +307,12 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dgv_customor);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.flp_customers);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 99);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1254, 400);
             this.panel3.TabIndex = 6;
-            // 
-            // dgv_customor
-            // 
-            this.dgv_customor.AllowUserToAddRows = false;
-            this.dgv_customor.AllowUserToDeleteRows = false;
-            this.dgv_customor.AllowUserToOrderColumns = true;
-            this.dgv_customor.AllowUserToResizeRows = false;
-            this.dgv_customor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_customor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.dgv_customor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_customor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_customor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_customor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_customor.ColumnHeadersHeight = 40;
-            this.dgv_customor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_customor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_icon,
-            this.col_id,
-            this.col_name,
-            this.col_email,
-            this.col_mobile,
-            this.col_city,
-            this.col_zip,
-            this.col_country,
-            this.col_addedBy,
-            this.col_addedDate,
-            this.col_website,
-            this.col_promotedFrom,
-            this.col_active});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_customor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_customor.EnableHeadersVisualStyles = false;
-            this.dgv_customor.Location = new System.Drawing.Point(0, 0);
-            this.dgv_customor.Name = "dgv_customor";
-            this.dgv_customor.RowHeadersVisible = false;
-            this.dgv_customor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_customor.Size = new System.Drawing.Size(1254, 400);
-            this.dgv_customor.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(224, 286);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Customers";
             // 
             // imageList
             // 
@@ -443,90 +363,39 @@
             this.lb_Customer.TabIndex = 0;
             this.lb_Customer.Text = "Customers";
             // 
-            // col_icon
+            // label3
             // 
-            this.col_icon.FillWeight = 23.31082F;
-            this.col_icon.HeaderText = "";
-            this.col_icon.Name = "col_icon";
-            this.col_icon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_icon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(89, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Filter: ";
             // 
-            // col_id
+            // lb_CustFilter
             // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.col_id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.col_id.FillWeight = 38.85136F;
-            this.col_id.HeaderText = "ID";
-            this.col_id.Name = "col_id";
+            this.lb_CustFilter.AutoSize = true;
+            this.lb_CustFilter.BackColor = System.Drawing.Color.Transparent;
+            this.lb_CustFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_CustFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_CustFilter.ForeColor = System.Drawing.Color.White;
+            this.lb_CustFilter.Location = new System.Drawing.Point(121, 21);
+            this.lb_CustFilter.Name = "lb_CustFilter";
+            this.lb_CustFilter.Size = new System.Drawing.Size(13, 13);
+            this.lb_CustFilter.TabIndex = 0;
+            this.lb_CustFilter.Text = "0";
             // 
-            // col_name
+            // flp_customers
             // 
-            this.col_name.FillWeight = 77.70273F;
-            this.col_name.HeaderText = "Name";
-            this.col_name.Name = "col_name";
-            // 
-            // col_email
-            // 
-            this.col_email.FillWeight = 77.70273F;
-            this.col_email.HeaderText = "Email";
-            this.col_email.Name = "col_email";
-            // 
-            // col_mobile
-            // 
-            this.col_mobile.FillWeight = 77.70273F;
-            this.col_mobile.HeaderText = "Mobile";
-            this.col_mobile.Name = "col_mobile";
-            // 
-            // col_city
-            // 
-            this.col_city.FillWeight = 77.70273F;
-            this.col_city.HeaderText = "City";
-            this.col_city.Name = "col_city";
-            // 
-            // col_zip
-            // 
-            this.col_zip.FillWeight = 38.85136F;
-            this.col_zip.HeaderText = "Zip";
-            this.col_zip.Name = "col_zip";
-            // 
-            // col_country
-            // 
-            this.col_country.FillWeight = 77.70273F;
-            this.col_country.HeaderText = "Country";
-            this.col_country.Name = "col_country";
-            // 
-            // col_addedBy
-            // 
-            this.col_addedBy.FillWeight = 77.70273F;
-            this.col_addedBy.HeaderText = "Added By";
-            this.col_addedBy.Name = "col_addedBy";
-            // 
-            // col_addedDate
-            // 
-            dataGridViewCellStyle3.Format = "D";
-            dataGridViewCellStyle3.NullValue = null;
-            this.col_addedDate.DefaultCellStyle = dataGridViewCellStyle3;
-            this.col_addedDate.FillWeight = 77.70273F;
-            this.col_addedDate.HeaderText = "Added Date";
-            this.col_addedDate.Name = "col_addedDate";
-            // 
-            // col_website
-            // 
-            this.col_website.FillWeight = 77.70273F;
-            this.col_website.HeaderText = "Website";
-            this.col_website.Name = "col_website";
-            // 
-            // col_promotedFrom
-            // 
-            this.col_promotedFrom.FillWeight = 77.70273F;
-            this.col_promotedFrom.HeaderText = "Promoted From";
-            this.col_promotedFrom.Name = "col_promotedFrom";
-            // 
-            // col_active
-            // 
-            this.col_active.FillWeight = 50F;
-            this.col_active.HeaderText = "Status";
-            this.col_active.Name = "col_active";
+            this.flp_customers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flp_customers.Location = new System.Drawing.Point(0, 0);
+            this.flp_customers.Name = "flp_customers";
+            this.flp_customers.Size = new System.Drawing.Size(1254, 400);
+            this.flp_customers.TabIndex = 1;
             // 
             // CustomersForm
             // 
@@ -549,8 +418,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_customor)).EndInit();
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -565,7 +432,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lb_Customer;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dgv_customor;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ImageList imageList;
@@ -576,24 +442,13 @@
         private Guna.UI2.WinForms.Guna2Button btn_all;
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button btn_promote;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ImageButton btn_add;
         private Guna.UI2.WinForms.Guna2ImageButton btn_update;
         private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
         private Guna.UI2.WinForms.Guna2ImageButton btn_delete;
-        private System.Windows.Forms.DataGridViewImageColumn col_icon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_mobile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_city;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_zip;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_country;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_website;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_promotedFrom;
-        private System.Windows.Forms.DataGridViewImageColumn col_active;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_CustFilter;
+        private System.Windows.Forms.FlowLayoutPanel flp_customers;
     }
 }

@@ -22,29 +22,9 @@ namespace Hil5_CRM_Project
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 100; i++)
-            {
-                dgv_customor.Rows.Add(new object[]
-                {
-                    imageList.Images[0]
-                });
-            }
+            // search Btn
         }
-        class custTempo
-        {
-
-        }
-        private void guna2CircleButton1_Click(object sender, EventArgs e)
-        {
-            // sample object
-            for (int i = 0; i < 10; i++)
-            {
-                dgv_customor.Rows.Add(new object[]
-                {
-                    imageList.Images[0]
-                });
-            }
-        }
+   
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
@@ -58,6 +38,7 @@ namespace Hil5_CRM_Project
         // exporting the pdf file.
         private void btn_pdfExport_Click(object sender, EventArgs e)
         {
+            /*
             if (dgv_customor.Rows.Count > 0)
             {
                 // dialog box on screen......
@@ -125,6 +106,7 @@ namespace Hil5_CRM_Project
                             MessageBox.Show(ex.Message, "export error");
                         }
                     }
+            
                 }
 
             }
@@ -132,6 +114,7 @@ namespace Hil5_CRM_Project
             {
                 MessageBox.Show("No reccord Found", "info");
             }
+            */
         }
         // add customer data.
         private void btn_add_Click(object sender, EventArgs e)
@@ -142,30 +125,11 @@ namespace Hil5_CRM_Project
         }
         private void CustomersForm_Load(object sender, EventArgs e)
         {
-            List<model.CustForDGV> customers = null;
-            DbAccess data = new DbAccess();
-            customers = data.GetAllCustomers();
-            //dgv_event.DataSource = events;
-            
-            foreach (model.CustForDGV customer in customers)
-            {
-                dgv_customor.Rows.Add(new object[]
-                {
-                    imageList.Images[0],
-                    customer.id,
-                    customer.name,
-                    customer.email,
-                    customer.mobile,
-                    customer.city,
-                    customer.zip,
-                    customer.country,
-                    customer.addedBy,
-                    customer.addedDate,
-                    customer.website,
-                    customer.promoted,
-                    customer.status ? imageList.Images[2] : imageList.Images[1]
-                }); ;
-            }
+        }
+
+        private void btn_update_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
     

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Hil5_CRM_Project.DialogBox;
 namespace Hil5_CRM_Project
 {
     public partial class DashBoardForm : Form
@@ -37,6 +37,15 @@ namespace Hil5_CRM_Project
             sqlhelper.close();
         }
 
-     
+        private void btn_addTeam_Click(object sender, EventArgs e)
+        {
+            DialogBox.AddTeam addTeam = new DialogBox.AddTeam();
+            addTeam.ShowDialog();
+        }
+
+        private void btn_showTeam_Click(object sender, EventArgs e)
+        {
+            // Team custom car operations.
+        }
     }
 }

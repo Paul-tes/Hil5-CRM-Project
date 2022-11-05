@@ -1,6 +1,6 @@
-﻿namespace Hil5_CRM_Project.DialogBox
+﻿namespace Hil5_CRM_Project.Edit
 {
-    partial class AddOrganization
+    partial class EditOrganization
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddOrganization));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditOrganization));
             this.panel_drag2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_title = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.lblCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_attach = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pictureBox_Logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lbl_required3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_save = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lbl_Address = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_address = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,6 +45,8 @@
             this.txt_phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_email = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_Phone = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.panel_drag2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
@@ -57,14 +54,14 @@
             // 
             // panel_drag2
             // 
-            this.panel_drag2.BackColor = System.Drawing.Color.Gold;
+            this.panel_drag2.BackColor = System.Drawing.Color.IndianRed;
             this.panel_drag2.Controls.Add(this.btn_exit);
             this.panel_drag2.Controls.Add(this.lbl_title);
             this.panel_drag2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_drag2.Location = new System.Drawing.Point(0, 0);
             this.panel_drag2.Name = "panel_drag2";
             this.panel_drag2.Size = new System.Drawing.Size(541, 108);
-            this.panel_drag2.TabIndex = 4;
+            this.panel_drag2.TabIndex = 5;
             // 
             // btn_exit
             // 
@@ -92,31 +89,19 @@
             this.lbl_title.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.Location = new System.Drawing.Point(188, 48);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(154, 33);
+            this.lbl_title.Size = new System.Drawing.Size(233, 33);
             this.lbl_title.TabIndex = 0;
-            this.lbl_title.Text = "COMPANY";
-            // 
-            // msg_dialogError
-            // 
-            this.msg_dialogError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.msg_dialogError.Caption = null;
-            this.msg_dialogError.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-            this.msg_dialogError.Parent = null;
-            this.msg_dialogError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
-            this.msg_dialogError.Text = null;
+            this.lbl_title.Text = "EDIT COMPANY";
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.lbl_id);
             this.bunifuGradientPanel1.Controls.Add(this.lblCountryCode);
             this.bunifuGradientPanel1.Controls.Add(this.btn_attach);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox_Logo);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required3);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required2);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required4);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required1);
             this.bunifuGradientPanel1.Controls.Add(this.btn_save);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_Address);
             this.bunifuGradientPanel1.Controls.Add(this.txt_address);
@@ -127,7 +112,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.lbl_email);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_Phone);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Gray;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
@@ -135,7 +120,7 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(541, 430);
-            this.bunifuGradientPanel1.TabIndex = 5;
+            this.bunifuGradientPanel1.TabIndex = 6;
             // 
             // lblCountryCode
             // 
@@ -186,53 +171,9 @@
             this.pictureBox_Logo.TabIndex = 2;
             this.pictureBox_Logo.TabStop = false;
             // 
-            // lbl_required3
-            // 
-            this.lbl_required3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required3.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required3.Location = new System.Drawing.Point(152, 237);
-            this.lbl_required3.Name = "lbl_required3";
-            this.lbl_required3.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required3.TabIndex = 11;
-            this.lbl_required3.Text = "*";
-            // 
-            // lbl_required2
-            // 
-            this.lbl_required2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required2.Location = new System.Drawing.Point(147, 200);
-            this.lbl_required2.Name = "lbl_required2";
-            this.lbl_required2.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required2.TabIndex = 11;
-            this.lbl_required2.Text = "*";
-            // 
-            // lbl_required4
-            // 
-            this.lbl_required4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required4.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required4.Location = new System.Drawing.Point(163, 271);
-            this.lbl_required4.Name = "lbl_required4";
-            this.lbl_required4.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required4.TabIndex = 11;
-            this.lbl_required4.Text = "*";
-            // 
-            // lbl_required1
-            // 
-            this.lbl_required1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required1.Location = new System.Drawing.Point(149, 170);
-            this.lbl_required1.Name = "lbl_required1";
-            this.lbl_required1.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required1.TabIndex = 11;
-            this.lbl_required1.Text = "*";
-            // 
             // btn_save
             // 
-            this.btn_save.BorderColor = System.Drawing.Color.Teal;
+            this.btn_save.BorderColor = System.Drawing.Color.Turquoise;
             this.btn_save.BorderRadius = 20;
             this.btn_save.BorderThickness = 2;
             this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -240,15 +181,15 @@
             this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_save.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.DarkGoldenrod;
-            this.btn_save.FillColor2 = System.Drawing.Color.Gray;
+            this.btn_save.FillColor = System.Drawing.Color.DarkGreen;
+            this.btn_save.FillColor2 = System.Drawing.SystemColors.GrayText;
             this.btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_save.ForeColor = System.Drawing.Color.Black;
+            this.btn_save.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_save.Location = new System.Drawing.Point(188, 329);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(180, 45);
             this.btn_save.TabIndex = 4;
-            this.btn_save.Text = "SAVE";
+            this.btn_save.Text = "EDIT";
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // lbl_Address
@@ -301,7 +242,6 @@
             this.txt_name.SelectedText = "";
             this.txt_name.Size = new System.Drawing.Size(233, 29);
             this.txt_name.TabIndex = 1;
-            this.txt_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_name_KeyDown);
             // 
             // txt_email
             // 
@@ -322,7 +262,6 @@
             this.txt_email.SelectedText = "";
             this.txt_email.Size = new System.Drawing.Size(233, 29);
             this.txt_email.TabIndex = 1;
-            this.txt_email.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_email_KeyDown);
             // 
             // lbl_name
             // 
@@ -355,7 +294,6 @@
             this.txt_phone.SelectedText = "";
             this.txt_phone.Size = new System.Drawing.Size(177, 29);
             this.txt_phone.TabIndex = 1;
-            this.txt_phone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_phone_KeyDown);
             // 
             // lbl_email
             // 
@@ -379,7 +317,24 @@
             this.lbl_Phone.TabIndex = 0;
             this.lbl_Phone.Text = "Phone";
             // 
-            // AddOrganization
+            // msg_dialogError
+            // 
+            this.msg_dialogError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.msg_dialogError.Caption = null;
+            this.msg_dialogError.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.msg_dialogError.Parent = null;
+            this.msg_dialogError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.msg_dialogError.Text = null;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(408, 329);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 13);
+            this.lbl_id.TabIndex = 14;
+            // 
+            // EditOrganization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -387,8 +342,8 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.panel_drag2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddOrganization";
-            this.Text = "AddOrganization";
+            this.Name = "EditOrganization";
+            this.Text = "EditOrganization";
             this.panel_drag2.ResumeLayout(false);
             this.panel_drag2.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -407,10 +362,6 @@
         private Guna.UI2.WinForms.Guna2TextBox lblCountryCode;
         private Guna.UI2.WinForms.Guna2ImageButton btn_attach;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBox_Logo;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required1;
         private Guna.UI2.WinForms.Guna2GradientButton btn_save;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Address;
         private Guna.UI2.WinForms.Guna2TextBox txt_address;
@@ -421,5 +372,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_email;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Phone;
         private Guna.UI2.WinForms.Guna2MessageDialog msg_dialogError;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

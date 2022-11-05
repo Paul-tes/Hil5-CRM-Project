@@ -1,6 +1,6 @@
-﻿namespace Hil5_CRM_Project.DialogBox
+﻿namespace Hil5_CRM_Project.Edit
 {
-    partial class AddTask
+    partial class EditTask
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTask));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditTask));
             this.panel_drag2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.txt_Note = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lbl_required6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_required1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_addedBy = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btn_save = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btn_edit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cmb_status = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_priority = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_referType = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -54,20 +48,21 @@
             this.txt_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.task_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_addedBy = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.panel_drag2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_drag2
             // 
-            this.panel_drag2.BackColor = System.Drawing.Color.Gold;
+            this.panel_drag2.BackColor = System.Drawing.Color.IndianRed;
             this.panel_drag2.Controls.Add(this.btn_exit);
             this.panel_drag2.Controls.Add(this.lbl_Title);
             this.panel_drag2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_drag2.Location = new System.Drawing.Point(0, 0);
             this.panel_drag2.Name = "panel_drag2";
             this.panel_drag2.Size = new System.Drawing.Size(806, 88);
-            this.panel_drag2.TabIndex = 2;
+            this.panel_drag2.TabIndex = 3;
             // 
             // btn_exit
             // 
@@ -95,24 +90,19 @@
             this.lbl_Title.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Title.Location = new System.Drawing.Point(49, 33);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(51, 26);
+            this.lbl_Title.Size = new System.Drawing.Size(111, 26);
             this.lbl_Title.TabIndex = 0;
-            this.lbl_Title.Text = "TASK";
+            this.lbl_Title.Text = "EDIT TASK";
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.lbl_id);
             this.bunifuGradientPanel1.Controls.Add(this.txt_Note);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required6);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required5);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required4);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required3);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required2);
-            this.bunifuGradientPanel1.Controls.Add(this.lbl_required1);
             this.bunifuGradientPanel1.Controls.Add(this.cmb_addedBy);
-            this.bunifuGradientPanel1.Controls.Add(this.btn_save);
+            this.bunifuGradientPanel1.Controls.Add(this.btn_edit);
             this.bunifuGradientPanel1.Controls.Add(this.cmb_status);
             this.bunifuGradientPanel1.Controls.Add(this.cmb_priority);
             this.bunifuGradientPanel1.Controls.Add(this.cmb_referType);
@@ -126,7 +116,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.task_Name);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_addedBy);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DodgerBlue;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Gray;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
@@ -134,11 +124,11 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(806, 425);
-            this.bunifuGradientPanel1.TabIndex = 3;
+            this.bunifuGradientPanel1.TabIndex = 4;
             // 
             // txt_Note
             // 
-            this.txt_Note.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.txt_Note.BorderColor = System.Drawing.Color.Turquoise;
             this.txt_Note.BorderRadius = 10;
             this.txt_Note.BorderThickness = 2;
             this.txt_Note.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -147,7 +137,7 @@
             this.txt_Note.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Note.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Note.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Note.FillColor = System.Drawing.Color.LightSeaGreen;
+            this.txt_Note.FillColor = System.Drawing.Color.SeaGreen;
             this.txt_Note.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Note.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Note.ForeColor = System.Drawing.Color.Black;
@@ -159,72 +149,6 @@
             this.txt_Note.SelectedText = "";
             this.txt_Note.Size = new System.Drawing.Size(210, 124);
             this.txt_Note.TabIndex = 12;
-            // 
-            // lbl_required6
-            // 
-            this.lbl_required6.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required6.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required6.Location = new System.Drawing.Point(152, 260);
-            this.lbl_required6.Name = "lbl_required6";
-            this.lbl_required6.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required6.TabIndex = 11;
-            this.lbl_required6.Text = "*";
-            // 
-            // lbl_required5
-            // 
-            this.lbl_required5.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required5.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required5.Location = new System.Drawing.Point(194, 221);
-            this.lbl_required5.Name = "lbl_required5";
-            this.lbl_required5.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required5.TabIndex = 11;
-            this.lbl_required5.Text = "*";
-            // 
-            // lbl_required4
-            // 
-            this.lbl_required4.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required4.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required4.Location = new System.Drawing.Point(181, 184);
-            this.lbl_required4.Name = "lbl_required4";
-            this.lbl_required4.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required4.TabIndex = 11;
-            this.lbl_required4.Text = "*";
-            // 
-            // lbl_required3
-            // 
-            this.lbl_required3.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required3.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required3.Location = new System.Drawing.Point(152, 148);
-            this.lbl_required3.Name = "lbl_required3";
-            this.lbl_required3.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required3.TabIndex = 11;
-            this.lbl_required3.Text = "*";
-            // 
-            // lbl_required2
-            // 
-            this.lbl_required2.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required2.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required2.Location = new System.Drawing.Point(179, 104);
-            this.lbl_required2.Name = "lbl_required2";
-            this.lbl_required2.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required2.TabIndex = 11;
-            this.lbl_required2.Text = "*";
-            // 
-            // lbl_required1
-            // 
-            this.lbl_required1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_required1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_required1.ForeColor = System.Drawing.Color.Red;
-            this.lbl_required1.Location = new System.Drawing.Point(147, 72);
-            this.lbl_required1.Name = "lbl_required1";
-            this.lbl_required1.Size = new System.Drawing.Size(13, 24);
-            this.lbl_required1.TabIndex = 11;
-            this.lbl_required1.Text = "*";
             // 
             // cmb_addedBy
             // 
@@ -248,26 +172,26 @@
             this.cmb_addedBy.Size = new System.Drawing.Size(210, 36);
             this.cmb_addedBy.TabIndex = 3;
             // 
-            // btn_save
+            // btn_edit
             // 
-            this.btn_save.BorderColor = System.Drawing.Color.Teal;
-            this.btn_save.BorderRadius = 20;
-            this.btn_save.BorderThickness = 2;
-            this.btn_save.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_save.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_save.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_save.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_save.FillColor = System.Drawing.Color.DarkGoldenrod;
-            this.btn_save.FillColor2 = System.Drawing.Color.Gray;
-            this.btn_save.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_save.ForeColor = System.Drawing.Color.Black;
-            this.btn_save.Location = new System.Drawing.Point(582, 324);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(180, 45);
-            this.btn_save.TabIndex = 4;
-            this.btn_save.Text = "SAVE";
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            this.btn_edit.BorderColor = System.Drawing.Color.Turquoise;
+            this.btn_edit.BorderRadius = 20;
+            this.btn_edit.BorderThickness = 2;
+            this.btn_edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_edit.FillColor = System.Drawing.Color.DarkCyan;
+            this.btn_edit.FillColor2 = System.Drawing.Color.Gray;
+            this.btn_edit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_edit.ForeColor = System.Drawing.Color.Blue;
+            this.btn_edit.Location = new System.Drawing.Point(582, 324);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(180, 45);
+            this.btn_edit.TabIndex = 4;
+            this.btn_edit.Text = "EDIT";
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // cmb_status
             // 
@@ -285,7 +209,7 @@
             this.cmb_status.Items.AddRange(new object[] {
             "New",
             "In Progress",
-            "DONE"});
+            "Done"});
             this.cmb_status.Location = new System.Drawing.Point(213, 138);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(210, 36);
@@ -430,7 +354,6 @@
             this.txt_name.SelectedText = "";
             this.txt_name.Size = new System.Drawing.Size(210, 29);
             this.txt_name.TabIndex = 1;
-            this.txt_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_name_KeyDown);
             // 
             // task_Name
             // 
@@ -454,7 +377,15 @@
             this.lbl_addedBy.TabIndex = 0;
             this.lbl_addedBy.Text = "Added By";
             // 
-            // AddTask
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(604, 263);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 13);
+            this.lbl_id.TabIndex = 13;
+            // 
+            // EditTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -462,8 +393,8 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.panel_drag2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddTask";
-            this.Text = "AddTask";
+            this.Name = "EditTask";
+            this.Text = "EditTask";
             this.panel_drag2.ResumeLayout(false);
             this.panel_drag2.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -478,26 +409,21 @@
         private Bunifu.Framework.UI.BunifuTileButton btn_exit;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_Title;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_required1;
-        private Guna.UI2.WinForms.Guna2GradientButton btn_save;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Note;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_addedBy;
+        private Guna.UI2.WinForms.Guna2GradientButton btn_edit;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_status;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_priority;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_referType;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_status;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_referName;
         private Guna.UI2.WinForms.Guna2TextBox txt_referName;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_priority;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_note;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_refertype;
         private Guna.UI2.WinForms.Guna2TextBox txt_name;
         private Guna.UI2.WinForms.Guna2HtmlLabel task_Name;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbl_addedBy;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_addedBy;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_priority;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_priority;
-        private Guna.UI2.WinForms.Guna2TextBox txt_Note;
+        private System.Windows.Forms.Label lbl_id;
     }
 }

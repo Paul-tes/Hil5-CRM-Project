@@ -129,6 +129,8 @@ namespace Hil5_CRM_Project
                 }); ;
 
             }
+            int numRows = dgv_event.Rows.Count;
+            lb_eventFilter.Text = numRows.ToString();
         }
         private void EventForm_Load(object sender, EventArgs e)
         {
@@ -167,6 +169,11 @@ namespace Hil5_CRM_Project
             DbAccess data = new DbAccess();
             events = data.GetUpCommingEvents();
             RefereshDgv(events);
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

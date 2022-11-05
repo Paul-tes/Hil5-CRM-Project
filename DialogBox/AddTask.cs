@@ -127,6 +127,8 @@ namespace Hil5_CRM_Project.DialogBox
 
             DbAccess dbaccess = new DbAccess();
             dbaccess.AddTask(task);
+            this.Close();
+
         }
 
         private void txt_name_KeyDown(object sender, KeyEventArgs e)

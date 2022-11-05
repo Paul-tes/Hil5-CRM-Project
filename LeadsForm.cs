@@ -129,6 +129,8 @@ namespace Hil5_CRM_Project
                     lead.status == "Lost" ? imageList.Images[1] : imageList.Images[2]
                 });
             }
+            int numRows = dgv_leads.Rows.Count;
+            lb_leadFilter.Text = numRows.ToString();
         }
         private void LeadsForm_Load(object sender, EventArgs e)
         {
@@ -163,3 +165,4 @@ namespace Hil5_CRM_Project
         }
     }
 }
+    

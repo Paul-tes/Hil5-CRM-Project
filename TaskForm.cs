@@ -19,6 +19,12 @@ namespace Hil5_CRM_Project
             DialogBox.AddTask addevent = new DialogBox.AddTask();
             addevent.StartPosition = FormStartPosition.CenterParent;
             addevent.ShowDialog();
+
+            // after adding the task referesh the data grid view.
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetAllTasks();
+            RefereshDGV(tasks);
         }
 
         private void btn_pdfExport_Click(object sender, EventArgs e)
@@ -98,7 +104,7 @@ namespace Hil5_CRM_Project
                 MessageBox.Show("No reccord Found", "info");
             }
         }
-        private void RefereshDGV(List<model.Task> tasks)
+        public void RefereshDGV(List<model.Task> tasks)
         {
             dgv_tasks.Rows.Clear();
             foreach (model.Task task in tasks)
@@ -115,9 +121,11 @@ namespace Hil5_CRM_Project
                     task.note,
                     DateTime.Now,
                     task.addedBy,
-                    task.status == "progress" ? imageList.Images[1] : imageList.Images[2]
+                    task.status == "In Progress" || task.status == "New" ? imageList.Images[1] : imageList.Images[2]
                 });
             }
+            int numRows = dgv_tasks.Rows.Count;
+            lb_taskFilter.Text = numRows.ToString();
         }
         private void TaskForm_Load(object sender, EventArgs e)
         {
@@ -154,15 +162,21 @@ namespace Hil5_CRM_Project
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+            int id = 0;
             if (dgv_tasks.SelectedCells.Count > 0)
             {
                 int selectedrowindex = dgv_tasks.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_tasks.Rows[selectedrowindex];
                 string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
-                int id = Int32.Parse(value);
+                id = Int32.Parse(value);
             }
 
-            // UpdateTask(id);
+            // edit task process.
+            model.Task task = new model.Task();
+            DbAccess access = new DbAccess();
+            task = access.SearchTasks(id);
+            Edit.EditTask editTask = new Edit.EditTask(task);
+            editTask.ShowDialog();
 
             // after update the task referesh the data grid view.
             List<model.Task> tasks = null;

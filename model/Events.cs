@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hil5_CRM_Project.model
 {
-    internal class Events
+    public class Events
     {
         public int id { get; set; }
         public string topic { get; set; }
