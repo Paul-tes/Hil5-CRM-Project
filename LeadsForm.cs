@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using Hil5_CRM_Project.DialogBox;
@@ -23,6 +24,13 @@ namespace Hil5_CRM_Project
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+            if (dgv_leads.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_leads.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_leads.Rows[selectedrowindex];
+                string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
+                int id = Int32.Parse(value);
+            }
         }
 
         private void btn_pdfExport_Click(object sender, EventArgs e)
@@ -101,6 +109,57 @@ namespace Hil5_CRM_Project
             {
                 MessageBox.Show("No reccord Found", "info");
             }
+        }
+        private void RefereshDGV(List<model.Leads> leads)
+        {
+            dgv_leads.Rows.Clear();
+            foreach (model.Leads lead in leads)
+            {
+                dgv_leads.Rows.Add(new object[]
+                {
+                    imageList.Images[0],
+                    lead.id,
+                    lead.name,
+                    lead.email,
+                    lead.source,
+                    lead.status,
+                    lead.note,
+                    lead.createDate,
+                    lead.addedBy,
+                    lead.status == "Lost" ? imageList.Images[1] : imageList.Images[2]
+                });
+            }
+        }
+        private void LeadsForm_Load(object sender, EventArgs e)
+        {
+            List<model.Leads> leads = null;
+            DbAccess data = new DbAccess();
+            leads = data.GetAllLeads();
+            RefereshDGV(leads);
+        }
+
+        private void btn_active_Click(object sender, EventArgs e)
+        {
+            List<model.Leads> leads = null;
+            DbAccess data = new DbAccess();
+            leads = data.GetActiveLeads();
+            RefereshDGV(leads);
+        }
+
+        private void btn_closed_Click(object sender, EventArgs e)
+        {
+            List<model.Leads> leads = null;
+            DbAccess data = new DbAccess();
+            leads = data.GetClosedLeads();
+            RefereshDGV(leads);
+        }
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            List<model.Leads> leads = null;
+            DbAccess data = new DbAccess();
+            leads = data.GetAllLeads();
+            RefereshDGV(leads);
         }
     }
 }

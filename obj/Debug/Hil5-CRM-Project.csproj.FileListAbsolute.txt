@@ -97,3 +97,5 @@ C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\bin\Debug\ru\Microsoft.Data.SqlC
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5-CRM-Project.csproj.CopyComplete
+C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\AddTeam.TeamCard.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\AddTeam.TeamCard.resources

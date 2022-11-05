@@ -26,7 +26,7 @@ namespace Hil5_CRM_Project.DialogBox
             txt_name.Text = null;
             txt_referName.Text = null;
             txt_referName.Text = null;
-            List <int> idList = new List <int>() { 1, 2, 3};
+            List<int> idList = new List<int>() { 1, 2, 3 };
             cmb_addedBy.DataSource = idList;
         }
 
@@ -87,7 +87,16 @@ namespace Hil5_CRM_Project.DialogBox
                 lbl_required5.Show();
             }
 
-           //note
+            //note
+            task.note = null;
+            if (txt_Note.Text !=null)
+            {
+                task.note = txt_Note.Text;
+            }
+            else
+            {
+                task.note = null;
+            }
            //no validation for now
 
             //priorty
@@ -102,8 +111,22 @@ namespace Hil5_CRM_Project.DialogBox
             {
                 task.priority = cmb_priority.SelectedItem.ToString();
             }
+            //AddedBy
+           if (cmb_addedBy.SelectedItem == null)
+            {
+                cmb_addedBy.BorderThickness = 2;
+                cmb_addedBy.BorderColor = Color.Red;
+                lbl_required2.Show();
 
+            }
+            else
+            {
+                task.addedBy = Int32.Parse(cmb_addedBy.SelectedItem.ToString());
 
+            }
+
+            DbAccess dbaccess = new DbAccess();
+            dbaccess.AddTask(task);
         }
 
         private void txt_name_KeyDown(object sender, KeyEventArgs e)

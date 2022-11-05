@@ -105,18 +105,68 @@ namespace Hil5_CRM_Project
                 MessageBox.Show("No reccord Found", "info");
             }
         }
+        private void RefereshDgv(List<model.Events> events)
+        {
+            // before populating the data grid view clear all rows.
+            dgv_event.Rows.Clear();
 
+            //List<model.Events> events = null;
+           // DbAccess data = new DbAccess();
+            //dgv_event.DataSource = events;
+            foreach (model.Events eve in events)
+            {
+                dgv_event.Rows.Add(new object[]
+                {
+                   imageList.Images[0],
+                    eve.id,
+                    eve.topic,
+                    eve.type,
+                    eve.addedBy,
+                    eve.note,
+                    eve.startDate,
+                    eve.endDate,
+                    eve.status == "passed" ? imageList.Images[2] : imageList.Images[1]
+                }); ;
+
+            }
+        }
         private void EventForm_Load(object sender, EventArgs e)
         {
+            // Ehen the form Loads by Default all events are populated on the data grid view.
             List<model.Events> events = null;
             DbAccess data = new DbAccess();
             events = data.GetAllEvents();
-            //dgv_event.DataSource = events;
-            foreach(model.Events eve in events)
-            {
-                dgv_event.Rows.Add(eve);
-            }
-            
+            RefereshDgv(events);
+
+
+        }
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            // All button populates all events to the data grid view
+            List<model.Events> events = null;
+            DbAccess data = new DbAccess();
+            events = data.GetAllEvents();
+            RefereshDgv(events);
+
+        }
+
+        private void btn_active_Click(object sender, EventArgs e)
+        {
+            // Active button populates all active events to the data grid view.
+            List<model.Events> events = null;
+            DbAccess data = new DbAccess();
+            events = data.GetUpCommingEvents();
+            RefereshDgv(events);
+        }
+
+        private void btn_onleave_Click(object sender, EventArgs e)
+        {
+            // On leave button populates all onleave events are populated in to the data grid view.
+            List<model.Events> events = null;
+            DbAccess data = new DbAccess();
+            events = data.GetUpCommingEvents();
+            RefereshDgv(events);
         }
     }
 }

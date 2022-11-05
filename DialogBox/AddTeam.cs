@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,6 +28,7 @@ namespace Hil5_CRM_Project.DialogBox
             lbl_required7.Hide();
         }
 
+        string imgLocation = "";
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -88,7 +90,7 @@ namespace Hil5_CRM_Project.DialogBox
 
             //Name 
 
-
+            /*
             //works partially
             Regex rFullName = new Regex(@"^[a-zA-Z]+ [a-zA-Z]+$");
             if (rFullName.IsMatch(txt_Name.Text))
@@ -104,6 +106,8 @@ namespace Hil5_CRM_Project.DialogBox
                 if (String.IsNullOrEmpty(txt_Name.Text))
                     lbl_required1.Show();
             }
+            */
+            team.name = txt_Name.Text;
 
 
             //works fine
@@ -157,6 +161,10 @@ namespace Hil5_CRM_Project.DialogBox
                 txt_department.BorderThickness = 2;
                 txt_department.BorderColor = Color.Red;
             }
+            else
+            {
+                team.departement = txt_department.Text;
+            }
             //role
             if (cmb_role.SelectedItem == null)
             {
@@ -173,6 +181,43 @@ namespace Hil5_CRM_Project.DialogBox
             //status
             team.status = chk_status.Checked;
 
+
+            //picture
+            team.picture = null;
+            if (imgLocation != "")
+            {
+                FileStream fs = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
+                BinaryReader brs = new BinaryReader(fs);
+                team.picture = brs.ReadBytes((int)fs.Length);
+            }
+            else
+            {
+                team.picture = null;
+            }
+
+            // saving Team to database.
+            DbAccess dbAccess = new DbAccess();
+            dbAccess.AddTeam(team);
+
+        }
+
+
+        //image to array
+        byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        // array to image
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void btn_Showpwd_Click(object sender, EventArgs e)
@@ -195,7 +240,7 @@ namespace Hil5_CRM_Project.DialogBox
 
         private void btn_Attach_Click(object sender, EventArgs e)
         {
-            string imgLocation = "";
+    
             try
             {
                 OpenFileDialog dialog = new OpenFileDialog();

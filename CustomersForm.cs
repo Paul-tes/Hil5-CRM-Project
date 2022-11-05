@@ -26,7 +26,7 @@ namespace Hil5_CRM_Project
             {
                 dgv_customor.Rows.Add(new object[]
                 {
-                    imageList1.Images[0]
+                    imageList.Images[0]
                 });
             }
         }
@@ -41,7 +41,7 @@ namespace Hil5_CRM_Project
             {
                 dgv_customor.Rows.Add(new object[]
                 {
-                    imageList1.Images[0]
+                    imageList.Images[0]
                 });
             }
         }
@@ -140,32 +140,33 @@ namespace Hil5_CRM_Project
             addCustomer.StartPosition = FormStartPosition.CenterParent;
             addCustomer.ShowDialog();
         }
-
         private void CustomersForm_Load(object sender, EventArgs e)
         {
-            List<model.Customers> customers = null;
+            List<model.CustForDGV> customers = null;
             DbAccess data = new DbAccess();
             customers = data.GetAllCustomers();
             //dgv_event.DataSource = events;
-            /*
-            foreach (model.custForDb task in customers)
+            
+            foreach (model.CustForDGV customer in customers)
             {
                 dgv_customor.Rows.Add(new object[]
                 {
-                    //imageList.Images[0],
-                    //task.id,
-                    //task.name,
-                    //task.status,
-                    //task.referType,
-                    //task.referName,
-                    //task.priority,
-                    //task.note,
-                    //DateTime.Now,
-                    //task.addedBy,
-                    //task.status == "progress" ? imageList.Images[1] : imageList.Images[2]
-                });
+                    imageList.Images[0],
+                    customer.id,
+                    customer.name,
+                    customer.email,
+                    customer.mobile,
+                    customer.city,
+                    customer.zip,
+                    customer.country,
+                    customer.addedBy,
+                    customer.addedDate,
+                    customer.website,
+                    customer.promoted,
+                    customer.status ? imageList.Images[2] : imageList.Images[1]
+                }); ;
             }
-            */
         }
     }
+    
 }

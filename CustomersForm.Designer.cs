@@ -51,6 +51,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgv_customor = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lb_Customer = new System.Windows.Forms.Label();
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,13 +68,7 @@
             this.col_addedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_website = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_promotedFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_photo = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lb_Customer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -365,7 +364,6 @@
             this.col_addedDate,
             this.col_website,
             this.col_promotedFrom,
-            this.col_photo,
             this.col_active});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
@@ -382,6 +380,68 @@
             this.dgv_customor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_customor.Size = new System.Drawing.Size(1254, 400);
             this.dgv_customor.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(224, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Customers";
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "icons8-contact-64.png");
+            this.imageList.Images.SetKeyName(1, "icons8-remove-48.png");
+            this.imageList.Images.SetKeyName(2, "icons8-active-58.png");
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.lb_Customer);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1254, 39);
+            this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_customer_insight_50;
+            this.pictureBox1.Location = new System.Drawing.Point(991, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lb_Customer
+            // 
+            this.lb_Customer.AutoSize = true;
+            this.lb_Customer.BackColor = System.Drawing.Color.Transparent;
+            this.lb_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Customer.ForeColor = System.Drawing.Color.White;
+            this.lb_Customer.Location = new System.Drawing.Point(1042, 9);
+            this.lb_Customer.Name = "lb_Customer";
+            this.lb_Customer.Size = new System.Drawing.Size(95, 20);
+            this.lb_Customer.TabIndex = 0;
+            this.lb_Customer.Text = "Customers";
             // 
             // col_icon
             // 
@@ -462,77 +522,11 @@
             this.col_promotedFrom.HeaderText = "Promoted From";
             this.col_promotedFrom.Name = "col_promotedFrom";
             // 
-            // col_photo
-            // 
-            this.col_photo.FillWeight = 38.85136F;
-            this.col_photo.HeaderText = "Photo";
-            this.col_photo.Name = "col_photo";
-            // 
             // col_active
             // 
             this.col_active.FillWeight = 50F;
-            this.col_active.HeaderText = "Active";
+            this.col_active.HeaderText = "Status";
             this.col_active.Name = "col_active";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(224, 286);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Customers";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8-contact-64.png");
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuGradientPanel1.Controls.Add(this.lb_Customer);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Black;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1254, 39);
-            this.bunifuGradientPanel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Hil5_CRM_Project.Properties.Resources.icons8_customer_insight_50;
-            this.pictureBox1.Location = new System.Drawing.Point(991, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lb_Customer
-            // 
-            this.lb_Customer.AutoSize = true;
-            this.lb_Customer.BackColor = System.Drawing.Color.Transparent;
-            this.lb_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lb_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Customer.ForeColor = System.Drawing.Color.White;
-            this.lb_Customer.Location = new System.Drawing.Point(1042, 9);
-            this.lb_Customer.Name = "lb_Customer";
-            this.lb_Customer.Size = new System.Drawing.Size(95, 20);
-            this.lb_Customer.TabIndex = 0;
-            this.lb_Customer.Text = "Customers";
             // 
             // CustomersForm
             // 
@@ -574,7 +568,7 @@
         private System.Windows.Forms.DataGridView dgv_customor;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ImageList imageList;
         private Guna.UI2.WinForms.Guna2CircleButton btn_search;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btn_onleave;
@@ -600,7 +594,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn col_addedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_website;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_promotedFrom;
-        private System.Windows.Forms.DataGridViewImageColumn col_photo;
         private System.Windows.Forms.DataGridViewImageColumn col_active;
     }
 }

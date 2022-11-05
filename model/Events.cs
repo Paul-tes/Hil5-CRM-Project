@@ -18,9 +18,9 @@ namespace Hil5_CRM_Project.model
         public string note { get; set; }
 
         public DateTime startDate { get; set; }
-        public DateTime startTime { get; set; }
+      //  public DateTime startTime { get; set; }
         public DateTime endDate { get; set; }
-        public DateTime endTime { get; set; }
+      //  public DateTime endTime { get; set; }
         public int addedBy { get; set; }
 
         //public List<Customers> customers { get; set; }

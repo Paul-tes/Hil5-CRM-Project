@@ -98,13 +98,9 @@ namespace Hil5_CRM_Project
                 MessageBox.Show("No reccord Found", "info");
             }
         }
-
-        private void TaskForm_Load(object sender, EventArgs e)
+        private void RefereshDGV(List<model.Task> tasks)
         {
-            List<model.Task> tasks = null;
-            DbAccess data = new DbAccess();
-            tasks = data.GetAllTasks();
-            //dgv_event.DataSource = events;
+            dgv_tasks.Rows.Clear();
             foreach (model.Task task in tasks)
             {
                 dgv_tasks.Rows.Add(new object[]
@@ -115,13 +111,64 @@ namespace Hil5_CRM_Project
                     task.status,
                     task.referType,
                     task.referName,
-                    task.priority,  
+                    task.priority,
                     task.note,
                     DateTime.Now,
                     task.addedBy,
                     task.status == "progress" ? imageList.Images[1] : imageList.Images[2]
                 });
             }
+        }
+        private void TaskForm_Load(object sender, EventArgs e)
+        {
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetAllTasks();
+            RefereshDGV(tasks);
+        }
+
+        private void btn_all_Click(object sender, EventArgs e)
+        {
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetAllTasks();
+            RefereshDGV(tasks);
+
+        }
+
+        private void btn_active_Click(object sender, EventArgs e)
+        {
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetProgressTask();
+            RefereshDGV(tasks);
+        }
+
+        private void btn_onleave_Click(object sender, EventArgs e)
+        {
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetDoneTasks();
+            RefereshDGV(tasks);
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            if (dgv_tasks.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_tasks.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_tasks.Rows[selectedrowindex];
+                string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
+                int id = Int32.Parse(value);
+            }
+
+            // UpdateTask(id);
+
+            // after update the task referesh the data grid view.
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetAllTasks();
+            RefereshDGV(tasks);
         }
     }
 }

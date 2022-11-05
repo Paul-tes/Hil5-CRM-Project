@@ -25,7 +25,7 @@ namespace Hil5_CRM_Project
                 foreach(var prop in type.GetProperties())
                 {
                     var propType = prop.PropertyType;
-                    prop.SetValue(obj, Convert.ChangeType(reader[prop.Name].ToString(), propType), null);
+                    prop.SetValue(obj, Convert.ChangeType(reader[prop.Name].ToString(), propType));
                 }
                 list.Add(obj);
             }
@@ -102,31 +102,18 @@ namespace Hil5_CRM_Project
         }
         // ----------------------------------------------------------Customer DB Access methods-------------------------------------------------------------
         // All Customers
-        public List<Customers> GetAllCustomers()
+        public List<CustForDGV> GetAllCustomers()
         {
-            List<model.Customers> customer = null;
+            List<CustForDGV> customer = null;
 
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                SqlCommand cmd = new SqlCommand(@"SELECT id as id,
-	                                                name as name,
-	                                                email as email,
-	                                                mobile as mobile,
-	                                                city as city,
-	                                                zip as zip,
-	                                                country as country,
-	                                                added_date as addedDate,
-	                                                photo as photo,
-	                                                website as website,
-	                                                status as status,
-	                                                promoted_leadsId as promoted,
-	                                                addedBy_teamId as addedBy
-	                                                FROM customers;", sqlhelper.connection());
+                SqlCommand cmd = new SqlCommand("SELECT id,  name, email, mobile, city, zip, country, addedBy_teamId as addedBy, added_date as addedDate, website, status, promoted_leadsId as promoted FROM customers;", sqlhelper.connection());
                 //cmd.CommandType = CommandType.StoredProcedure;
                 var dataReader = cmd.ExecuteReader();
-                // customer = GetList<model.custForDb>(dataReader);
+                customer = GetList<CustForDGV>(dataReader);
             }
             sqlhelper.close();
             return customer;
@@ -252,8 +239,24 @@ namespace Hil5_CRM_Project
                 cmd.Parameters["@zip"].Value = cust.zip;
                 cmd.Parameters["@country"].Value = cust.country;
                 cmd.Parameters["@added_date"].Value = cust.addedDate;
-                cmd.Parameters["@photo"].Value = DBNull.Value;
-                cmd.Parameters["@website"].Value = DBNull.Value;
+               
+                if (cust.photo == null)
+                {
+                    cmd.Parameters["@photo"].Value = DBNull.Value;
+                }
+                else {
+                    cmd.Parameters["@photo"].Value = cust.photo;
+                }
+               
+                if (cust.website == null)
+                {
+                    cmd.Parameters["@website"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@website"].Value = cust.website;
+                }
+             
                 cmd.Parameters["@status"].Value = cust.status;
                 cmd.Parameters["@promoted_leadsId"].Value = DBNull.Value;
                 cmd.Parameters["@addedBy_teamId"].Value = cust.addedBy;
@@ -312,15 +315,7 @@ namespace Hil5_CRM_Project
 
             if (sqlhelper.isConnected())
             {
-                SqlCommand cmd = new SqlCommand(@"SELECT id as id, 
-	                                                name as name, 
-	                                                status as status,
-	                                                refer_type as referType,
-	                                                refer_name as referName,
-	                                                priority as priority,
-	                                                note as note,
-	                                                addedBy_teamid as addedBy
-	                                                FROM [dbo].tasks;", sqlhelper.connection());
+                SqlCommand cmd = new SqlCommand(@"SELECT id as id, name, status, refer_type as referType, refer_name as referName, priority, note, addedBy_teamid as addedBy FROM [dbo].tasks;", sqlhelper.connection());
                 //cmd.CommandType = CommandType.StoredProcedure;
                 var dataReader = cmd.ExecuteReader();
                 tasks = GetList<model.Task>(dataReader);
@@ -331,36 +326,15 @@ namespace Hil5_CRM_Project
         // On Progress Task.
         public List<model.Task> GetProgressTask()
         {
-            SqlHelper sqlhelper = new SqlHelper(con);
-
-            if (sqlhelper.isConnected())
-            {
-                // do database operation
-
-
-
-
-
-            }
-            sqlhelper.close();
-            return new List<model.Task>();
+            // filter progerssed tasks using lambda expression.
+            List<model.Task> tasks = GetAllTasks();
+            return tasks.FindAll(progTask => progTask.status == "In Progress");
         }
         // Done Tasks
         public List<model.Task> GetDoneTasks()
         {
-            SqlHelper sqlhelper = new SqlHelper(con);
-
-            if (sqlhelper.isConnected())
-            {
-                // do database operation
-
-
-
-
-
-            }
-            sqlhelper.close();
-            return new List<model.Task>();
+            List<model.Task> tasks = GetAllTasks();
+            return tasks.FindAll(doneTask => doneTask.status == "Done");
         }
         // search by id from Tasks record.
         public List<model.Task> SearchTasks(int id)
@@ -397,15 +371,49 @@ namespace Hil5_CRM_Project
             return new List<model.Task>();
         }
         // Add new Task
-        public void AddTask(int id, string name, string addedby, string status, string referType, string referName, string priority, string note)
+        public void AddTask(Hil5_CRM_Project.model.Task task)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
 
+                SqlCommand cmd = new SqlCommand("Add Tasks", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
+                /*
+                   @name varchar(255),
+	                @status varchar(255),
+	                @refer_type varchar(255),
+	                @refer_name varchar(255),
+	                @priority varchar(255),
+	                @note varchar(max),
+	                @addedBy_teamId int
+                 */
+
+                // store procedure parameters.
+
+               
+                cmd.Parameters.Add("@name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@status", SqlDbType.VarChar);
+                cmd.Parameters.Add("@refer_type", SqlDbType.VarChar);
+                cmd.Parameters.Add("@refer_name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@priority", SqlDbType.VarChar);
+                cmd.Parameters.Add("@note", SqlDbType.VarChar);
+                cmd.Parameters.Add("@addedBy_teamId", SqlDbType.VarChar);
+ 
+                // parameter values.
+                
+                cmd.Parameters["@name"].Value = task.name;
+                cmd.Parameters["@status"].Value = task.status;
+                cmd.Parameters["@refer_type"].Value = task.referType;
+                cmd.Parameters["@refer_name"].Value = task.referName;
+                cmd.Parameters["@priority"].Value = task.priority;
+                cmd.Parameters["@note"].Value = task.note;
+                cmd.Parameters["@addedBy_teamId"].Value = task.addedBy;
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
 
 
 
@@ -413,7 +421,7 @@ namespace Hil5_CRM_Project
             sqlhelper.close();
         }
         // update existing Tasks.
-        public void UpdateCustomer(int id, string name, string addedby, string status, string referType, string referName, string priority, string note)
+        public void UpdateCustomer(Hil5_CRM_Project.model.Task task)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
@@ -449,54 +457,32 @@ namespace Hil5_CRM_Project
         // All Leads.
         public List<Leads> GetAllLeads()
         {
+            List<model.Leads> leads = null;
+
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
-
-
-
-
-
+                SqlCommand cmd = new SqlCommand(@"SELECT id, name, email, source, status, note, createDate, addedBy_teamId as addedBy from leads;", sqlhelper.connection());
+                //cmd.CommandType = CommandType.StoredProcedure;
+                var dataReader = cmd.ExecuteReader();
+                leads = GetList<model.Leads>(dataReader);
             }
             sqlhelper.close();
-            return new List<Leads>();
+            return leads;
         }
         // Active Leads.
         public List<Leads> GetActiveLeads()
         {
-            SqlHelper sqlhelper = new SqlHelper(con);
-
-            if (sqlhelper.isConnected())
-            {
-                // do database operation
-
-
-
-
-
-            }
-            sqlhelper.close();
-            return new List<Leads>();
+            List<model.Leads> leads = GetAllLeads();
+            return leads.FindAll(activeLeads => activeLeads.status != "Lost");
         }
 
         // Closed Leads
         public List<Leads> GetClosedLeads()
         {
-            SqlHelper sqlhelper = new SqlHelper(con);
-
-            if (sqlhelper.isConnected())
-            {
-                // do database operation
-
-
-
-
-
-            }
-            sqlhelper.close();
-            return new List<Leads>();
+            List<model.Leads> leads = GetAllLeads();
+            return leads.FindAll(activeLeads => activeLeads.status == "Lost");
         }
         // search by id from Lead record.
         public List<Leads> SearchLeads(int id)
@@ -619,15 +605,7 @@ namespace Hil5_CRM_Project
 
             if (sqlhelper.isConnected())
             {
-                SqlCommand cmd = new SqlCommand(@"SELECT id as id, 
-	                                                name as name, 
-	                                                status as status,
-	                                                refer_type as referType,
-	                                                refer_name as referName,
-	                                                priority as priority,
-	                                                note as note,
-	                                                addedBy_teamid as addedBy
-	                                                FROM [dbo].tasks;", sqlhelper.connection());
+                SqlCommand cmd = new SqlCommand("SELECT id, topic, type,status,note, startDate, end_date as endDate, addedBy_teamId as addedBy  FROM events;", sqlhelper.connection());
                 //cmd.CommandType = CommandType.StoredProcedure;
                 var dataReader = cmd.ExecuteReader();
                 events = GetList<model.Events>(dataReader);
@@ -638,37 +616,19 @@ namespace Hil5_CRM_Project
         // Passed Events.
         public List<Events> GetPassedEvents()
         {
-            SqlHelper sqlhelper = new SqlHelper(con);
-
-            if (sqlhelper.isConnected())
-            {
-                // do database operation
-
-
-
-
-
-            }
-            sqlhelper.close();
-            return new List<Events>();
+            List<Events> passedEvents =  GetAllEvents();
+            // filtering by using lambda expression.
+            DateTime d = DateTime.Now;
+            return passedEvents.FindAll(paEv => paEv.startDate < d);
         }
 
         // UpComming Events
         public List<Events> GetUpCommingEvents()
         {
-            SqlHelper sqlhelper = new SqlHelper(con);
-
-            if (sqlhelper.isConnected())
-            {
-                // do database operation
-
-
-
-
-
-            }
-            sqlhelper.close();
-            return new List<Events>();
+            List<Events> upComingEvents = GetAllEvents();
+            // filtering by using lambda expression.
+            DateTime d = DateTime.Now;
+            return upComingEvents.FindAll(paEv => paEv.startDate > d);
         }
         // search by id from Events record.
         public List<Events> SearchEvents(int id)
@@ -735,9 +695,9 @@ namespace Hil5_CRM_Project
                 cmd.Parameters.Add("@status", SqlDbType.VarChar);
                 cmd.Parameters.Add("@note", SqlDbType.VarChar);
                 cmd.Parameters.Add("@startDate", SqlDbType.Date);
-                cmd.Parameters.Add("@startTime", SqlDbType.Time);
+              //  cmd.Parameters.Add("@startTime", SqlDbType.Time);
                 cmd.Parameters.Add("@endDate", SqlDbType.Date);
-                cmd.Parameters.Add("@endTime", SqlDbType.Time);
+              //  cmd.Parameters.Add("@endTime", SqlDbType.Time);
                 cmd.Parameters.Add("@addedBy_teamId", SqlDbType.Int);
 
 
@@ -747,9 +707,9 @@ namespace Hil5_CRM_Project
                 cmd.Parameters["@status"].Value = events.status;
                 cmd.Parameters["@note"].Value = events.note;
                 cmd.Parameters["@startDate"].Value = events.startDate;
-                cmd.Parameters["@startTime"].Value = events.startTime;
+               // cmd.Parameters["@startTime"].Value = "13:00";
                 cmd.Parameters["@endDate"].Value = events.endDate;
-                cmd.Parameters["@endTime"].Value = events.endTime;
+                // cmd.Parameters["@endTime"].Value = "15:00";
                 cmd.Parameters["@addedBy_teamId"].Value = events.addedBy;
             
 
@@ -796,6 +756,227 @@ namespace Hil5_CRM_Project
             }
             sqlhelper.close();
         }
+
+
+
+        // -------------------------------------------------------  Organization DB Access methods------------------------------------------------------------------- 
+        
+        // search by name from Leads record.
+        public List<Organization> SearchOrganization(string name)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+            return new List<Organization>();
+        }
+        // Add new Org
+        //This works fine
+        public void AddOrganization(Organization org)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+
+                SqlCommand cmd = new SqlCommand("Add organization", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+
+
+                // store procedure parameters.
+
+                cmd.Parameters.Add("@logo", SqlDbType.VarBinary);
+                cmd.Parameters.Add("@name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@email", SqlDbType.VarChar);
+                cmd.Parameters.Add("@phone", SqlDbType.VarChar);
+                cmd.Parameters.Add("@address", SqlDbType.VarChar);
+                // parameter values.
+                if (org.logo == null)
+                {
+                    cmd.Parameters["@logo"].Value = DBNull.Value;
+                }
+                else 
+                {
+                    cmd.Parameters["@logo"].Value = org.logo;
+                }
+           
+                cmd.Parameters["@name"].Value = org.name;
+                cmd.Parameters["@email"].Value = org.email;
+                cmd.Parameters["@phone"].Value = org.phone;
+                cmd.Parameters["@address"].Value = org.addres;
+
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // update existing Organization.
+        public void UpdateOrganization(Organization org)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // Delete org
+        public void DeleteOrganization(int id)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+
+
+
+
+
+        // -------------------------------------------------------  Team DB Access methods------------------------------------------------------------------- 
+
+        // search by name from Team record.
+        public List<Team> searchTeam(string name)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+            return new List<Team>();
+        }
+        // Add new Team
+        //This works fine
+        public void AddTeam(Team team)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+
+                SqlCommand cmd = new SqlCommand("Add Team", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                /*
+                    @picture varbinary(max),
+                    @name varchar(255),
+	                @gender varchar(255),
+	                @email varchar(255),
+	                @password varchar(255),
+	                @type varchar(255),
+	                @department varchar(255),
+	                @role varchar(255),
+	                @status bit
+                 */
+
+                // store procedure parameters.
+
+                cmd.Parameters.Add("@picture", SqlDbType.VarBinary);
+                cmd.Parameters.Add("@name", SqlDbType.VarChar);
+                cmd.Parameters.Add("@gender", SqlDbType.VarChar);
+                cmd.Parameters.Add("@email", SqlDbType.VarChar);
+                cmd.Parameters.Add("@password", SqlDbType.VarChar);
+                cmd.Parameters.Add("@type", SqlDbType.VarChar);
+                cmd.Parameters.Add("@department", SqlDbType.VarChar);
+                cmd.Parameters.Add("@role", SqlDbType.VarChar);
+                cmd.Parameters.Add("@status", SqlDbType.Bit);
+                
+                // parameter values.
+                if (team.picture == null)
+                {
+                    cmd.Parameters["@picture"].Value = DBNull.Value;
+                }
+                else
+                {
+                    cmd.Parameters["@picture"].Value = team.picture;
+                }
+
+                cmd.Parameters["@name"].Value = team.name;
+                cmd.Parameters["@gender"].Value = team.gender;
+                cmd.Parameters["@email"].Value = team.email;
+                cmd.Parameters["@password"].Value = team.password;
+                cmd.Parameters["@type"].Value = team.type;
+                cmd.Parameters["@department"].Value = team.departement;
+                cmd.Parameters["@role"].Value = team.role;
+                cmd.Parameters["@status"].Value = team.status;
+
+                int affectedRows = cmd.ExecuteNonQuery();
+
+                System.Windows.Forms.MessageBox.Show(affectedRows + " row affected");
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // update existing Team.
+        public void updateTeam(Team team)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+        // Delete org
+        public void DeleteTeam(int id)
+        {
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                // do database operation
+
+
+
+
+
+            }
+            sqlhelper.close();
+        }
+
+
         // -------------------------------------------------------  Guest DB Access methods------------------------------------------------------------------- 
 
 

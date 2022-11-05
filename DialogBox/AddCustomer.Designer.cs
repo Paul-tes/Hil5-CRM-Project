@@ -34,6 +34,8 @@
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.dtp_addedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.lbl_addedDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_phone = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_country = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -65,8 +67,6 @@
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.dtp_addedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.lbl_addedDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_customer)).BeginInit();
@@ -159,6 +159,31 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(806, 425);
             this.bunifuGradientPanel1.TabIndex = 3;
+            // 
+            // dtp_addedDate
+            // 
+            this.dtp_addedDate.Checked = true;
+            this.dtp_addedDate.FillColor = System.Drawing.Color.Snow;
+            this.dtp_addedDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtp_addedDate.Location = new System.Drawing.Point(303, 386);
+            this.dtp_addedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_addedDate.MinDate = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
+            this.dtp_addedDate.Name = "dtp_addedDate";
+            this.dtp_addedDate.Size = new System.Drawing.Size(234, 37);
+            this.dtp_addedDate.TabIndex = 18;
+            this.dtp_addedDate.Value = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
+            // 
+            // lbl_addedDate
+            // 
+            this.lbl_addedDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_addedDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_addedDate.ForeColor = System.Drawing.Color.Gold;
+            this.lbl_addedDate.Location = new System.Drawing.Point(303, 357);
+            this.lbl_addedDate.Name = "lbl_addedDate";
+            this.lbl_addedDate.Size = new System.Drawing.Size(103, 23);
+            this.lbl_addedDate.TabIndex = 17;
+            this.lbl_addedDate.Text = "Added Date";
             // 
             // lblCountryCode
             // 
@@ -601,31 +626,6 @@
             this.msg_dialogError.Parent = null;
             this.msg_dialogError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.msg_dialogError.Text = null;
-            // 
-            // dtp_addedDate
-            // 
-            this.dtp_addedDate.Checked = true;
-            this.dtp_addedDate.FillColor = System.Drawing.Color.Snow;
-            this.dtp_addedDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_addedDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtp_addedDate.Location = new System.Drawing.Point(303, 386);
-            this.dtp_addedDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_addedDate.MinDate = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
-            this.dtp_addedDate.Name = "dtp_addedDate";
-            this.dtp_addedDate.Size = new System.Drawing.Size(234, 37);
-            this.dtp_addedDate.TabIndex = 18;
-            this.dtp_addedDate.Value = new System.DateTime(2022, 10, 21, 0, 0, 0, 0);
-            // 
-            // lbl_addedDate
-            // 
-            this.lbl_addedDate.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_addedDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_addedDate.ForeColor = System.Drawing.Color.Gold;
-            this.lbl_addedDate.Location = new System.Drawing.Point(303, 357);
-            this.lbl_addedDate.Name = "lbl_addedDate";
-            this.lbl_addedDate.Size = new System.Drawing.Size(103, 23);
-            this.lbl_addedDate.TabIndex = 17;
-            this.lbl_addedDate.Text = "Added Date";
             // 
             // AddCustomer
             // 

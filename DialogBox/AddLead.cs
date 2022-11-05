@@ -112,14 +112,17 @@ namespace Hil5_CRM_Project.DialogBox
             {
                 lead.note = txt_note.Text;
             }
+
+
+            //added date
+            lead.createDate = DateTime.Parse(dtp_addedDate.Text.ToString());
             
             
             DbAccess dbaccess = new DbAccess();
             dbaccess.AddLead(lead);
 
 
-            //added date
-            lead.createDate = DateTime.Parse(dtp_addedDate.Text.ToString());
+           
 
 
         }

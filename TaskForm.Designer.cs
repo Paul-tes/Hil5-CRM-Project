@@ -53,7 +53,6 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.dgv_tasks = new System.Windows.Forms.DataGridView();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +64,7 @@
             this.col_ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -192,6 +192,7 @@
             this.btn_update.PressedState.ImageSize = new System.Drawing.Size(45, 45);
             this.btn_update.Size = new System.Drawing.Size(40, 40);
             this.btn_update.TabIndex = 3;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_pdfExport
             // 
@@ -254,6 +255,7 @@
             this.btn_onleave.Size = new System.Drawing.Size(91, 31);
             this.btn_onleave.TabIndex = 1;
             this.btn_onleave.Text = "Done";
+            this.btn_onleave.Click += new System.EventHandler(this.btn_onleave_Click);
             // 
             // btn_active
             // 
@@ -276,6 +278,7 @@
             this.btn_active.Size = new System.Drawing.Size(75, 31);
             this.btn_active.TabIndex = 1;
             this.btn_active.Text = "Progress";
+            this.btn_active.Click += new System.EventHandler(this.btn_active_Click);
             // 
             // btn_all
             // 
@@ -297,6 +300,7 @@
             this.btn_all.Size = new System.Drawing.Size(66, 31);
             this.btn_all.TabIndex = 1;
             this.btn_all.Text = "All";
+            this.btn_all.Click += new System.EventHandler(this.btn_all_Click);
             // 
             // guna2TextBox1
             // 
@@ -388,14 +392,6 @@
             this.dgv_tasks.Size = new System.Drawing.Size(1222, 370);
             this.dgv_tasks.TabIndex = 9;
             // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "icons8-tasklist-50 (1).png");
-            this.imageList.Images.SetKeyName(1, "icons8-active-58.png");
-            this.imageList.Images.SetKeyName(2, "icons8-close-64.png");
-            // 
             // col_icon
             // 
             this.col_icon.FillWeight = 23.31082F;
@@ -465,6 +461,14 @@
             this.col_active.FillWeight = 50F;
             this.col_active.HeaderText = "Active";
             this.col_active.Name = "col_active";
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "icons8-tasklist-50 (1).png");
+            this.imageList.Images.SetKeyName(1, "icons8-active-58.png");
+            this.imageList.Images.SetKeyName(2, "icons8-close-64.png");
             // 
             // TaskForm
             // 
