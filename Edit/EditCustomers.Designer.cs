@@ -33,7 +33,10 @@
             this.panel_drag = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.dtp_addedDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lbl_addedDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
@@ -57,9 +60,6 @@
             this.lbl_email = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.lbl_id = new System.Windows.Forms.Label();
             this.panel_drag.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_customer)).BeginInit();
@@ -67,7 +67,7 @@
             // 
             // panel_drag
             // 
-            this.panel_drag.BackColor = System.Drawing.Color.IndianRed;
+            this.panel_drag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(10)))), ((int)(((byte)(41)))));
             this.panel_drag.Controls.Add(this.btn_exit);
             this.panel_drag.Controls.Add(this.lbl_Title);
             this.panel_drag.Dock = System.Windows.Forms.DockStyle.Top;
@@ -105,6 +105,21 @@
             this.lbl_Title.Size = new System.Drawing.Size(159, 26);
             this.lbl_Title.TabIndex = 0;
             this.lbl_Title.Text = "EDIT  CUSTOMER";
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.panel_drag;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // msg_dialogError
+            // 
+            this.msg_dialogError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.msg_dialogError.Caption = null;
+            this.msg_dialogError.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.msg_dialogError.Parent = null;
+            this.msg_dialogError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.msg_dialogError.Text = null;
             // 
             // bunifuGradientPanel1
             // 
@@ -145,6 +160,14 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(806, 425);
             this.bunifuGradientPanel1.TabIndex = 4;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(714, 281);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 13);
+            this.lbl_id.TabIndex = 19;
             // 
             // dtp_addedDate
             // 
@@ -498,29 +521,6 @@
             this.lbl_Name.Size = new System.Drawing.Size(51, 23);
             this.lbl_Name.TabIndex = 0;
             this.lbl_Name.Text = "Name";
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl1.TargetControl = this.panel_drag;
-            this.guna2DragControl1.UseTransparentDrag = true;
-            // 
-            // msg_dialogError
-            // 
-            this.msg_dialogError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.msg_dialogError.Caption = null;
-            this.msg_dialogError.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-            this.msg_dialogError.Parent = null;
-            this.msg_dialogError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
-            this.msg_dialogError.Text = null;
-            // 
-            // lbl_id
-            // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(714, 281);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(0, 13);
-            this.lbl_id.TabIndex = 19;
             // 
             // EditCustomers
             // 

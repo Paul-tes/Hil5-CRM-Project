@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using Hil5_CRM_Project.model;
 using System.Data;
 using System.IO;
+using System.Drawing;
 
 namespace Hil5_CRM_Project
 {
@@ -222,7 +223,7 @@ namespace Hil5_CRM_Project
                     cust.status = custReader.GetBoolean(10);
                     cust.addedBy = (int)custReader["addedBy_teamId"];
                     return cust;
-                    System.Windows.Forms.MessageBox.Show("success");
+             
                 }
                 else
                 {
@@ -469,7 +470,7 @@ namespace Hil5_CRM_Project
                     task.note = taskReader.GetString(6);
                     task.addedBy = taskReader.GetInt32(7);
                     return task;
-                    System.Windows.Forms.MessageBox.Show("success");
+               
                 }
                 else
                 {
@@ -650,21 +651,58 @@ namespace Hil5_CRM_Project
             return leads.FindAll(activeLeads => activeLeads.status == "Lost");
         }
         // search by id from Lead record.
-        public List<Leads> SearchLeads(int id)
+        public Leads SearchLeads(int id)
         {
+            Leads lead;
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
+                SqlCommand cmd = new SqlCommand("spGet_leadBy_id", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
 
+                // store procedure parameters.
+                cmd.Parameters.Add("@idOrName", SqlDbType.VarChar);
 
+                // parameter values.
+                cmd.Parameters["@idOrName"].Value = id;
 
+                SqlDataReader leadReader = cmd.ExecuteReader(CommandBehavior.SingleRow);
+                if (leadReader.Read())
+                {
+                    lead = new Leads();
+                    lead.id = leadReader.GetInt32(0);
+                    lead.name = leadReader.GetString(1);
+                    lead.email = leadReader.GetString(2);
+                    lead.source = leadReader.GetString(3);
+                    lead.status = leadReader.GetString(4);
+                    if (leadReader["note"] != DBNull.Value)
+                        lead.note = leadReader.GetString(5);
+                    else
+                        lead.note = null;
+                    lead.createDate = leadReader.GetDateTime(6);
+                    lead.addedBy = leadReader.GetInt32(7);
+
+                    /*
+                    if (leadReader["customerId"] != DBNull.Value)
+                        lead.custId = leadReader.GetInt32(8);
+                    else
+                    {
+                        lead.custId = null;
+                    }
+                    */
+                    return lead;
+
+                }
+                else
+                {
+                    return null;
+                }
 
             }
             sqlhelper.close();
-            return new List<Leads>();
+            return null;
         }
         // search by name from Leads record.
         public List<Leads> SearchLeads(string name)
@@ -726,16 +764,46 @@ namespace Hil5_CRM_Project
             sqlhelper.close();
         }
         // update existing Lead.
-        public void UpdateLead(int id, string name, string addedby, string status, string referType, string referName, string priority, string note)
+        public void UpdateLead(Leads lead)
         {
             SqlHelper sqlhelper = new SqlHelper(con);
 
             if (sqlhelper.isConnected())
             {
-                // do database operation
+      
+
+                SqlCommand cmd = new SqlCommand("spUpdateLead_byIdOrName", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // store procedure parameters.
+                cmd.Parameters.Add("@leadsIdOrName", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newName", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newEmail", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newSources", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newStatus", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newNote", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newCreateDate", SqlDbType.DateTime);
+                cmd.Parameters.Add("@newAddedBy_teamId", SqlDbType.VarChar);
+                cmd.Parameters.Add("@newCustomerId", SqlDbType.Int);
+
+                //PArameter Values
+                cmd.Parameters["@leadsIdOrName"].Value = lead.id;
+                cmd.Parameters["@newName"].Value = lead.name;
+                cmd.Parameters["@newEmail"].Value = lead.email;
+                cmd.Parameters["@newSources"].Value = lead.source;
+
+                cmd.Parameters["@newStatus"].Value = lead.status;
+                if (lead.note != null)
+                    cmd.Parameters["@newNote"].Value = lead.note;
+                else
+                    cmd.Parameters["@newNote"].Value = DBNull.Value;
+                cmd.Parameters["@newCreateDate"].Value = lead.createDate;
+                cmd.Parameters["@newAddedBy_teamId"].Value = lead.addedBy;
+                cmd.Parameters["@newCustomerId"].Value = DBNull.Value;
 
 
-
+                int rowsaffected = cmd.ExecuteNonQuery();
+                System.Windows.Forms.MessageBox.Show(rowsaffected + " row affected");
 
 
             }
@@ -1210,7 +1278,71 @@ namespace Hil5_CRM_Project
             }
             sqlhelper.close();
         }
+        //Get All Team
+        byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        // array to image
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
 
+        public List<model.Team> GetAllTeam()
+        {
+
+            List < Team > teams= new List<Team>();
+            Team team;
+            Byte[] img1 = null;
+            SqlHelper sqlhelper = new SqlHelper(con);
+
+            if (sqlhelper.isConnected())
+            {
+                SqlCommand cmd = new SqlCommand("spGetAllTeam", sqlhelper.connection());
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlDataReader teamReader = cmd.ExecuteReader();
+                while (teamReader.Read())
+                {
+                    team = new Team();
+                    team.id = teamReader.GetInt32(0);
+                    if (teamReader["picture"] != DBNull.Value)
+                    {
+                        img1 = (byte[])(teamReader["picture"]);
+                        MemoryStream ms = new MemoryStream(img1);
+                        team.picture = img1;
+                    }
+                    else
+                    {
+                        team.picture = null;
+                    }
+                    team.name = teamReader.GetString(2);
+                    team.gender = teamReader.GetString(3);
+                    team.email = teamReader.GetString(4);
+                    team.password = teamReader.GetString(5);
+                    team.type = teamReader.GetString(6);
+                    team.departement = teamReader.GetString(7);
+                    team.role = teamReader.GetString(8);
+                    team.status = teamReader.GetBoolean(9);
+
+                    teams.Add(team);
+                }
+                teamReader.Close();
+               
+
+            }
+            sqlhelper.close();
+            return teams;
+
+        }
 
         // -------------------------------------------------------  Guest DB Access methods------------------------------------------------------------------- 
 

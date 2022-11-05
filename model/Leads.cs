@@ -16,6 +16,7 @@ namespace Hil5_CRM_Project.model
         public string note { get; set; }
         public DateTime createDate { get; set; }
         public int addedBy { get; set; }
+       // public  int? custId  { get; set; }
         // public Team team { get; set; }
         // public Customers Customers { get; set; }
 

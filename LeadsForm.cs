@@ -24,13 +24,27 @@ namespace Hil5_CRM_Project
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+            int id = 0;
             if (dgv_leads.SelectedCells.Count > 0)
             {
                 int selectedrowindex = dgv_leads.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dgv_leads.Rows[selectedrowindex];
                 string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
-                int id = Int32.Parse(value);
+                id = Int32.Parse(value);
             }
+            // edit lead process.
+            model.Leads lead = new model.Leads();
+            DbAccess access = new DbAccess();
+            lead = access.SearchLeads(id);
+            Edit.EditLead editLead = new Edit.EditLead(lead);
+            editLead.ShowDialog();
+
+            // after update the lead referesh the data grid view.
+            List<model.Leads> leads = null;
+            DbAccess data = new DbAccess();
+            leads = data.GetAllLeads();
+           
+            RefereshDGV(leads);
         }
 
         private void btn_pdfExport_Click(object sender, EventArgs e)

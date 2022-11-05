@@ -33,6 +33,7 @@
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.lblCountryCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_attach = new Guna.UI2.WinForms.Guna2ImageButton();
             this.pictureBox_Logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -46,7 +47,6 @@
             this.lbl_email = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_Phone = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.msg_dialogError = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.lbl_id = new System.Windows.Forms.Label();
             this.panel_drag2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Logo)).BeginInit();
@@ -54,7 +54,7 @@
             // 
             // panel_drag2
             // 
-            this.panel_drag2.BackColor = System.Drawing.Color.IndianRed;
+            this.panel_drag2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(10)))), ((int)(((byte)(41)))));
             this.panel_drag2.Controls.Add(this.btn_exit);
             this.panel_drag2.Controls.Add(this.lbl_title);
             this.panel_drag2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -87,6 +87,7 @@
             // 
             this.lbl_title.BackColor = System.Drawing.Color.Transparent;
             this.lbl_title.Font = new System.Drawing.Font("Georgia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title.ForeColor = System.Drawing.Color.Coral;
             this.lbl_title.Location = new System.Drawing.Point(188, 48);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(233, 33);
@@ -112,7 +113,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.lbl_email);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_Phone);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Gray;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.SystemColors.Highlight;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
@@ -121,6 +122,14 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(541, 430);
             this.bunifuGradientPanel1.TabIndex = 6;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(408, 329);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 13);
+            this.lbl_id.TabIndex = 14;
             // 
             // lblCountryCode
             // 
@@ -325,14 +334,6 @@
             this.msg_dialogError.Parent = null;
             this.msg_dialogError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
             this.msg_dialogError.Text = null;
-            // 
-            // lbl_id
-            // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(408, 329);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(0, 13);
-            this.lbl_id.TabIndex = 14;
             // 
             // EditOrganization
             // 

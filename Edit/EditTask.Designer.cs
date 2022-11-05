@@ -33,6 +33,7 @@
             this.btn_exit = new Bunifu.Framework.UI.BunifuTileButton();
             this.lbl_Title = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.lbl_id = new System.Windows.Forms.Label();
             this.txt_Note = new Guna.UI2.WinForms.Guna2TextBox();
             this.cmb_addedBy = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_edit = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -48,14 +49,13 @@
             this.txt_name = new Guna.UI2.WinForms.Guna2TextBox();
             this.task_Name = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lbl_addedBy = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lbl_id = new System.Windows.Forms.Label();
             this.panel_drag2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_drag2
             // 
-            this.panel_drag2.BackColor = System.Drawing.Color.IndianRed;
+            this.panel_drag2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(10)))), ((int)(((byte)(41)))));
             this.panel_drag2.Controls.Add(this.btn_exit);
             this.panel_drag2.Controls.Add(this.lbl_Title);
             this.panel_drag2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -71,7 +71,7 @@
             this.btn_exit.colorActive = System.Drawing.Color.Red;
             this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_exit.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.btn_exit.ForeColor = System.Drawing.Color.Black;
+            this.btn_exit.ForeColor = System.Drawing.Color.BurlyWood;
             this.btn_exit.Image = null;
             this.btn_exit.ImagePosition = 20;
             this.btn_exit.ImageZoom = 50;
@@ -88,6 +88,7 @@
             // 
             this.lbl_Title.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Title.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Title.ForeColor = System.Drawing.Color.Coral;
             this.lbl_Title.Location = new System.Drawing.Point(49, 33);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(111, 26);
@@ -116,7 +117,7 @@
             this.bunifuGradientPanel1.Controls.Add(this.task_Name);
             this.bunifuGradientPanel1.Controls.Add(this.lbl_addedBy);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Gray;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.SystemColors.Highlight;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.SystemColors.WindowFrame;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Black;
@@ -125,6 +126,14 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(806, 425);
             this.bunifuGradientPanel1.TabIndex = 4;
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(604, 263);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(0, 13);
+            this.lbl_id.TabIndex = 13;
             // 
             // txt_Note
             // 
@@ -137,7 +146,7 @@
             this.txt_Note.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txt_Note.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txt_Note.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_Note.FillColor = System.Drawing.Color.SeaGreen;
+            this.txt_Note.FillColor = System.Drawing.Color.DarkCyan;
             this.txt_Note.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_Note.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_Note.ForeColor = System.Drawing.Color.Black;
@@ -376,14 +385,6 @@
             this.lbl_addedBy.Size = new System.Drawing.Size(80, 23);
             this.lbl_addedBy.TabIndex = 0;
             this.lbl_addedBy.Text = "Added By";
-            // 
-            // lbl_id
-            // 
-            this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(604, 263);
-            this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(0, 13);
-            this.lbl_id.TabIndex = 13;
             // 
             // EditTask
             // 

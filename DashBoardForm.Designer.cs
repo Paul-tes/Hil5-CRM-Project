@@ -50,10 +50,10 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_showTeam = new Guna.UI2.WinForms.Guna2Button();
             this.btn_addTeam = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.flp_team = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_showTeam = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2GradientPanel3.SuspendLayout();
@@ -269,7 +269,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 39);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1266, 168);
+            this.panel2.Size = new System.Drawing.Size(1266, 181);
             this.panel2.TabIndex = 4;
             // 
             // bunifuGradientPanel1
@@ -324,6 +324,28 @@
             this.panel1.Size = new System.Drawing.Size(1266, 43);
             this.panel1.TabIndex = 5;
             // 
+            // btn_showTeam
+            // 
+            this.btn_showTeam.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_showTeam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.btn_showTeam.BorderRadius = 13;
+            this.btn_showTeam.BorderThickness = 2;
+            this.btn_showTeam.CustomizableEdges.BottomLeft = false;
+            this.btn_showTeam.CustomizableEdges.TopRight = false;
+            this.btn_showTeam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_showTeam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_showTeam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_showTeam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_showTeam.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
+            this.btn_showTeam.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_showTeam.ForeColor = System.Drawing.Color.White;
+            this.btn_showTeam.Location = new System.Drawing.Point(201, 9);
+            this.btn_showTeam.Name = "btn_showTeam";
+            this.btn_showTeam.Size = new System.Drawing.Size(111, 31);
+            this.btn_showTeam.TabIndex = 3;
+            this.btn_showTeam.Text = "Show Team";
+            this.btn_showTeam.Click += new System.EventHandler(this.btn_showTeam_Click);
+            // 
             // btn_addTeam
             // 
             this.btn_addTeam.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -361,32 +383,10 @@
             // flp_team
             // 
             this.flp_team.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp_team.Location = new System.Drawing.Point(0, 207);
+            this.flp_team.Location = new System.Drawing.Point(0, 220);
             this.flp_team.Name = "flp_team";
-            this.flp_team.Size = new System.Drawing.Size(1266, 336);
+            this.flp_team.Size = new System.Drawing.Size(1266, 323);
             this.flp_team.TabIndex = 6;
-            // 
-            // btn_showTeam
-            // 
-            this.btn_showTeam.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btn_showTeam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.btn_showTeam.BorderRadius = 13;
-            this.btn_showTeam.BorderThickness = 2;
-            this.btn_showTeam.CustomizableEdges.BottomLeft = false;
-            this.btn_showTeam.CustomizableEdges.TopRight = false;
-            this.btn_showTeam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_showTeam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_showTeam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_showTeam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_showTeam.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.btn_showTeam.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_showTeam.ForeColor = System.Drawing.Color.White;
-            this.btn_showTeam.Location = new System.Drawing.Point(201, 9);
-            this.btn_showTeam.Name = "btn_showTeam";
-            this.btn_showTeam.Size = new System.Drawing.Size(111, 31);
-            this.btn_showTeam.TabIndex = 3;
-            this.btn_showTeam.Text = "Show Team";
-            this.btn_showTeam.Click += new System.EventHandler(this.btn_showTeam_Click);
             // 
             // DashBoardForm
             // 

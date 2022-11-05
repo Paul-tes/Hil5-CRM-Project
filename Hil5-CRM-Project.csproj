@@ -377,6 +377,12 @@
     <Compile Include="TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeamDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeamDetails.Designer.cs">
+      <DependentUpon>TeamDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestForEdits.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,11 +425,20 @@
     <EmbeddedResource Include="Edit\EditCustomers.resx">
       <DependentUpon>EditCustomers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditEvent.resx">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditLead.resx">
+      <DependentUpon>EditLead.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit\EditOrganization.resx">
       <DependentUpon>EditOrganization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit\EditTask.resx">
       <DependentUpon>EditTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit\EditTeam.resx">
+      <DependentUpon>EditTeam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
@@ -452,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamDetails.resx">
+      <DependentUpon>TeamDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestForEdits.resx">
       <DependentUpon>TestForEdits.cs</DependentUpon>
