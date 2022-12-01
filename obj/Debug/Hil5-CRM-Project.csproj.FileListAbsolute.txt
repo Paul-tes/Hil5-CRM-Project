@@ -64,3 +64,7 @@ C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditLead.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditTeam.resources
 C:\Users\DELL\Documents\GitHub\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.TeamDetails.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditEvent.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditLead.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.Edit.EditTeam.resources
+C:\Users\joy\source\repos\Hil5-CRM-Project\Hil5-CRM-Project\obj\Debug\Hil5_CRM_Project.TeamDetails.resources

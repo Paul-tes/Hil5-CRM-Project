@@ -121,11 +121,12 @@ namespace Hil5_CRM_Project
                     eve.id,
                     eve.topic,
                     eve.type,
-                    eve.addedBy,
+                    eve.status,
                     eve.note,
                     eve.startDate,
                     eve.endDate,
-                    eve.status == "passed" ? imageList.Images[2] : imageList.Images[1]
+                    eve.addedBy,
+                    eve.note == "Finished" || eve.note == "Not Held" || eve.status == "not_heled" ? imageList.Images[1] : imageList.Images[2]
                 }); ;
 
             }
@@ -174,6 +175,29 @@ namespace Hil5_CRM_Project
         private void btn_update_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            // finding the id of which row are selected.
+            int id = 0;
+            if (dgv_event.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_event.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_event.Rows[selectedrowindex];
+                string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
+                id = Int32.Parse(value);
+            }
+
+            // delete from the database.
+            DbAccess access = new DbAccess();
+            access.DelEvent(id);
+
+            // refresh the data grid view.
+            List<model.Events> events = null;
+            DbAccess data = new DbAccess();     
+            events = data.GetAllEvents();
+            RefereshDgv(events);
         }
     }
 }

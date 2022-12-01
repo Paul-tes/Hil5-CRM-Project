@@ -177,6 +177,29 @@ namespace Hil5_CRM_Project
             leads = data.GetAllLeads();
             RefereshDGV(leads);
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            // finding the id of which row are selected.
+            int id = 0;
+            if (dgv_leads.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_leads.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_leads.Rows[selectedrowindex];
+                string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
+                id = Int32.Parse(value);
+            }
+
+            // delete from the database.
+            DbAccess access = new DbAccess();
+            access.DelLead(id);
+
+            // refresh the data grid view.
+            List<model.Leads> leads = null;
+            DbAccess data = new DbAccess();
+            leads = data.GetAllLeads();
+            RefereshDGV(leads);
+        }
     }
 }
     

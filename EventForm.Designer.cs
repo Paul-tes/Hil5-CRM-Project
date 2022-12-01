@@ -30,10 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EventForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lb_eventFilter = new System.Windows.Forms.Label();
+            this.lb_fileter = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -48,21 +50,20 @@
             this.btn_delete = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_event = new System.Windows.Forms.DataGridView();
-            this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
-            this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_startDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_endDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_status = new System.Windows.Forms.DataGridViewImageColumn();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Leads = new System.Windows.Forms.Label();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.lb_fileter = new System.Windows.Forms.Label();
-            this.lb_eventFilter = new System.Windows.Forms.Label();
+            this.col_icon = new System.Windows.Forms.DataGridViewImageColumn();
+            this.col_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_note = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_startDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_endDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_addedBy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_active = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,6 +83,32 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1222, 44);
             this.panel2.TabIndex = 7;
+            // 
+            // lb_eventFilter
+            // 
+            this.lb_eventFilter.AutoSize = true;
+            this.lb_eventFilter.BackColor = System.Drawing.Color.Transparent;
+            this.lb_eventFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_eventFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_eventFilter.ForeColor = System.Drawing.Color.White;
+            this.lb_eventFilter.Location = new System.Drawing.Point(114, 18);
+            this.lb_eventFilter.Name = "lb_eventFilter";
+            this.lb_eventFilter.Size = new System.Drawing.Size(13, 13);
+            this.lb_eventFilter.TabIndex = 0;
+            this.lb_eventFilter.Text = "0";
+            // 
+            // lb_fileter
+            // 
+            this.lb_fileter.AutoSize = true;
+            this.lb_fileter.BackColor = System.Drawing.Color.Transparent;
+            this.lb_fileter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lb_fileter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_fileter.ForeColor = System.Drawing.Color.White;
+            this.lb_fileter.Location = new System.Drawing.Point(82, 18);
+            this.lb_fileter.Name = "lb_fileter";
+            this.lb_fileter.Size = new System.Drawing.Size(35, 13);
+            this.lb_fileter.TabIndex = 0;
+            this.lb_fileter.Text = "Filter: ";
             // 
             // label1
             // 
@@ -291,6 +318,7 @@
             this.btn_delete.PressedState.ImageSize = new System.Drawing.Size(45, 45);
             this.btn_delete.Size = new System.Drawing.Size(45, 48);
             this.btn_delete.TabIndex = 1;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // panel1
             // 
@@ -312,14 +340,14 @@
             this.dgv_event.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_event.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_event.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_event.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_event.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_event.ColumnHeadersHeight = 40;
             this.dgv_event.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_event.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -327,19 +355,20 @@
             this.col_id,
             this.col_name,
             this.col_type,
-            this.col_addedBy,
+            this.col_status,
             this.col_note,
             this.col_startDate,
             this.col_endDate,
-            this.col_status});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_event.DefaultCellStyle = dataGridViewCellStyle9;
+            this.col_addedBy,
+            this.col_active});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(31)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_event.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_event.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_event.EnableHeadersVisualStyles = false;
             this.dgv_event.Location = new System.Drawing.Point(0, 99);
@@ -348,61 +377,6 @@
             this.dgv_event.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_event.Size = new System.Drawing.Size(1222, 367);
             this.dgv_event.TabIndex = 10;
-            // 
-            // col_icon
-            // 
-            this.col_icon.FillWeight = 23.31082F;
-            this.col_icon.HeaderText = "";
-            this.col_icon.Name = "col_icon";
-            this.col_icon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_icon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // col_id
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.col_id.DefaultCellStyle = dataGridViewCellStyle8;
-            this.col_id.FillWeight = 38.85136F;
-            this.col_id.HeaderText = "ID";
-            this.col_id.Name = "col_id";
-            // 
-            // col_name
-            // 
-            this.col_name.FillWeight = 77.70273F;
-            this.col_name.HeaderText = "Topic";
-            this.col_name.Name = "col_name";
-            // 
-            // col_type
-            // 
-            this.col_type.HeaderText = "Type";
-            this.col_type.Name = "col_type";
-            // 
-            // col_addedBy
-            // 
-            this.col_addedBy.FillWeight = 77.70273F;
-            this.col_addedBy.HeaderText = "Added By";
-            this.col_addedBy.Name = "col_addedBy";
-            // 
-            // col_note
-            // 
-            this.col_note.HeaderText = "Note";
-            this.col_note.Name = "col_note";
-            // 
-            // col_startDate
-            // 
-            this.col_startDate.HeaderText = "Start Date";
-            this.col_startDate.Name = "col_startDate";
-            // 
-            // col_endDate
-            // 
-            this.col_endDate.HeaderText = "End Date";
-            this.col_endDate.Name = "col_endDate";
-            // 
-            // col_status
-            // 
-            this.col_status.HeaderText = "Status";
-            this.col_status.Name = "col_status";
-            this.col_status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // bunifuGradientPanel1
             // 
@@ -450,34 +424,69 @@
             this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
             this.imageList.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList.Images.SetKeyName(0, "icons8-schedule-50 (1).png");
-            this.imageList.Images.SetKeyName(1, "icons8-active-58.png");
-            this.imageList.Images.SetKeyName(2, "icons8-close-64.png");
+            this.imageList.Images.SetKeyName(1, "icons8-close-64.png");
+            this.imageList.Images.SetKeyName(2, "icons8-active-58.png");
             // 
-            // lb_fileter
+            // col_icon
             // 
-            this.lb_fileter.AutoSize = true;
-            this.lb_fileter.BackColor = System.Drawing.Color.Transparent;
-            this.lb_fileter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lb_fileter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_fileter.ForeColor = System.Drawing.Color.White;
-            this.lb_fileter.Location = new System.Drawing.Point(82, 18);
-            this.lb_fileter.Name = "lb_fileter";
-            this.lb_fileter.Size = new System.Drawing.Size(35, 13);
-            this.lb_fileter.TabIndex = 0;
-            this.lb_fileter.Text = "Filter: ";
+            this.col_icon.FillWeight = 23.31082F;
+            this.col_icon.HeaderText = "";
+            this.col_icon.Name = "col_icon";
+            this.col_icon.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_icon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // lb_eventFilter
+            // col_id
             // 
-            this.lb_eventFilter.AutoSize = true;
-            this.lb_eventFilter.BackColor = System.Drawing.Color.Transparent;
-            this.lb_eventFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lb_eventFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_eventFilter.ForeColor = System.Drawing.Color.White;
-            this.lb_eventFilter.Location = new System.Drawing.Point(114, 18);
-            this.lb_eventFilter.Name = "lb_eventFilter";
-            this.lb_eventFilter.Size = new System.Drawing.Size(13, 13);
-            this.lb_eventFilter.TabIndex = 0;
-            this.lb_eventFilter.Text = "0";
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.col_id.DefaultCellStyle = dataGridViewCellStyle11;
+            this.col_id.FillWeight = 38.85136F;
+            this.col_id.HeaderText = "ID";
+            this.col_id.Name = "col_id";
+            // 
+            // col_name
+            // 
+            this.col_name.FillWeight = 77.70273F;
+            this.col_name.HeaderText = "Topic";
+            this.col_name.Name = "col_name";
+            // 
+            // col_type
+            // 
+            this.col_type.HeaderText = "Type";
+            this.col_type.Name = "col_type";
+            // 
+            // col_status
+            // 
+            this.col_status.HeaderText = "Status";
+            this.col_status.Name = "col_status";
+            this.col_status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // col_note
+            // 
+            this.col_note.HeaderText = "Note";
+            this.col_note.Name = "col_note";
+            // 
+            // col_startDate
+            // 
+            this.col_startDate.HeaderText = "Start Date";
+            this.col_startDate.Name = "col_startDate";
+            // 
+            // col_endDate
+            // 
+            this.col_endDate.HeaderText = "End Date";
+            this.col_endDate.Name = "col_endDate";
+            // 
+            // col_addedBy
+            // 
+            this.col_addedBy.FillWeight = 77.70273F;
+            this.col_addedBy.HeaderText = "Added By";
+            this.col_addedBy.Name = "col_addedBy";
+            // 
+            // col_active
+            // 
+            this.col_active.HeaderText = "Active";
+            this.col_active.Name = "col_active";
+            this.col_active.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_active.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // EventForm
             // 
@@ -528,16 +537,17 @@
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2ImageButton btn_pdfExport;
         private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.Label lb_eventFilter;
+        private System.Windows.Forms.Label lb_fileter;
         private System.Windows.Forms.DataGridViewImageColumn col_icon;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_status;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_note;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_startDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_endDate;
-        private System.Windows.Forms.DataGridViewImageColumn col_status;
-        private System.Windows.Forms.Label lb_eventFilter;
-        private System.Windows.Forms.Label lb_fileter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_addedBy;
+        private System.Windows.Forms.DataGridViewImageColumn col_active;
     }
 }

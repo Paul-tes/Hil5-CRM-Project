@@ -610,7 +610,11 @@ namespace Hil5_CRM_Project
             if (sqlhelper.isConnected())
             {
                 // do database operation
-
+                // do database operation
+                //exec [dbo].[Delete Leads_byIdOrName] 10;
+                SqlCommand cmd = new SqlCommand($"exec [dbo].[Delete Tasks_byId] {id};", sqlhelper.connection());
+                //cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                int affectedRows = cmd.ExecuteNonQuery();
 
 
 
@@ -817,8 +821,10 @@ namespace Hil5_CRM_Project
             if (sqlhelper.isConnected())
             {
                 // do database operation
-
-
+                //exec [dbo].[Delete Leads_byIdOrName] 10;
+                SqlCommand cmd = new SqlCommand($"exec [dbo].[Delete Leads_byIdOrName] {id};", sqlhelper.connection());
+                //cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                int affectedRows = cmd.ExecuteNonQuery();
 
 
 
@@ -981,11 +987,9 @@ namespace Hil5_CRM_Project
             if (sqlhelper.isConnected())
             {
                 // do database operation
-
-
-
-
-
+                SqlCommand cmd = new SqlCommand($"exec [dbo].[Delete Event_byIdOrTopic] {id};", sqlhelper.connection());
+                //cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                int affectedRows = cmd.ExecuteNonQuery();
             }
             sqlhelper.close();
         }

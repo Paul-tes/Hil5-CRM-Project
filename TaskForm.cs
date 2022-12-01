@@ -162,6 +162,7 @@ namespace Hil5_CRM_Project
 
         private void btn_update_Click(object sender, EventArgs e)
         {
+            // finding the id of which row are selected.
             int id = 0;
             if (dgv_tasks.SelectedCells.Count > 0)
             {
@@ -184,5 +185,30 @@ namespace Hil5_CRM_Project
             tasks = data.GetAllTasks();
             RefereshDGV(tasks);
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            // finding the id of which row are selected.
+            int id = 0;
+            if (dgv_tasks.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dgv_tasks.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dgv_tasks.Rows[selectedrowindex];
+                string value = Convert.ToString(selectedRow.Cells["col_id"].Value);
+                id = Int32.Parse(value);
+            }
+
+            // delete from the database.
+            DbAccess access = new DbAccess();
+            access.DelTask(id);
+
+            // after update the task referesh the data grid view.
+            List<model.Task> tasks = null;
+            DbAccess data = new DbAccess();
+            tasks = data.GetAllTasks();
+            RefereshDGV(tasks);
+
+        }
     }
 }
+            
